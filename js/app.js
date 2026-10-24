@@ -162,6 +162,35 @@
 /* ---------- Velad: tablero de investigación. Todo se dibuja desde data.json ---------- */
 function veladMain(DATA) {
         document.documentElement.setAttribute("data-theme", "dark");
+        (function veladTheme() {
+          var root = document.documentElement, order = ["oscuro", "medio", "claro"];
+          var names = { oscuro: "Tema oscuro", medio: "Tema medio", claro: "Tema claro" };
+          var icons = {
+            oscuro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>',
+            medio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>',
+            claro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>'
+          };
+          var cur = "oscuro";
+          try { var s = localStorage.getItem("velad-tema"); if (order.indexOf(s) >= 0) cur = s; } catch (e) {}
+          var btn = document.getElementById("tema");
+          function apply(t) {
+            cur = t; root.setAttribute("data-velad", t);
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", t === "claro" ? "#f4f1ea" : t === "medio" ? "#262c36" : "#0e1116");
+            if (btn) {
+              var next = order[(order.indexOf(t) + 1) % 3];
+              btn.innerHTML = icons[t];
+              btn.setAttribute("aria-label", names[t] + ". Cambiar a " + names[next].toLowerCase());
+              btn.title = names[t] + " (tocá para cambiar)";
+            }
+          }
+          apply(cur);
+          if (btn) btn.addEventListener("click", function () {
+            var next = order[(order.indexOf(cur) + 1) % 3];
+            apply(next);
+            try { localStorage.setItem("velad-tema", next); } catch (e) {}
+          });
+        })();
         var BW = 2900, BH = 1700;
         var view = document.getElementById("view");
         var board = document.getElementById("board");
@@ -181,7 +210,7 @@ function veladMain(DATA) {
         }
         inherit(TREE, "x-muted");
         var crumbs = document.getElementById("crumbs"), upBtn = document.getElementById("up"), setEl = document.getElementById("set-gen");
-        var BRAND = '<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="#c9a75a" stroke-width="1"><circle cx="10" cy="10" r="9" /><path d="M10 5v10M6.5 8.5h7" /></svg>';
+        var BRAND = '<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" style="stroke:var(--x-gold)" stroke-width="1"><circle cx="10" cy="10" r="9" /><path d="M10 5v10M6.5 8.5h7" /></svg>';
         var stack = [], MAP, cur, items, LINKS, POS, tl;
         var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         var cam = { x: 0, y: 0, s: 1 };
