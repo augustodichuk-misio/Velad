@@ -176,7 +176,7 @@ function veladMain(DATA) {
           function apply(t) {
             cur = t; root.setAttribute("data-velad", t);
             var meta = document.querySelector('meta[name="theme-color"]');
-            if (meta) meta.setAttribute("content", t === "claro" ? "#f4f1ea" : t === "medio" ? "#262c36" : "#0e1116");
+            if (meta) meta.setAttribute("content", t === "claro" ? "#f4f1ea" : t === "medio" ? "#342b24" : "#0e1116");
             if (btn) {
               var next = order[(order.indexOf(t) + 1) % 3];
               btn.innerHTML = icons[t];

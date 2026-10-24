@@ -1048,25 +1048,29 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
 
       /* Velad themes: oscuro (default), medio, claro */
       :root[data-velad="medio"] {
-        --x-bg-rgb: 38 44 54;
-        --x-bg: #262c36;
-        --x-bg-deep: #1f242c;
-        --x-surface: #2f3642;
-        --x-surface-2: #2a303b;
-        --x-card-top: #343c49;
-        --x-hl-a: #39414f;
-        --x-hl-b: #323a46;
-        --x-ink-rgb: 236 232 224;
-        --x-line: rgb(236 232 224 / 0.13);
-        --x-line-2: rgb(236 232 224 / 0.22);
-        --x-text: #f1ede5;
-        --x-body: #dcd8cf;
-        --x-muted: #aab1bb;
-        --x-muted-rgb: 170 177 187;
-        --x-ref: #cdd1d8;
-        --x-link: #75839a;
-        --x-link-dot: #8e9bb0;
-        --x-shade-k: 0.7;
+        --x-bg-rgb: 52 43 36;
+        --x-bg: #342b24;
+        --x-bg-deep: #2c241e;
+        --x-surface: #42372e;
+        --x-surface-2: #3b3129;
+        --x-card-top: #483c32;
+        --x-hl-a: #4c4035;
+        --x-hl-b: #443930;
+        --x-ink-rgb: 236 226 210;
+        --x-line: rgb(236 226 210 / 0.13);
+        --x-line-2: rgb(236 226 210 / 0.22);
+        --x-text: #f4ece0;
+        --x-body: #e0d6c6;
+        --x-muted: #b8aa98;
+        --x-muted-rgb: 184 170 152;
+        --x-ref: #d2c6b6;
+        --x-gold: #d0ac62;
+        --x-gold-rgb: 208 172 98;
+        --x-gold-soft: rgb(208 172 98 / 0.55);
+        --x-link: #8a7a68;
+        --x-link-dot: #a8967f;
+        --x-shade-rgb: 20 14 8;
+        --x-shade-k: 0.75;
       }
       :root[data-velad="claro"] {
         color-scheme: light;
