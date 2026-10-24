@@ -1,0 +1,3211 @@
+{
+ "version": 1,
+ "tree": {
+  "id": "root",
+  "title": "Mapa de los Últimos Tiempos",
+  "brand": "Velad",
+  "subtitle": "Mapa general · <b>9 bloques bíblicos</b>",
+  "kind": "Bloque",
+  "w": 2500,
+  "links": [
+   [
+    "b-jeremias",
+    "b-isaias"
+   ],
+   [
+    "b-jeremias",
+    "b-apocalipsis"
+   ],
+   [
+    "b-evangelios",
+    "b-apocalipsis"
+   ],
+   [
+    "b-daniel",
+    "b-evangelios"
+   ],
+   [
+    "b-daniel",
+    "b-apocalipsis"
+   ],
+   [
+    "b-isaias",
+    "b-apocalipsis"
+   ],
+   [
+    "b-ezequiel",
+    "b-apocalipsis"
+   ],
+   [
+    "b-menores",
+    "b-isaias"
+   ],
+   [
+    "b-ley",
+    "b-menores"
+   ],
+   [
+    "b-salmos",
+    "b-isaias"
+   ]
+  ],
+  "nodes": [
+   {
+    "id": "b-evangelios",
+    "title": "Evangelios y epístolas",
+    "c": "c-venida",
+    "pos": [
+     160,
+     200
+    ],
+    "children": {
+     "id": "m-evangelios",
+     "title": "Evangelios y epístolas",
+     "nodes": [
+      {
+       "id": "c01",
+       "n": "01",
+       "title": "Mateo 24",
+       "summary": "Expediente con 16 nodos",
+       "children": {
+        "id": "m-mateo24",
+        "set": "e1",
+        "rich": true,
+        "title": "Mateo 24",
+        "subtitle": "Expediente 01 · Mateo 24 · <b>Lectura postribulacional</b>",
+        "timeline": {
+         "title": "Línea de tiempo",
+         "marks": [
+          {
+           "target": "titus",
+           "label": "<b>70 d.C.</b>Templo destruido"
+          },
+          {
+           "target": "dolores",
+           "label": "Principio de dolores"
+          },
+          {
+           "target": "abominacion",
+           "label": "Abominación (mitad de la semana)"
+          },
+          {
+           "target": "tribulacion",
+           "label": "Gran tribulación (3½ años)"
+          },
+          {
+           "target": "cosmicas",
+           "label": "Señales cósmicas"
+          },
+          {
+           "target": "venida",
+           "label": "Venida + arrebatamiento",
+           "gold": true
+          },
+          {
+           "target": "porque",
+           "label": "Milenio (Ap 20)"
+          }
+         ]
+        },
+        "links": [
+         [
+          "monte",
+          "titus"
+         ],
+         [
+          "monte",
+          "jerusalen"
+         ],
+         [
+          "monte",
+          "dolores"
+         ],
+         [
+          "dolores",
+          "persecucion"
+         ],
+         [
+          "persecucion",
+          "abominacion"
+         ],
+         [
+          "abominacion",
+          "daniel"
+         ],
+         [
+          "abominacion",
+          "tribulacion"
+         ],
+         [
+          "tribulacion",
+          "cosmicas"
+         ],
+         [
+          "cosmicas",
+          "venida"
+         ],
+         [
+          "venida",
+          "noe"
+         ],
+         [
+          "venida",
+          "higuera"
+         ],
+         [
+          "venida",
+          "porque"
+         ],
+         [
+          "tribulacion",
+          "porque"
+         ],
+         [
+          "jerusalen",
+          "venida"
+         ],
+         [
+          "persecucion",
+          "porque"
+         ],
+         [
+          "senales22",
+          "dolores"
+         ],
+         [
+          "senales22",
+          "persecucion"
+         ],
+         [
+          "senales22",
+          "tribulacion"
+         ],
+         [
+          "exhortaciones",
+          "higuera"
+         ],
+         [
+          "exhortaciones",
+          "abominacion"
+         ],
+         [
+          "esposo",
+          "venida"
+         ],
+         [
+          "esposo",
+          "porque"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "monte",
+          "cat": "Evento",
+          "num": "01",
+          "title": "Monte de los Olivos",
+          "ref": "Mt 24:1-3",
+          "tags": [
+           "Mateo",
+           "Templo"
+          ],
+          "photo": {
+           "src": "img/templo_s.jpg",
+           "alt": "Maqueta del Segundo Templo en el Museo de Israel",
+           "caption": "Maqueta del Segundo Templo · Museo de Israel"
+          },
+          "c": "c-evento",
+          "aria": "Mt 24:1-3, Monte de los Olivos",
+          "pos": [
+           120,
+           130
+          ],
+          "kicker": "Nodo 01 · Mt 24:1-3",
+          "body": "<h2>El discurso del Monte de los Olivos</h2>\n<p>Jesús sale del templo y los discípulos le muestran los edificios. Desde el Monte de los Olivos le hacen tres preguntas:</p>\n<ol>\n<li>¿Cuándo serán estas cosas?</li>\n<li>¿Qué señal habrá de tu venida?</li>\n<li>¿Y del fin del siglo?</li>\n</ol>\n<h3>Dato histórico</h3>\n<p>El templo de Herodes, ampliado desde c. 20 a.C., era uno de los edificios más imponentes del mundo romano.</p>\n<p class=\"fineprint\">Foto: maqueta del Segundo Templo, Museo de Israel.</p>"
+         },
+         {
+          "id": "titus",
+          "cat": "Historia",
+          "num": "02",
+          "title": "70 d.C. · Arco de Tito",
+          "ref": "Mt 24:2",
+          "tags": [
+           "Roma"
+          ],
+          "photo": {
+           "src": "img/titus_s.jpg",
+           "alt": "Arco de Tito en Roma",
+           "caption": "Arco de Tito · Roma, c. 81 d.C."
+          },
+          "c": "c-historia",
+          "aria": "70 d.C., Arco de Tito",
+          "pos": [
+           170,
+           700
+          ],
+          "kicker": "Nodo 02 · 70 d.C.",
+          "body": "<h2>“No quedará aquí piedra sobre piedra”</h2>\n<p class=\"x-verse\">“¿Veis todo esto? De cierto os digo, que no quedará aquí piedra sobre piedra, que no sea derribada.” <small>Mt 24:2</small></p>\n<p>Cumplido en el año 70 d.C., cuando las legiones de Tito destruyeron Jerusalén y el templo.</p>\n<p>El Arco de Tito en Roma (c. 81 d.C.) muestra el saqueo del templo y la menorá llevada como botín.</p>\n<div class=\"x-key\"><p><span class=\"chip\">Cumplido</span></p><p>Cumplimiento histórico de la primera pregunta; las otras dos apuntan a la venida y al fin del siglo.</p></div>"
+         },
+         {
+          "id": "jerusalen",
+          "cat": "Lugar",
+          "num": "13",
+          "title": "Jerusalén · s. I",
+          "ref": "Zac 14:4 · Hch 1:11-12",
+          "tags": [
+           "Zacarías",
+           "Hechos"
+          ],
+          "media": "<div class=\"x-map\" style=\"margin-top:14px\">\n<svg viewBox=\"0 0 380 250\" role=\"img\" aria-label=\"Mapa de Jerusalén: Ciudad, Monte del Templo, Valle del Cedrón y Monte de los Olivos al este\">\n<g fill=\"none\" stroke=\"#5d6b7f\" stroke-width=\"0.8\">\n<path d=\"M298 22 q30 30 20 70 t10 80 t-10 66\"></path>\n<path d=\"M284 14 q35 40 22 80 t14 90 t-14 62\"></path>\n<path d=\"M314 34 q20 25 14 60 t8 70\"></path>\n</g>\n<path d=\"M240 0 C 230 60, 252 110, 238 160 S 232 220, 224 250\" stroke=\"#6f8299\" stroke-width=\"1\" stroke-dasharray=\"4 4\" fill=\"none\"></path>\n<path d=\"M40 56 L150 44 L205 66 L215 146 L190 222 L110 232 L50 204 L30 124 Z\" fill=\"rgb(231 227 218 / 0.03)\" stroke=\"#9aa1ab\" stroke-width=\"1.2\"></path>\n<g fill=\"none\" stroke=\"rgb(231 227 218 / 0.09)\" stroke-width=\"0.8\"><path d=\"M60 96 h120 M55 136 h140 M60 176 h120 M100 56 v166 M150 50 v176\"></path></g>\n<rect x=\"150\" y=\"76\" width=\"56\" height=\"62\" fill=\"rgb(201 167 90 / 0.08)\" stroke=\"#c9a75a\" stroke-width=\"1.2\"></rect>\n<rect x=\"171\" y=\"96\" width=\"14\" height=\"22\" fill=\"none\" stroke=\"#c9a75a\" stroke-width=\"1\"></rect>\n<g fill=\"none\" stroke=\"#7ea8ae\" stroke-width=\"1\"><circle cx=\"318\" cy=\"106\" r=\"5\"></circle><circle cx=\"331\" cy=\"121\" r=\"4\"></circle><circle cx=\"307\" cy=\"124\" r=\"3.5\"></circle><circle cx=\"324\" cy=\"92\" r=\"3.5\"></circle></g>\n<g font-family=\"Inter, system-ui, sans-serif\" fill=\"#9aa1ab\" font-size=\"13\">\n<text x=\"66\" y=\"196\">Ciudad</text>\n<text x=\"122\" y=\"38\" font-size=\"12\">Monte del Templo</text>\n<text x=\"252\" y=\"196\" font-size=\"12\" transform=\"rotate(-78 252 196)\">Valle del Cedrón</text>\n<text x=\"270\" y=\"156\">Monte de</text>\n<text x=\"270\" y=\"172\">los Olivos</text>\n</g>\n<path d=\"M300 214 L300 184\" stroke=\"#c9a75a\" stroke-width=\"0.8\" fill=\"none\"></path>\n<text x=\"270\" y=\"232\" font-family=\"Inter, system-ui, sans-serif\" font-size=\"12\" fill=\"#c9a75a\" letter-spacing=\"1.2\">ZAC 14:4</text>\n<g transform=\"translate(352 28)\" font-family=\"Inter, system-ui, sans-serif\" font-size=\"12\" fill=\"#9aa1ab\">\n<path d=\"M0 -12 L4 4 L0 1 L-4 4 Z\" fill=\"none\" stroke=\"#9aa1ab\" stroke-width=\"0.9\"></path><text x=\"-4\" y=\"19\">N</text>\n</g>\n</svg>\n</div>",
+          "c": "c-lugar",
+          "style": "padding-bottom:18px;",
+          "aria": "Mapa de Jerusalén",
+          "pos": [
+           580,
+           800
+          ],
+          "kicker": "Nodo 13 · Mapa",
+          "body": "<h2>Jerusalén: el mismo monte</h2>\n<p class=\"x-verse\">“Y se afirmarán sus pies en aquel día sobre el monte de los Olivos, que está en frente de Jerusalén al oriente.” <small>Zac 14:4</small></p>\n<p>Hch 1:11-12: la ascensión fue desde el monte que se llama del Olivar, y “así vendrá”.</p>\n<p>Es el mismo lugar del discurso (Mt 24:3). Al oeste del Valle del Cedrón, el Monte del Templo y la Ciudad.</p>"
+         },
+         {
+          "id": "dolores",
+          "cat": "Señal",
+          "num": "03",
+          "title": "Principio de dolores",
+          "ref": "Mt 24:4-8",
+          "note": "“aún no es el fin”",
+          "tags": [
+           "Apocalipsis 6"
+          ],
+          "c": "c-senal",
+          "aria": "Principio de dolores, Mt 24:4-8",
+          "pos": [
+           560,
+           190
+          ],
+          "kicker": "Nodo 03 · Mt 24:4-8",
+          "body": "<h2>Principio de dolores</h2>\n<ul>\n<li>Falsos cristos: “muchos vendrán en mi nombre”.</li>\n<li>Guerras y rumores de guerras.</li>\n<li>Nación contra nación, reino contra reino.</li>\n<li>Hambres, pestes y terremotos en diferentes lugares.</li>\n</ul>\n<p class=\"x-verse\">“Pero todo esto es principio de dolores.” <small>v. 8</small></p>\n<p class=\"x-verse\">“Mirad que no os turbéis… pero aún no es el fin.” <small>v. 6</small></p>\n<h3>Conexión</h3>\n<p>Ap 6:1-8: los primeros sellos (conquista, guerra, hambre, muerte).</p>"
+         },
+         {
+          "id": "persecucion",
+          "cat": "Señal",
+          "num": "04",
+          "title": "Persecución y apostasía",
+          "ref": "Mt 24:9-14",
+          "note": "persevere hasta el fin",
+          "tags": [
+           "2 Tesalonicenses"
+          ],
+          "c": "c-senal",
+          "aria": "Persecución y apostasía, Mt 24:9-14",
+          "pos": [
+           930,
+           470
+          ],
+          "kicker": "Nodo 04 · Mt 24:9-14",
+          "body": "<h2>Persecución y apostasía</h2>\n<ul>\n<li>“Os entregarán a tribulación, y os matarán” (v. 9).</li>\n<li>Muchos tropezarán, se entregarán y se aborrecerán unos a otros (v. 10).</li>\n<li>Muchos falsos profetas engañarán a muchos (v. 11).</li>\n<li>“El amor de muchos se enfriará” (v. 12).</li>\n</ul>\n<p class=\"x-verse\">“Mas el que persevere hasta el fin, éste será salvo.” <small>v. 13</small></p>\n<p class=\"x-verse\">“Y será predicado este evangelio del reino en todo el mundo… y entonces vendrá el fin.” <small>v. 14</small></p>\n<h3>Conexión</h3>\n<p>2 Ts 2:3: la apostasía viene primero.</p>"
+         },
+         {
+          "id": "abominacion",
+          "cat": "Profecía",
+          "num": "05 · clave",
+          "title": "Abominación desoladora",
+          "ref": "Mt 24:15",
+          "tags": [
+           "Daniel",
+           "2 Tesalonicenses",
+           "1 Macabeos"
+          ],
+          "c": "c-profecia",
+          "aria": "Abominación desoladora, Mt 24:15",
+          "pos": [
+           1270,
+           140
+          ],
+          "kicker": "Nodo 05 · Mt 24:15",
+          "body": "<h2>La abominación desoladora</h2>\n<p class=\"x-verse\">“Por tanto, cuando veáis en el lugar santo la abominación desoladora de que habló el profeta Daniel (el que lee, entienda)…” <small>Mt 24:15</small></p>\n<h3>Hilos</h3>\n<ul>\n<li><b>Dn 9:27</b>: a la mitad de la semana hará cesar el sacrificio.</li>\n<li><b>Dn 11:31</b>: profanarán el santuario y pondrán la abominación desoladora.</li>\n<li><b>Dn 12:11</b>: desde que sea quitado el continuo sacrificio, 1.290 días.</li>\n<li><b>2 Ts 2:3-4</b>: el hombre de pecado se sienta en el templo de Dios haciéndose pasar por Dios.</li>\n</ul>\n<h3>Antecedente histórico</h3>\n<p>Antíoco IV Epífanes profanó el templo en 167 a.C. (1 Macabeos 1), un tipo del cumplimiento final.</p>"
+         },
+         {
+          "id": "daniel",
+          "cat": "Profecía",
+          "num": "06",
+          "title": "Daniel 9:27 · la semana 70",
+          "ref": "Dn 9:27",
+          "note": "7 años → ½ = 1.260 días",
+          "tags": [
+           "Daniel",
+           "Apocalipsis 12–13"
+          ],
+          "c": "c-profecia",
+          "aria": "Daniel 9:27, la semana 70",
+          "pos": [
+           1020,
+           900
+          ],
+          "kicker": "Nodo 06 · Dn 9:27",
+          "body": "<h2>Daniel 9:27: la semana 70</h2>\n<p>El príncipe que ha de venir confirma un pacto por una semana (7 años); a la mitad de la semana hace cesar el sacrificio y la ofrenda.</p>\n<div class=\"x-key\">\n<p><b>La segunda mitad</b></p>\n<p>3½ años <span class=\"pill\">42 meses · Ap 13:5</span> <span class=\"pill\">1.260 días · Ap 12:6</span></p>\n</div>"
+         },
+         {
+          "id": "tribulacion",
+          "cat": "Evento",
+          "num": "07",
+          "title": "Gran tribulación",
+          "ref": "Mt 24:21-22",
+          "note": "¡los escogidos están ahí! (v. 22, 24)",
+          "tags": [
+           "Apocalipsis 7",
+           "Apocalipsis 13"
+          ],
+          "c": "c-evento",
+          "aria": "Gran tribulación, Mt 24:21-22",
+          "pos": [
+           1430,
+           560
+          ],
+          "kicker": "Nodo 07 · Mt 24:21-22",
+          "body": "<h2>La gran tribulación</h2>\n<p class=\"x-verse\">“Porque habrá entonces gran tribulación, cual no la ha habido desde el principio del mundo hasta ahora, ni la habrá.” <small>v. 21</small></p>\n<p class=\"x-verse\">“Mas por causa de los escogidos, aquellos días serán acortados.” <small>v. 22</small></p>\n<div class=\"x-key\">\n<p><span class=\"chip chip--solid\">Clave postribulacional</span></p>\n<p>Los escogidos están presentes durante la tribulación. También el v. 24: los falsos cristos harán señales para engañar, si fuere posible, aun a los escogidos.</p>\n</div>\n<h3>Conexión</h3>\n<ul>\n<li>Ap 7:14: “estos son los que han salido de la gran tribulación”.</li>\n<li>Ap 13:7: se le permitió hacer guerra contra los santos.</li>\n</ul>"
+         },
+         {
+          "id": "cosmicas",
+          "cat": "Señal",
+          "num": "08",
+          "title": "Señales cósmicas",
+          "ref": "Mt 24:29",
+          "note": "“inmediatamente después”",
+          "tags": [
+           "Joel",
+           "Isaías",
+           "Apocalipsis 6"
+          ],
+          "c": "c-senal",
+          "aria": "Señales cósmicas, Mt 24:29",
+          "pos": [
+           1790,
+           210
+          ],
+          "kicker": "Nodo 08 · Mt 24:29",
+          "body": "<h2>Señales cósmicas</h2>\n<p class=\"x-verse\">“E <b>inmediatamente después</b> de la tribulación de aquellos días, el sol se oscurecerá, y la luna no dará su resplandor, y las estrellas caerán del cielo, y las potencias de los cielos serán conmovidas.” <small>v. 29</small></p>\n<h3>Hilos</h3>\n<ul>\n<li>Jl 2:31: el sol se convertirá en tinieblas y la luna en sangre, antes del día grande y espantoso.</li>\n<li>Is 13:10: las estrellas no darán su luz; el sol se oscurecerá.</li>\n<li>Ap 6:12-13: el sexto sello.</li>\n</ul>"
+         },
+         {
+          "id": "venida",
+          "cat": "Evento",
+          "num": "09 · centro del caso",
+          "title": "La venida y la reunión",
+          "ref": "Mt 24:30-31",
+          "note": "trompeta → reunión de los escogidos = arrebatamiento",
+          "tags": [
+           "1 Tesalonicenses",
+           "1 Corintios",
+           "Apocalipsis 11"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "La venida y la reunión, Mt 24:30-31",
+          "pos": [
+           1850,
+           680
+          ],
+          "kicker": "Nodo 09 · Mt 24:30-31 · centro del caso",
+          "body": "<h2>La venida y la reunión</h2>\n<p class=\"x-verse\">“Entonces aparecerá la señal del Hijo del Hombre en el cielo; y entonces lamentarán todas las tribus de la tierra, y verán al Hijo del Hombre viniendo sobre las nubes del cielo, con poder y gran gloria.” <small>v. 30</small></p>\n<p class=\"x-verse\">“Y enviará sus ángeles con gran voz de trompeta, y juntarán a sus escogidos, de los cuatro vientos.” <small>v. 31</small></p>\n<div class=\"x-key\">\n<p><span class=\"chip chip--solid\">Lectura postribulacional</span></p>\n<p>Esta reunión <b>es</b> el arrebatamiento, después de la tribulación.</p>\n</div>\n<h3>Hilos</h3>\n<ul>\n<li><b>1 Ts 4:16-17</b>: voz de arcángel, trompeta de Dios… seremos arrebatados.</li>\n<li><b>1 Co 15:51-52</b>: a la final trompeta.</li>\n<li><b>Ap 11:15</b>: la séptima trompeta.</li>\n<li><b>Hch 1:11</b>: vendrá así como le habéis visto ir al cielo.</li>\n</ul>"
+         },
+         {
+          "id": "noe",
+          "cat": "Argumento",
+          "num": "10",
+          "title": "Como en los días de Noé",
+          "ref": "Mt 24:37-41",
+          "tags": [
+           "Lucas 17"
+          ],
+          "c": "c-argumento",
+          "aria": "Como en los días de Noé, Mt 24:37-41",
+          "pos": [
+           2270,
+           270
+          ],
+          "kicker": "Nodo 10 · Mt 24:37-41",
+          "body": "<h2>Como en los días de Noé</h2>\n<p>Comían, bebían, se casaban y daban en casamiento, hasta el día en que Noé entró en el arca, y no entendieron hasta que vino el diluvio.</p>\n<p class=\"x-verse\">“Entonces estarán dos en el campo; el uno será tomado, y el otro será dejado.” <small>v. 40</small></p>\n<h3>Paralelo</h3>\n<p>Lc 17:26-30: los días de Noé y también los días de Lot.</p>"
+         },
+         {
+          "id": "higuera",
+          "cat": "Señal",
+          "num": "11",
+          "title": "Velad · la higuera",
+          "ref": "Mt 24:32-44",
+          "tags": [
+           "Parábola",
+           "Mateo"
+          ],
+          "c": "c-senal",
+          "aria": "Velad, Mt 24:32-44",
+          "pos": [
+           2450,
+           640
+          ],
+          "kicker": "Nodo 11 · Mt 24:32-44",
+          "body": "<h2>Velad: la parábola de la higuera</h2>\n<p class=\"x-verse\">“Así también vosotros, cuando veáis todas estas cosas, conoced que está cerca, a las puertas.” <small>v. 33</small></p>\n<ul>\n<li>“Pero del día y la hora nadie sabe” (v. 36).</li>\n<li>“Velad, pues, porque no sabéis a qué hora ha de venir vuestro Señor” (v. 42).</li>\n<li>“Por tanto, también vosotros estad preparados” (v. 44).</li>\n</ul>\n<h3>Tres llamados</h3>\n<ol>\n<li><b>Aprender</b> la parábola (24:32).</li>\n<li><b>Saber</b> que está cerca, a las puertas (24:33).</li>\n<li><b>Ver:</b> una generación verá “todas estas cosas” (24:33-34).</li>\n</ol>\n<p>Cinco parábolas de vigilancia: la higuera, el ladrón (24:43-44), el siervo fiel y el malo (24:45-51), las diez vírgenes y los talentos (Mt 25).</p>"
+         },
+         {
+          "id": "porque",
+          "cat": "Argumento",
+          "num": "12",
+          "title": "¿Por qué postribulacional?",
+          "ref": "Resumen del caso · 5 argumentos",
+          "tags": [
+           "2 Tesalonicenses",
+           "Apocalipsis 20"
+          ],
+          "c": "c-argumento",
+          "aria": "¿Por qué postribulacional? Resumen del caso",
+          "pos": [
+           2230,
+           1060
+          ],
+          "kicker": "Nodo 12 · Resumen del caso",
+          "body": "<h2>¿Por qué postribulacional?</h2>\n<ol>\n<li><b>El orden del texto:</b> tribulación → “inmediatamente después” → venida y reunión (Mt 24:29-31).</li>\n<li><b>Una sola trompeta final:</b> Mt 24:31, 1 Co 15:52, 1 Ts 4:16.</li>\n<li><b>2 Ts 2:1-3:</b> “nuestra reunión con él” no ocurre sin que antes venga la apostasía y se manifieste el hombre de pecado.</li>\n<li><b>Ap 20:4-6:</b> la primera resurrección incluye a los que no adoraron a la bestia; después, el milenio.</li>\n<li><b>Los escogidos están presentes en la tribulación</b> (Mt 24:22, 24).</li>\n</ol>"
+         },
+         {
+          "id": "senales22",
+          "cat": "Señal",
+          "num": "Nodo 14",
+          "title": "Las 22 señales",
+          "ref": "Mt 24 · Mc 13 · Lc 21",
+          "tags": [
+           "Señales"
+          ],
+          "c": "c-senal",
+          "aria": "Las 22 señales, Mt 24 · Mc 13 · Lc 21",
+          "pos": [
+           600,
+           1180
+          ],
+          "kicker": "Nodo 14 · Mt 24 · Mc 13 · Lc 21",
+          "body": "<h2>Las 22 señales de los tiempos</h2>\n<p>Entre Mateo 24, Marcos 13 y Lucas 21, Jesús da 22 señales; 20 son negativas. Se agrupan en tres etapas:</p>\n<h3>1 · Principio de dolores (12)</h3>\n<ul>\n<li>Falsos cristos (24:5)</li>\n<li>Guerras (24:6)</li>\n<li>Rumores de guerra</li>\n<li>Conflictos étnicos, nación contra nación (24:7)</li>\n<li>Guerra económica, reino contra reino (24:7)</li>\n<li>Hambres (24:7)</li>\n<li>Pestes (24:7)</li>\n<li>Grandes terremotos (Lc 21:11)</li>\n<li>Conmociones (Lc 21:9)</li>\n<li>Cosas espantosas (Lc 21:11)</li>\n<li>Grandes señales del cielo (Lc 21:11)</li>\n<li>Bramido del mar y perplejidad (Lc 21:25)</li>\n</ul>\n<h3>2 · Primeros 3½ años, “paz y seguridad” falsa (5)</h3>\n<ul>\n<li>Martirio de creyentes (24:9)</li>\n<li>Odio, traición y ofensa (24:10)</li>\n<li>Falsos profetas: el engaño es la mayor advertencia (24:11)</li>\n<li>La maldad llega a su colmo (24:12)</li>\n<li>El amor de muchos se enfría (24:12)</li>\n</ul>\n<h3>3 · Gran Tribulación, últimos 3½ años (5)</h3>\n<ul>\n<li>Evangelio predicado a todas las naciones (24:14)</li>\n<li>Restauración del día de reposo en Israel (24:20)</li>\n<li>La abominación desoladora (24:15)</li>\n<li>Muertes sin precedentes (24:22)</li>\n<li>Falsos profetas con grandes señales (24:24)</li>\n</ul>\n<div class=\"x-key\">\n<p><span class=\"chip\">Clave</span></p>\n<p>Lucas aporta 4 señales que Mateo no menciona.</p>\n</div>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "exhortaciones",
+          "cat": "Argumento",
+          "num": "Nodo 15",
+          "title": "14 exhortaciones",
+          "ref": "Mt 24:4-33",
+          "tags": [
+           "Velar"
+          ],
+          "c": "c-argumento",
+          "aria": "14 exhortaciones, Mt 24:4-33",
+          "pos": [
+           1300,
+           1180
+          ],
+          "kicker": "Nodo 15 · Mt 24:4-33",
+          "body": "<h2>Saber y no ser engañados</h2>\n<p>Jesús da 14 exhortaciones en el capítulo. Ocho apuntan a dos cosas:</p>\n<ul>\n<li><b>Conocer</b> la narrativa del fin (24:15, 32, 33).</li>\n<li><b>No ser engañados</b> (24:4, 6, 23, 26).</li>\n</ul>\n<p>Por eso advierte tanto contra los que dirán “aquí está el Cristo” o “en el desierto está” (24:23-26): serán convincentes, al punto de engañar, si fuera posible, aun a los escogidos.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "esposo",
+          "cat": "Reino",
+          "num": "Nodo 16",
+          "title": "Esposo, Rey y Juez",
+          "ref": "Mt 25:1, 31-46",
+          "tags": [
+           "Mateo 25"
+          ],
+          "c": "c-reino",
+          "aria": "Esposo, Rey y Juez, Mt 25:1, 31-46",
+          "pos": [
+           2600,
+           1180
+          ],
+          "kicker": "Nodo 16 · Mt 25:1, 31-46",
+          "body": "<h2>Cómo se revela Jesús</h2>\n<ul>\n<li><b>Esposo</b> que desea relación (25:1).</li>\n<li><b>Rey</b> lleno de poder, sentado en su trono (25:31).</li>\n<li><b>Juez</b> celoso que quita todo lo que estorba al amor (25:32-46).</li>\n</ul>\n<p>La iglesia va a estar mejor preparada para estos tiempos si conoce a Jesús así; es el mismo retrato de Apocalipsis.</p>\n<p>Mateo 24–25 es un solo discurso: señales (24:5-14), advertencias (24:15-28), la respuesta que espera de los suyos (24:32–25:30) y el juicio de las naciones (25:31-46).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c02",
+       "n": "02",
+       "title": "Lucas 21",
+       "summary": "Expediente con 7 nodos",
+       "xref": [
+        {
+         "label": "Mateo 24 › Abominación",
+         "to": [
+          "b-evangelios",
+          "c01",
+          "abominacion"
+         ]
+        },
+        {
+         "label": "La Venida › Armagedón",
+         "to": [
+          "b-apocalipsis",
+          "lavenida",
+          "ap9"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-lucas21",
+        "set": "e5",
+        "rich": true,
+        "title": "Lucas 21",
+        "subtitle": "Expediente 02 · Lucas · <b>Lectura postribulacional</b>",
+        "intro": "Paralelo de Mateo 24 con detalles propios.",
+        "links": [
+         [
+          "lc-ejercitos",
+          "lc-daniel"
+         ],
+         [
+          "lc-ejercitos",
+          "lc-venganza"
+         ],
+         [
+          "lc-venganza",
+          "lc-escrito"
+         ],
+         [
+          "lc-ejercitos",
+          "lc-cautivos"
+         ],
+         [
+          "lc-cautivos",
+          "lc-hollada"
+         ],
+         [
+          "lc-hollada",
+          "lc-gentiles"
+         ],
+         [
+          "lc-cautivos",
+          "lc-gentiles"
+         ],
+         [
+          "lc-escrito",
+          "lc-hollada"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "lc-ejercitos",
+          "cat": "Evento",
+          "num": "Nodo 01",
+          "title": "Jerusalén rodeada de ejércitos",
+          "ref": "Lc 21:20",
+          "tags": [
+           "Lucas",
+           "Mateo 24"
+          ],
+          "c": "c-evento",
+          "aria": "Jerusalén rodeada de ejércitos, Lc 21:20",
+          "pos": [
+           120,
+           160
+          ],
+          "kicker": "Nodo 01 · Lc 21:20",
+          "body": "<h2>Primero, los ejércitos</h2>\n<p class=\"x-verse\">“Pero cuando viereis a Jerusalén rodeada de ejércitos, sabed entonces que su destrucción ha llegado.” <small>Lc 21:20</small></p>\n<p>Lucas no nombra la abominación desoladora, pero es el mismo momento que Mt 24:15 con otras palabras. Su detalle propio: sucede después de que Jerusalén sea cercada por ejércitos.</p>\n<p>El año 70 fue un anticipo de un cerco mayor en el fin.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "lc-daniel",
+          "cat": "Profecía",
+          "num": "Nodo 02",
+          "title": "El espejo de Daniel",
+          "ref": "Dn 11:31",
+          "tags": [
+           "Daniel"
+          ],
+          "c": "c-profecia",
+          "aria": "El espejo de Daniel, Dn 11:31",
+          "pos": [
+           180,
+           720
+          ],
+          "kicker": "Nodo 02 · Dn 11:31",
+          "body": "<h2>Fuerzas que profanan el santuario</h2>\n<p class=\"x-verse\">“Y se levantarán de su parte tropas que profanarán el santuario y la fortaleza, y quitarán el continuo sacrificio, y pondrán la abominación desoladora.” <small>Dn 11:31</small></p>\n<p>Daniel ya había unido ejércitos, templo profanado y abominación.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "lc-venganza",
+          "cat": "Juicio",
+          "num": "Nodo 03",
+          "title": "Días de venganza",
+          "ref": "Lc 21:22",
+          "tags": [
+           "Isaías 61"
+          ],
+          "c": "c-juicio",
+          "aria": "Días de venganza, Lc 21:22",
+          "pos": [
+           620,
+           260
+          ],
+          "kicker": "Nodo 03 · Lc 21:22",
+          "body": "<h2>La venganza es de Dios</h2>\n<p>“Días de retribución” (Is 61:2): no es la venganza de las naciones contra Israel, sino el juicio final de Dios sobre las naciones que se aliaron con el Anticristo contra Jerusalén.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "lc-escrito",
+          "cat": "Profecía",
+          "num": "Nodo 04",
+          "title": "Todo lo que está escrito",
+          "ref": "Lc 21:22",
+          "tags": [
+           "Joel",
+           "Zacarías",
+           "Ezequiel"
+          ],
+          "c": "c-profecia",
+          "aria": "Todo lo que está escrito, Lc 21:22",
+          "pos": [
+           660,
+           820
+          ],
+          "kicker": "Nodo 04 · Lc 21:22",
+          "body": "<h2>Se cumple la Escritura</h2>\n<p>“Para que se cumplan todas las cosas que están escritas.” Los profetas anunciaron que todas las naciones subirían contra Jerusalén al final:</p>\n<ul>\n<li>Joel 3:2, 12</li>\n<li>Zac 12:3; 14:2</li>\n<li>Ez 38:4</li>\n<li>Jer 30:7 (paralelo con Ap 12)</li>\n</ul>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "lc-cautivos",
+          "cat": "Historia",
+          "num": "Nodo 05",
+          "title": "Cautivos en todas las naciones",
+          "ref": "Lc 21:23-24",
+          "tags": [
+           "Deuteronomio 28",
+           "Jeremías 30"
+          ],
+          "c": "c-historia",
+          "aria": "Cautivos en todas las naciones, Lc 21:23-24",
+          "pos": [
+           1120,
+           200
+          ],
+          "kicker": "Nodo 05 · Lc 21:23-24",
+          "body": "<h2>La angustia de Jacob</h2>\n<p>Cuando se levante la abominación, el pueblo judío huirá de Jerusalén y será llevado cautivo, odiado entre las naciones.</p>\n<p>Dt 28:64 se cumplió en parte con Asiria (721 a.C.), Babilonia (586 a.C.) y Roma (70 d.C.); el cumplimiento final es en el fin.</p>\n<p class=\"x-verse\">“¡Ah, cuán grande es aquel día! tanto, que no hay otro semejante a él; tiempo de angustia para Jacob; pero de ella será librado.” <small>Jer 30:7</small></p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "lc-hollada",
+          "cat": "Lugar",
+          "num": "Nodo 06",
+          "title": "Jerusalén hollada 42 meses",
+          "ref": "Lc 21:24 · Ap 11:2",
+          "tags": [
+           "Apocalipsis 11"
+          ],
+          "c": "c-lugar",
+          "aria": "Jerusalén hollada 42 meses, Lc 21:24 · Ap 11:2",
+          "pos": [
+           1180,
+           760
+          ],
+          "kicker": "Nodo 06 · Lc 21:24 · Ap 11:2",
+          "body": "<h2>Pisoteada por los gentiles</h2>\n<p class=\"x-verse\">“…ha sido entregado a los gentiles; y ellos hollarán la ciudad santa cuarenta y dos meses.” <small>Ap 11:2</small></p>\n<p>42 meses = 3½ años: los últimos 3½ años, el tiempo de angustia para Jacob.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "lc-gentiles",
+          "cat": "Evento",
+          "num": "Nodo 07 · centro del caso",
+          "title": "El tiempo de los gentiles",
+          "ref": "Lc 21:24",
+          "tags": [
+           "Lucas",
+           "Mateo 23"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "El tiempo de los gentiles, Lc 21:24",
+          "pos": [
+           1650,
+           460
+          ],
+          "kicker": "Nodo 07 · Lc 21:24 · centro del caso",
+          "body": "<h2>Hasta que se cumpla</h2>\n<p>La opresión gentil sobre Jerusalén dura toda la tribulación y tiene fecha de fin: las naciones aliadas al Anticristo serán juzgadas.</p>\n<p>Al mismo tiempo, miles de creyentes gentiles van a estar predicando, del lado de Israel, mostrándoles a Jesús (Yeshúa) para que digan “Bendito el que viene en el nombre del Señor” (Mt 23:39).</p>\n<h3>Para meditar</h3>\n<ul>\n<li>¿Qué me enseña Jesús en este pasaje?</li>\n<li>¿Qué hay hoy en mi corazón hacia Israel?</li>\n<li>¿Cómo nos preparamos como iglesia para este rol?</li>\n</ul>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c03",
+       "n": "03",
+       "title": "1 Tesalonicenses",
+       "summary": "Expediente con 8 nodos",
+       "xref": [
+        {
+         "label": "La Venida › La final trompeta",
+         "to": [
+          "b-apocalipsis",
+          "lavenida",
+          "ap5"
+         ]
+        },
+        {
+         "label": "Mateo 24 › La Venida",
+         "to": [
+          "b-evangelios",
+          "c01",
+          "venida"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-1tes",
+        "set": "e6",
+        "rich": true,
+        "title": "1 Tesalonicenses",
+        "subtitle": "Expediente 03 · 1 Tesalonicenses · <b>Lectura postribulacional</b>",
+        "links": [
+         [
+          "ts1-berea",
+          "ts1-muertos"
+         ],
+         [
+          "ts1-muertos",
+          "ts1-arrebatados"
+         ],
+         [
+          "ts1-olivos",
+          "ts1-arrebatados"
+         ],
+         [
+          "ts1-trompeta",
+          "ts1-arrebatados"
+         ],
+         [
+          "ts1-arrebatados",
+          "ts1-ladron"
+         ],
+         [
+          "ts1-ladron",
+          "ts1-paz"
+         ],
+         [
+          "ts1-paz",
+          "ts1-velar"
+         ],
+         [
+          "ts1-ladron",
+          "ts1-velar"
+         ],
+         [
+          "ts1-berea",
+          "ts1-olivos"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "ts1-berea",
+          "cat": "Historia",
+          "num": "Nodo 01",
+          "title": "Como los de Berea",
+          "ref": "Hch 17:2, 11",
+          "tags": [
+           "Hechos"
+          ],
+          "c": "c-historia",
+          "aria": "Como los de Berea, Hch 17:2, 11",
+          "pos": [
+           120,
+           160
+          ],
+          "kicker": "Nodo 01 · Hch 17:2, 11",
+          "body": "<h2>Escudriñar por uno mismo</h2>\n<p>Pablo estuvo tres semanas en Tesalónica enseñando desde las Escrituras, incluido el fin de los tiempos (Hch 17:2). Después escribe dos cartas para aclarar dudas.</p>\n<p>Actitud de los de Berea: revisar todo en la Biblia y rechazar lo que no se vea claro en ella (Hch 17:11).</p>\n<h3>Mapa de las dos cartas</h3>\n<ul>\n<li><b>1 Ts 4:13-18</b> · El regreso de Jesús y el arrebatamiento</li>\n<li><b>1 Ts 5:1-11</b> · Velar por el día del Señor</li>\n<li><b>2 Ts 1:4-10</b> · Los justos juicios</li>\n<li><b>2 Ts 2:1-5</b> · La apostasía y el Anticristo antes del Día</li>\n<li><b>2 Ts 2:6-12</b> · El engaño y la destrucción del Anticristo</li>\n</ul>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-muertos",
+          "cat": "Argumento",
+          "num": "Nodo 02",
+          "title": "¿Y los que murieron?",
+          "ref": "1 Ts 4:13-16",
+          "tags": [
+           "1 Tesalonicenses"
+          ],
+          "c": "c-argumento",
+          "aria": "¿Y los que murieron?, 1 Ts 4:13-16",
+          "pos": [
+           180,
+           720
+          ],
+          "kicker": "Nodo 02 · 1 Ts 4:13-16",
+          "body": "<h2>Los muertos en Cristo primero</h2>\n<p>Los tesalonicenses temían que sus seres queridos muertos se perdieran el regreso de Jesús. Pablo responde: resucitan primero y participan plenamente de la venida.</p>\n<div class=\"x-key\">\n<p><span class=\"chip\">Clave</span></p>\n<p>La segunda venida es lo que hace Jesús; el arrebatamiento es lo que le pasa a la iglesia. Es un mismo momento.</p>\n</div>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-olivos",
+          "cat": "Venida",
+          "num": "Nodo 03",
+          "title": "El eco de Mateo 24",
+          "ref": "1 Ts 4:16 · Mt 24:30-31",
+          "tags": [
+           "Mateo 24"
+          ],
+          "c": "c-venida",
+          "aria": "El eco de Mateo 24, 1 Ts 4:16 · Mt 24:30-31",
+          "pos": [
+           640,
+           240
+          ],
+          "kicker": "Nodo 03 · 1 Ts 4:16 · Mt 24:30-31",
+          "body": "<h2>Pablo se apoya en Jesús</h2>\n<ul>\n<li>Viene del cielo en las nubes (Mt 24:30)</li>\n<li>Con ángeles (24:31)</li>\n<li>Con trompeta (24:31)</li>\n<li>Para reunir a sus escogidos (24:31)</li>\n<li>Todo ojo le verá (Ap 1:7; Dn 7:13)</li>\n</ul>\n<p>Mismos elementos: venida, ángeles, trompeta, reunión de los santos.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-trompeta",
+          "cat": "Profecía",
+          "num": "Nodo 04",
+          "title": "La última trompeta",
+          "ref": "1 Co 15:52 · Ap 11:15",
+          "tags": [
+           "1 Corintios",
+           "Apocalipsis 11"
+          ],
+          "c": "c-profecia",
+          "aria": "La última trompeta, 1 Co 15:52 · Ap 11:15",
+          "pos": [
+           700,
+           820
+          ],
+          "kicker": "Nodo 04 · 1 Co 15:52 · Ap 11:15",
+          "body": "<h2>La séptima</h2>\n<p>Tres años después Pablo dice que los muertos resucitan “a la final trompeta” (1 Co 15:52). “Final” implica una serie numerada: las trompetas de Apocalipsis 8–11.</p>\n<p>Cuando suena la séptima, “los reinos del mundo han venido a ser de nuestro Señor y de su Cristo” (Ap 11:15).</p>\n<div class=\"x-key\">\n<p><span class=\"chip chip--solid\">Clave postribulacional</span></p>\n<p>La reunión de la iglesia ocurre al final de la serie, no antes.</p>\n</div>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-arrebatados",
+          "cat": "Reunión",
+          "num": "Nodo 05 · centro del caso",
+          "title": "Arrebatados en las nubes",
+          "ref": "1 Ts 4:16-17",
+          "tags": [
+           "1 Tesalonicenses",
+           "Hechos 1"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "Arrebatados en las nubes, 1 Ts 4:16-17",
+          "pos": [
+           1160,
+           260
+          ],
+          "kicker": "Nodo 05 · 1 Ts 4:16-17 · centro del caso",
+          "body": "<h2>Harpazō</h2>\n<p class=\"x-verse\">“Porque el Señor mismo con voz de mando, con voz de arcángel, y con trompeta de Dios, descenderá del cielo; y los muertos en Cristo resucitarán primero. Luego nosotros los que vivimos, los que hayamos quedado, seremos arrebatados juntamente con ellos en las nubes para recibir al Señor en el aire, y así estaremos siempre con el Señor.” <small>1 Ts 4:16-17</small></p>\n<ul>\n<li><b>Voz de mando:</b> Jesús manda a los muertos que se levanten (Jn 5:28-29).</li>\n<li><b>Voz de arcángel:</b> moviliza al ejército angélico (Mt 24:31).</li>\n<li><b>Arrebatados:</b> griego harpazō, latín rapturo, de ahí “rapto”.</li>\n<li><b>En las nubes:</b> nubes sobrenaturales, como en la ascensión (Hch 1:9) y los dos testigos (Ap 11:12).</li>\n</ul>\n<p>“Alentaos los unos a los otros con estas palabras” (4:18).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-ladron",
+          "cat": "Señal",
+          "num": "Nodo 06",
+          "title": "Como ladrón en la noche",
+          "ref": "1 Ts 5:1-4",
+          "tags": [
+           "Día del Señor"
+          ],
+          "c": "c-senal",
+          "aria": "Como ladrón en la noche, 1 Ts 5:1-4",
+          "pos": [
+           1220,
+           820
+          ],
+          "kicker": "Nodo 06 · 1 Ts 5:1-4",
+          "body": "<h2>El día del Señor</h2>\n<p>Los creyentes conocían los tiempos (cronos: la secuencia) y las sazones (kairós: su duración), aunque no la fecha.</p>\n<p>El día del Señor tiene dos sentidos: un día puntual y un “día amplio” desde la tribulación hasta el milenio.</p>\n<p>Llega como ladrón de dos maneras: de repente, y con pérdida para quien no está despierto. “Mas vosotros, hermanos, no estáis en tinieblas, para que aquel día os sorprenda como ladrón” (5:4): los creyentes van a estar en la tierra y no deben ser tomados por sorpresa.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-paz",
+          "cat": "Señal",
+          "num": "Nodo 07",
+          "title": "Paz y seguridad",
+          "ref": "1 Ts 5:3 · Dn 9:27",
+          "tags": [
+           "Daniel"
+          ],
+          "c": "c-senal",
+          "aria": "Paz y seguridad, 1 Ts 5:3 · Dn 9:27",
+          "pos": [
+           1700,
+           240
+          ],
+          "kicker": "Nodo 07 · 1 Ts 5:3 · Dn 9:27",
+          "body": "<h2>Una paz falsa</h2>\n<p>“Que cuando digan: Paz y seguridad, entonces vendrá sobre ellos destrucción repentina, como los dolores a la mujer encinta, y no escaparán” (5:3).</p>\n<p>Esa paz falsa se desarrolla en los primeros 3½ años, alrededor del pacto que confirma el Anticristo (Dn 9:27), y se corta de golpe con la abominación desoladora (Mt 24:15).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts1-velar",
+          "cat": "Argumento",
+          "num": "Nodo 08",
+          "title": "Velemos y seamos sobrios",
+          "ref": "1 Ts 5:5-11",
+          "tags": [
+           "Velar"
+          ],
+          "c": "c-argumento",
+          "aria": "Velemos y seamos sobrios, 1 Ts 5:5-11",
+          "pos": [
+           1760,
+           800
+          ],
+          "kicker": "Nodo 08 · 1 Ts 5:5-11",
+          "body": "<h2>Hijos del día</h2>\n<p>“No durmamos como los demás, sino velemos y seamos sobrios” (5:6).</p>\n<ul>\n<li>Coraza de fe y de amor, yelmo de la esperanza de salvación (5:8)</li>\n<li>No nos puso Dios para ira, sino para salvación (5:9)</li>\n<li>El destino final: vivir juntamente con él (5:10)</li>\n<li>Animaos y edificaos unos a otros (5:11)</li>\n</ul>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c04",
+       "n": "04",
+       "title": "2 Tesalonicenses",
+       "summary": "Expediente con 7 nodos",
+       "xref": [
+        {
+         "label": "Mateo 24 › Abominación",
+         "to": [
+          "b-evangelios",
+          "c01",
+          "abominacion"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-2tes",
+        "set": "e7",
+        "rich": true,
+        "title": "2 Tesalonicenses",
+        "subtitle": "Expediente 04 · 2 Tesalonicenses · <b>Lectura postribulacional</b>",
+        "links": [
+         [
+          "ts2-juicio",
+          "ts2-fuego"
+         ],
+         [
+          "ts2-confusion",
+          "ts2-apostasia"
+         ],
+         [
+          "ts2-confusion",
+          "ts2-hombre"
+         ],
+         [
+          "ts2-confusion",
+          "ts2-detiene"
+         ],
+         [
+          "ts2-apostasia",
+          "ts2-hombre"
+         ],
+         [
+          "ts2-detiene",
+          "ts2-hombre"
+         ],
+         [
+          "ts2-hombre",
+          "ts2-engano"
+         ],
+         [
+          "ts2-engano",
+          "ts2-fuego"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "ts2-juicio",
+          "cat": "Juicio",
+          "num": "Nodo 01",
+          "title": "El justo juicio",
+          "ref": "2 Ts 1:4-7",
+          "tags": [
+           "Persecución"
+          ],
+          "c": "c-juicio",
+          "aria": "El justo juicio, 2 Ts 1:4-7",
+          "pos": [
+           120,
+           200
+          ],
+          "kicker": "Nodo 01 · 2 Ts 1:4-7",
+          "body": "<h2>Perseverar bajo persecución</h2>\n<p>Los tesalonicenses dudaban de cómo los veía Dios, porque en el mundo pagano la persecución era señal de no tener el favor de los dioses.</p>\n<p>Pablo responde: la perseverancia de ellos es “demostración del justo juicio de Dios” (1:5). Nadie gana el Reino por perseverar, pero perseverar muestra que el amor recibido es genuino.</p>\n<p>Es justo que Dios dé tribulación a los que atribulan y reposo a los atribulados (1:6-7).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts2-fuego",
+          "cat": "Venida",
+          "num": "Nodo 02",
+          "title": "En llama de fuego",
+          "ref": "2 Ts 1:7-10",
+          "tags": [
+           "2 Tesalonicenses"
+          ],
+          "c": "c-venida",
+          "aria": "En llama de fuego, 2 Ts 1:7-10",
+          "pos": [
+           180,
+           780
+          ],
+          "kicker": "Nodo 02 · 2 Ts 1:7-10",
+          "body": "<h2>Cuando se manifieste</h2>\n<p class=\"x-verse\">“…cuando se manifieste el Señor Jesús desde el cielo con los ángeles de su poder, en llama de fuego…” <small>2 Ts 1:7-8</small></p>\n<p>El alivio de los santos llega cuando Jesús vuelve al final de la tribulación. Los que rechazan su liderazgo sufren “eterna perdición, excluidos de la presencia del Señor” (1:9): griego olethros, destrucción, no aniquilación.</p>\n<p>Ese día será “glorificado en sus santos y admirado en todos los que creyeron” (1:10).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts2-confusion",
+          "cat": "Argumento",
+          "num": "Nodo 03",
+          "title": "¿Ya llegó el Día?",
+          "ref": "2 Ts 2:1-2",
+          "tags": [
+           "Día del Señor"
+          ],
+          "c": "c-argumento",
+          "aria": "¿Ya llegó el Día?, 2 Ts 2:1-2",
+          "pos": [
+           640,
+           260
+          ],
+          "kicker": "Nodo 03 · 2 Ts 2:1-2",
+          "body": "<h2>Que nadie los engañe</h2>\n<p>Algunos pensaban que el día del Señor ya había llegado por la persecución tan fuerte. Pablo une “la venida de nuestro Señor Jesucristo” y “nuestra reunión con él” (2:1) con ese Día, y dice: no va a llegar sin antes tres señales globales.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts2-apostasia",
+          "cat": "Señal",
+          "num": "Nodo 04",
+          "title": "La apostasía",
+          "ref": "2 Ts 2:3",
+          "tags": [
+           "1 Timoteo 4"
+          ],
+          "c": "c-senal",
+          "aria": "La apostasía, 2 Ts 2:3",
+          "pos": [
+           1120,
+           140
+          ],
+          "kicker": "Nodo 04 · 2 Ts 2:3",
+          "body": "<h2>Señal 1 · La caída</h2>\n<p class=\"x-verse\">“Nadie os engañe en ninguna manera; porque no vendrá sin que antes venga la apostasía…” <small>2 Ts 2:3</small></p>\n<p>Un apartamiento de la fe a escala mundial (ver 1 Timoteo 4).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts2-hombre",
+          "cat": "Señal",
+          "num": "Nodo 05 · centro del caso",
+          "title": "El hombre de pecado",
+          "ref": "2 Ts 2:3-4",
+          "tags": [
+           "Mateo 24",
+           "Apocalipsis 13"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "El hombre de pecado, 2 Ts 2:3-4",
+          "pos": [
+           1180,
+           560
+          ],
+          "kicker": "Nodo 05 · 2 Ts 2:3-4 · centro del caso",
+          "body": "<h2>Señal 2 · Se manifiesta el Anticristo</h2>\n<p class=\"x-verse\">“…y se manifieste el hombre de pecado, el hijo de perdición, el cual se opone y se levanta contra todo lo que se llama Dios o es objeto de culto; tanto que se sienta en el templo de Dios como Dios, haciéndose pasar por Dios.” <small>2 Ts 2:3-4</small></p>\n<p>Es la abominación desoladora de Mt 24:15 (ver también Ap 13).</p>\n<div class=\"x-key\">\n<p><span class=\"chip chip--solid\">Clave postribulacional</span></p>\n<p>Los creyentes van a ver al Anticristo en el templo antes de la reunión con el Señor. Por eso Pablo dice “nadie os engañe”.</p>\n</div>\n<p>“¿No os acordáis que cuando yo estaba todavía con vosotros, os decía esto?” (2:5).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts2-detiene",
+          "cat": "Señal",
+          "num": "Nodo 06",
+          "title": "Lo que lo detiene",
+          "ref": "2 Ts 2:6-7",
+          "tags": [
+           "2 Tesalonicenses"
+          ],
+          "c": "c-senal",
+          "aria": "Lo que lo detiene, 2 Ts 2:6-7",
+          "pos": [
+           1200,
+           1000
+          ],
+          "kicker": "Nodo 06 · 2 Ts 2:6-7",
+          "body": "<h2>Señal 3 · Se quita el freno</h2>\n<p>Pablo habla de “lo que lo detiene” (neutro) y “quien al presente lo detiene” (masculino).</p>\n<p>Nota de Bickle: ve el “qué” como el gobierno humano y el “quien” como la voluntad de Dios, su tiempo decretado para levantar el freno.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ts2-engano",
+          "cat": "Juicio",
+          "num": "Nodo 07",
+          "title": "Poder engañoso",
+          "ref": "2 Ts 2:8-12",
+          "tags": [
+           "Apocalipsis 13"
+          ],
+          "c": "c-juicio",
+          "aria": "Poder engañoso, 2 Ts 2:8-12",
+          "pos": [
+           1680,
+           560
+          ],
+          "kicker": "Nodo 07 · 2 Ts 2:8-12",
+          "body": "<h2>Señales mentirosas y su fin</h2>\n<p>El inicuo viene “por obra de Satanás, con gran poder y señales y prodigios mentirosos” (2:9; Ap 13:2-4). Los que no recibieron el amor de la verdad quedan entregados a la mentira.</p>\n<p>Su final: “a quien el Señor matará con el espíritu de su boca, y destruirá con el resplandor de su venida” (2:8).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c05",
+       "n": "05",
+       "title": "1 Corintios",
+       "summary": "Expediente con 8 nodos",
+       "xref": [
+        {
+         "label": "La Venida › 1 Co 15:52",
+         "to": [
+          "b-apocalipsis",
+          "lavenida",
+          "ap5"
+         ]
+        },
+        {
+         "label": "1 Tesalonicenses › La última trompeta",
+         "to": [
+          "b-evangelios",
+          "c03",
+          "ts1-trompeta"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-1cor",
+        "set": "e8",
+        "rich": true,
+        "title": "1 Corintios 15",
+        "subtitle": "Expediente 05 · 1 Corintios · <b>Lectura postribulacional</b>",
+        "links": [
+         [
+          "co1-problema",
+          "co1-evangelio"
+         ],
+         [
+          "co1-problema",
+          "co1-sino"
+         ],
+         [
+          "co1-sino",
+          "co1-primicias"
+         ],
+         [
+          "co1-primicias",
+          "co1-fin"
+         ],
+         [
+          "co1-primicias",
+          "co1-cuerpo"
+         ],
+         [
+          "co1-cuerpo",
+          "co1-misterio"
+         ],
+         [
+          "co1-misterio",
+          "co1-victoria"
+         ],
+         [
+          "co1-fin",
+          "co1-victoria"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "co1-problema",
+          "cat": "Historia",
+          "num": "Nodo 01",
+          "title": "No hay resurrección",
+          "ref": "1 Co 15:12",
+          "tags": [
+           "Corinto"
+          ],
+          "c": "c-historia",
+          "aria": "No hay resurrección, 1 Co 15:12",
+          "pos": [
+           120,
+           200
+          ],
+          "kicker": "Nodo 01 · 1 Co 15:12",
+          "body": "<h2>El error en Corinto</h2>\n<p>Algunos creían que Jesús resucitó, pero no que los creyentes resucitarían en cuerpo. Detrás había una idea griega: el cuerpo es malo. La visión bíblica: el cuerpo es bueno y parte de quién somos.</p>\n<h3>Esquema</h3>\n<ul>\n<li><b>15:1-11</b> La resurrección en el corazón del evangelio</li>\n<li><b>15:12-19</b> ¿Y si no hubiera resurrección?</li>\n<li><b>15:20-28</b> Cristo primicias y el fin</li>\n<li><b>15:29-34</b> Coraje para creer</li>\n<li><b>15:35-49</b> El cuerpo resucitado</li>\n<li><b>15:50-58</b> El misterio y la victoria</li>\n</ul>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-evangelio",
+          "cat": "Evento",
+          "num": "Nodo 02",
+          "title": "Testigos de la resurrección",
+          "ref": "1 Co 15:1-11",
+          "tags": [
+           "Isaías 53",
+           "Salmos"
+          ],
+          "c": "c-evento",
+          "aria": "Testigos de la resurrección, 1 Co 15:1-11",
+          "pos": [
+           180,
+           760
+          ],
+          "kicker": "Nodo 02 · 1 Co 15:1-11",
+          "body": "<h2>Murió, fue sepultado, resucitó</h2>\n<p>Cristo murió por nuestros pecados conforme a las Escrituras (Is 53; Sal 22) y resucitó al tercer día (Sal 16:10; Os 6:2). La resurrección prueba que el Padre aceptó su muerte por nosotros (Ro 4:25).</p>\n<p>Apareció a Pedro, a los doce y a más de quinientos a la vez.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-sino",
+          "cat": "Argumento",
+          "num": "Nodo 03",
+          "title": "¿Y si no?",
+          "ref": "1 Co 15:12-19",
+          "tags": [
+           "1 Corintios"
+          ],
+          "c": "c-argumento",
+          "aria": "¿Y si no?, 1 Co 15:12-19",
+          "pos": [
+           640,
+           320
+          ],
+          "kicker": "Nodo 03 · 1 Co 15:12-19",
+          "body": "<h2>Todo se cae</h2>\n<p>Si los muertos no resucitan, Cristo tampoco resucitó; entonces la fe es vana y los apóstoles mintieron.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-primicias",
+          "cat": "Reunión",
+          "num": "Nodo 04",
+          "title": "Cristo, las primicias",
+          "ref": "1 Co 15:20-23",
+          "tags": [
+           "1 Tesalonicenses"
+          ],
+          "c": "c-reunion",
+          "aria": "Cristo, las primicias, 1 Co 15:20-23",
+          "pos": [
+           1100,
+           180
+          ],
+          "kicker": "Nodo 04 · 1 Co 15:20-23",
+          "body": "<h2>Cada uno en su orden</h2>\n<p>Jesús es el primer fruto de la cosecha. “Cristo, las primicias; luego los que son de Cristo, en su venida” (15:23; 1 Ts 4:16).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-fin",
+          "cat": "Reino",
+          "num": "Nodo 05",
+          "title": "Dios todo en todos",
+          "ref": "1 Co 15:24-28",
+          "tags": [
+           "Milenio"
+          ],
+          "c": "c-reino",
+          "aria": "Dios todo en todos, 1 Co 15:24-28",
+          "pos": [
+           1150,
+           780
+          ],
+          "kicker": "Nodo 05 · 1 Co 15:24-28",
+          "body": "<h2>El fin del milenio</h2>\n<p>Jesús reina hasta poner a todos sus enemigos bajo sus pies; el último enemigo es la muerte. Al final del milenio entrega el reino al Padre “para que Dios sea todo en todos”: Dios hace su morada en la tierra.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-cuerpo",
+          "cat": "Argumento",
+          "num": "Nodo 06",
+          "title": "El cuerpo resucitado",
+          "ref": "1 Co 15:35-49",
+          "tags": [
+           "Lucas 24",
+           "Filipenses 3"
+          ],
+          "c": "c-argumento",
+          "aria": "El cuerpo resucitado, 1 Co 15:35-49",
+          "pos": [
+           1620,
+           320
+          ],
+          "kicker": "Nodo 06 · 1 Co 15:35-49",
+          "body": "<h2>Semilla y planta</h2>\n<p>Hay continuidad entre lo que se siembra y lo que brota: seguimos siendo nosotros.</p>\n<ul>\n<li>Corrupción → incorrupción</li>\n<li>Deshonra → gloria</li>\n<li>Debilidad → poder</li>\n<li>Cuerpo natural → cuerpo espiritual</li>\n<li>Mortal → inmortal</li>\n</ul>\n<p>Como el cuerpo de Jesús resucitado: con carne y huesos, que come (Lc 24:39-43), lleno de luz. “Transformará el cuerpo de la humillación nuestra, para que sea semejante al cuerpo de la gloria suya” (Fil 3:21).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-misterio",
+          "cat": "Reunión",
+          "num": "Nodo 07 · centro del caso",
+          "title": "El misterio",
+          "ref": "1 Co 15:51-53",
+          "tags": [
+           "Apocalipsis 11",
+           "1 Tesalonicenses"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "El misterio, 1 Co 15:51-53",
+          "pos": [
+           2080,
+           180
+          ],
+          "kicker": "Nodo 07 · 1 Co 15:51-53 · centro del caso",
+          "body": "<h2>A la final trompeta</h2>\n<p class=\"x-verse\">“He aquí, os digo un misterio: No todos dormiremos; pero todos seremos transformados, en un momento, en un abrir y cerrar de ojos, a la final trompeta; porque se tocará la trompeta, y los muertos serán resucitados incorruptibles, y nosotros seremos transformados.” <small>1 Co 15:51-52</small></p>\n<p>La final trompeta conecta con la séptima de Ap 11:15 y con 1 Ts 4:16.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co1-victoria",
+          "cat": "Celebración",
+          "num": "Nodo 08",
+          "title": "Victoria sobre la muerte",
+          "ref": "1 Co 15:54-58",
+          "tags": [
+           "1 Corintios"
+          ],
+          "c": "c-celebracion",
+          "aria": "Victoria sobre la muerte, 1 Co 15:54-58",
+          "pos": [
+           2120,
+           780
+          ],
+          "kicker": "Nodo 08 · 1 Co 15:54-58",
+          "body": "<h2>Firmes y abundando</h2>\n<p>“Sorbida es la muerte en victoria” (15:54). La respuesta: “estad firmes y constantes, creciendo en la obra del Señor siempre, sabiendo que vuestro trabajo en el Señor no es en vano” (15:58).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c06",
+       "n": "06",
+       "title": "2 Corintios",
+       "summary": "Expediente con 6 nodos",
+       "xref": [
+        {
+         "label": "1 Corintios › El cuerpo resucitado",
+         "to": [
+          "b-evangelios",
+          "c05",
+          "co1-cuerpo"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-2cor",
+        "set": "e9",
+        "rich": true,
+        "title": "2 Corintios 5",
+        "subtitle": "Expediente 06 · 2 Corintios · <b>Lectura postribulacional</b>",
+        "links": [
+         [
+          "co2-contexto",
+          "co2-invisible"
+         ],
+         [
+          "co2-contexto",
+          "co2-tienda"
+         ],
+         [
+          "co2-invisible",
+          "co2-tienda"
+         ],
+         [
+          "co2-tienda",
+          "co2-confianza"
+         ],
+         [
+          "co2-confianza",
+          "co2-tribunal"
+         ],
+         [
+          "co2-tribunal",
+          "co2-embajadores"
+         ],
+         [
+          "co2-confianza",
+          "co2-embajadores"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "co2-contexto",
+          "cat": "Historia",
+          "num": "Nodo 01",
+          "title": "Escrito bajo persecución",
+          "ref": "2 Co 4:16-18",
+          "tags": [
+           "Persecución"
+          ],
+          "c": "c-historia",
+          "aria": "Escrito bajo persecución, 2 Co 4:16-18",
+          "pos": [
+           120,
+           240
+          ],
+          "kicker": "Nodo 01 · 2 Co 4:16-18",
+          "body": "<h2>No desmayamos</h2>\n<p>Pablo escribe para que no temamos la persecución ni el martirio. El pasaje sigue desde 4:16: la tribulación “produce en nosotros un cada vez más excelente y eterno peso de gloria” (4:17).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co2-invisible",
+          "cat": "Reino",
+          "num": "Nodo 02",
+          "title": "Lo que no se ve",
+          "ref": "2 Co 4:18",
+          "tags": [
+           "Apocalipsis 4"
+          ],
+          "c": "c-reino",
+          "aria": "Lo que no se ve, 2 Co 4:18",
+          "pos": [
+           200,
+           800
+          ],
+          "kicker": "Nodo 02 · 2 Co 4:18",
+          "body": "<h2>Mirar lo eterno</h2>\n<p>Lo que no se ve: la Nueva Jerusalén, el trono (Ap 4), las recompensas, la tierra restaurada del milenio, el río y el árbol de la vida.</p>\n<p>Lo que se ve: el maltrato, la demora, la incertidumbre, los obstáculos. No es ahí donde ponemos la mirada.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co2-tienda",
+          "cat": "Argumento",
+          "num": "Nodo 03 · centro del caso",
+          "title": "Tienda y edificio",
+          "ref": "2 Co 5:1-5",
+          "tags": [
+           "2 Corintios"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "Tienda y edificio, 2 Co 5:1-5",
+          "pos": [
+           720,
+           260
+          ],
+          "kicker": "Nodo 03 · 2 Co 5:1-5 · centro del caso",
+          "body": "<h2>Dos moradas</h2>\n<p>Nuestro cuerpo actual es una tienda: morada temporal que puede deshacerse (martirio, enfermedad, vejez).</p>\n<p>“Tenemos de Dios un edificio, una casa no hecha de manos, eterna, en los cielos” (5:1): el cuerpo glorificado. Pablo lo dice en presente porque es seguro.</p>\n<p>Gemimos anhelándolo, no desesperados sino deseando la plenitud. No queremos ser hallados “desnudos”, sin cuerpo, como enseñaba la idea griega.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co2-confianza",
+          "cat": "Argumento",
+          "num": "Nodo 04",
+          "title": "Confiados",
+          "ref": "2 Co 5:6-8 · Fil 1:21-23",
+          "tags": [
+           "Filipenses 1"
+          ],
+          "c": "c-argumento",
+          "aria": "Confiados, 2 Co 5:6-8 · Fil 1:21-23",
+          "pos": [
+           1240,
+           760
+          ],
+          "kicker": "Nodo 04 · 2 Co 5:6-8 · Fil 1:21-23",
+          "body": "<h2>Más que el miedo al martirio</h2>\n<p>“Andamos por fe, no por vista” (5:7). “Más quisiéramos estar ausentes del cuerpo, y presentes al Señor” (5:8).</p>\n<p>El clamor de Pablo, “para mí el vivir es Cristo, y el morir es ganancia” (Fil 1:21), va a ser el clamor de la iglesia del tiempo del fin.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co2-tribunal",
+          "cat": "Juicio",
+          "num": "Nodo 05",
+          "title": "El tribunal de Cristo",
+          "ref": "2 Co 5:9-11",
+          "tags": [
+           "2 Corintios"
+          ],
+          "c": "c-juicio",
+          "aria": "El tribunal de Cristo, 2 Co 5:9-11",
+          "pos": [
+           1720,
+           300
+          ],
+          "kicker": "Nodo 05 · 2 Co 5:9-11",
+          "body": "<h2>Agradarle</h2>\n<p>“Es necesario que todos nosotros comparezcamos ante el tribunal de Cristo, para que cada uno reciba según lo que haya hecho” (5:10). Por eso procuramos serle agradables (5:9).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "co2-embajadores",
+          "cat": "Llamado",
+          "num": "Nodo 06",
+          "title": "Embajadores",
+          "ref": "2 Co 5:12-21",
+          "tags": [
+           "2 Corintios"
+          ],
+          "c": "c-celebracion",
+          "aria": "Embajadores, 2 Co 5:12-21",
+          "pos": [
+           1780,
+           860
+          ],
+          "kicker": "Nodo 06 · 2 Co 5:12-21",
+          "body": "<h2>El llamado</h2>\n<p>El estilo de vida, la confianza y el llamado de los embajadores en nombre de Cristo: “Reconciliaos con Dios” (5:20).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c07",
+       "n": "07",
+       "title": "1 Timoteo",
+       "summary": "Expediente con 6 nodos",
+       "xref": [
+        {
+         "label": "2 Tesalonicenses › La apostasía",
+         "to": [
+          "b-evangelios",
+          "c04",
+          "ts2-apostasia"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-1tim",
+        "set": "e10",
+        "rich": true,
+        "title": "1 Timoteo 4",
+        "subtitle": "Expediente 07 · 1 Timoteo · <b>Lectura postribulacional</b>",
+        "links": [
+         [
+          "ti1-espiritu",
+          "ti1-apostasia"
+         ],
+         [
+          "ti1-apostasia",
+          "ti1-enganadores"
+         ],
+         [
+          "ti1-apostasia",
+          "ti1-conciencia"
+         ],
+         [
+          "ti1-enganadores",
+          "ti1-prohibiciones"
+         ],
+         [
+          "ti1-conciencia",
+          "ti1-prohibiciones"
+         ],
+         [
+          "ti1-prohibiciones",
+          "ti1-bueno"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "ti1-espiritu",
+          "cat": "Profecía",
+          "num": "Nodo 01",
+          "title": "El Espíritu dice claramente",
+          "ref": "1 Ti 4:1",
+          "tags": [
+           "2 Timoteo 3",
+           "2 Tesalonicenses"
+          ],
+          "c": "c-profecia",
+          "aria": "El Espíritu dice claramente, 1 Ti 4:1",
+          "pos": [
+           120,
+           280
+          ],
+          "kicker": "Nodo 01 · 1 Ti 4:1",
+          "body": "<h2>Una profecía urgente</h2>\n<p class=\"x-verse\">“Pero el Espíritu dice claramente que en los postreros tiempos algunos apostatarán de la fe, escuchando a espíritus engañadores y a doctrinas de demonios.” <small>1 Ti 4:1</small></p>\n<p>Pablo vuelve sobre esto en 2 Ti 3:1 y en 2 Ts 2:3.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti1-apostasia",
+          "cat": "Señal",
+          "num": "Nodo 02 · centro del caso",
+          "title": "La gran apostasía",
+          "ref": "1 Ti 4:1",
+          "tags": [
+           "2 Pedro 2",
+           "Hebreos"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "La gran apostasía, 1 Ti 4:1",
+          "pos": [
+           640,
+           180
+          ],
+          "kicker": "Nodo 02 · 1 Ti 4:1 · centro del caso",
+          "body": "<h2>Apartarse de la fe</h2>\n<p>La realidad más trágica del tiempo del fin: muchos van a soltar su fe en Jesús.</p>\n<ul>\n<li>Por entregarse al pecado.</li>\n<li>Por miedo a la persecución.</li>\n<li>Por incredulidad con apariencia de “honestidad intelectual”: primero descartan los juicios de Dios, después la autoridad de la Escritura, y terminan negando que Jesús sea el único camino.</li>\n</ul>\n<p>Otras referencias: 2 Ti 3:1-7; 4:3-5; 2 P 2:1-3; He 3:12; 6:4-6.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti1-enganadores",
+          "cat": "Señal",
+          "num": "Nodo 03",
+          "title": "Espíritus engañadores",
+          "ref": "1 Ti 4:1 · Dn 8:23",
+          "tags": [
+           "Daniel",
+           "Mateo 24"
+          ],
+          "c": "c-senal",
+          "aria": "Espíritus engañadores, 1 Ti 4:1 · Dn 8:23",
+          "pos": [
+           700,
+           760
+          ],
+          "kicker": "Nodo 03 · 1 Ti 4:1 · Dn 8:23",
+          "body": "<h2>Más advertencias sobre engaño que sobre persecución</h2>\n<p>Son demonios que seducen y obran a través de personas. Antes de la venida, el pecado y el engaño llegan a su punto más alto: “cuando los transgresores lleguen al colmo, se levantará un rey altivo de rostro” (Dn 8:23).</p>\n<p>Jesús y Pablo advirtieron más sobre el engaño que sobre la tribulación (Mt 24:4-5, 11, 24; 2 Ts 2:3-10).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti1-conciencia",
+          "cat": "Señal",
+          "num": "Nodo 04",
+          "title": "Conciencia cauterizada",
+          "ref": "1 Ti 4:2",
+          "tags": [
+           "1 Timoteo"
+          ],
+          "c": "c-senal",
+          "aria": "Conciencia cauterizada, 1 Ti 4:2",
+          "pos": [
+           1180,
+           320
+          ],
+          "kicker": "Nodo 04 · 1 Ti 4:2",
+          "body": "<h2>Mentira con hipocresía</h2>\n<p>Mienten sobre la Palabra, la felicidad y la libertad. La conciencia queda como marcada con hierro candente: ya no responde a Dios.</p>\n<p>Posiblemente la apostasía no sea volverse ateos, sino adoptar otras espiritualidades, muchas veces con lenguaje no religioso.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti1-prohibiciones",
+          "cat": "Señal",
+          "num": "Nodo 05",
+          "title": "Prohiben casarse y comer",
+          "ref": "1 Ti 4:3",
+          "tags": [
+           "1 Timoteo"
+          ],
+          "c": "c-senal",
+          "aria": "Prohiben casarse y comer, 1 Ti 4:3",
+          "pos": [
+           1240,
+           880
+          ],
+          "kicker": "Nodo 05 · 1 Ti 4:3",
+          "body": "<h2>Dos señales</h2>\n<p>Prohibir el matrimonio y mandar abstenerse de alimentos. Bickle lo relaciona con la redefinición del matrimonio y la sexualidad en la cultura y la ley, y con prácticas de negar la comida para buscar “iluminación”.</p>\n<p>Ambas cosas aparecen ligadas a los espíritus engañadores.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti1-bueno",
+          "cat": "Argumento",
+          "num": "Nodo 06",
+          "title": "Todo lo que Dios creó es bueno",
+          "ref": "1 Ti 4:4-5",
+          "tags": [
+           "Génesis 1"
+          ],
+          "c": "c-argumento",
+          "aria": "Todo lo que Dios creó es bueno, 1 Ti 4:4-5",
+          "pos": [
+           1720,
+           560
+          ],
+          "kicker": "Nodo 06 · 1 Ti 4:4-5",
+          "body": "<h2>Santificado por la Palabra y la oración</h2>\n<p>La creación es buena (Gn 1:31) y se recibe con acción de gracias. Pablo no promueve un ascetismo religioso: lo que Dios creó es bueno usado como Él quiso.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c08",
+       "n": "08",
+       "title": "2 Timoteo",
+       "summary": "Expediente con 8 nodos",
+       "xref": [
+        {
+         "label": "1 Timoteo › La gran apostasía",
+         "to": [
+          "b-evangelios",
+          "c07",
+          "ti1-apostasia"
+         ]
+        }
+       ],
+       "children": {
+        "id": "m-2tim",
+        "set": "e11",
+        "rich": true,
+        "title": "2 Timoteo 3–4",
+        "subtitle": "Expediente 08 · 2 Timoteo · <b>Lectura postribulacional</b>",
+        "links": [
+         [
+          "ti2-peligrosos",
+          "ti2-veinte"
+         ],
+         [
+          "ti2-peligrosos",
+          "ti2-maestros"
+         ],
+         [
+          "ti2-veinte",
+          "ti2-perseguidos"
+         ],
+         [
+          "ti2-maestros",
+          "ti2-perseguidos"
+         ],
+         [
+          "ti2-perseguidos",
+          "ti2-escritura"
+         ],
+         [
+          "ti2-escritura",
+          "ti2-predica"
+         ],
+         [
+          "ti2-predica",
+          "ti2-comezon"
+         ],
+         [
+          "ti2-comezon",
+          "ti2-corona"
+         ],
+         [
+          "ti2-maestros",
+          "ti2-comezon"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "ti2-peligrosos",
+          "cat": "Profecía",
+          "num": "Nodo 01",
+          "title": "Tiempos peligrosos",
+          "ref": "2 Ti 3:1",
+          "tags": [
+           "2 Pedro 3"
+          ],
+          "c": "c-profecia",
+          "aria": "Tiempos peligrosos, 2 Ti 3:1",
+          "pos": [
+           120,
+           240
+          ],
+          "kicker": "Nodo 01 · 2 Ti 3:1",
+          "body": "<h2>Sepan esto</h2>\n<p class=\"x-verse\">“También debes saber esto: que en los postreros días vendrán tiempos peligrosos.” <small>2 Ti 3:1</small></p>\n<p>“Los postreros días” en 2 Ti 3:1 y 2 P 3:3 apuntan a la generación del regreso de Jesús; en Hch 2:17 y He 1:2, a toda la era desde la resurrección.</p>\n<p>Pablo habla en futuro (“vendrán”, “serán”, “irán de mal en peor”, 3:13): no anima a esperar que el mal disminuya antes de la venida.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-veinte",
+          "cat": "Señal",
+          "num": "Nodo 02 · centro del caso",
+          "title": "20 rasgos",
+          "ref": "2 Ti 3:2-5",
+          "tags": [
+           "2 Timoteo"
+          ],
+          "c": "x-gold",
+          "center": true,
+          "aria": "20 rasgos, 2 Ti 3:2-5",
+          "pos": [
+           200,
+           820
+          ],
+          "kicker": "Nodo 02 · 2 Ti 3:2-5 · centro del caso",
+          "body": "<h2>Cómo será la gente</h2>\n<ol>\n<li>Amadores de sí mismos</li>\n<li>Avaros</li>\n<li>Vanagloriosos</li>\n<li>Soberbios</li>\n<li>Blasfemos</li>\n<li>Desobedientes a los padres</li>\n<li>Ingratos</li>\n<li>Impíos</li>\n<li>Sin afecto natural</li>\n<li>Implacables</li>\n<li>Calumniadores</li>\n<li>Intemperantes</li>\n<li>Crueles</li>\n<li>Aborrecedores de lo bueno</li>\n<li>Traidores</li>\n<li>Impetuosos</li>\n<li>Infatuados</li>\n<li>Amadores de los deleites</li>\n<li>Más que de Dios</li>\n<li>Con apariencia de piedad, negando su poder</li>\n</ol>\n<p>Respuesta: vivir en el espíritu contrario (Sermón del Monte) y estar alertados, no sorprendidos ni ofendidos. “A éstos evita” (3:5): se refiere a los que apostatan y atacan a los creyentes.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-maestros",
+          "cat": "Señal",
+          "num": "Nodo 03",
+          "title": "Falsos maestros",
+          "ref": "2 Ti 3:6-9",
+          "tags": [
+           "Éxodo 7"
+          ],
+          "c": "c-senal",
+          "aria": "Falsos maestros, 2 Ti 3:6-9",
+          "pos": [
+           720,
+           300
+          ],
+          "kicker": "Nodo 03 · 2 Ti 3:6-9",
+          "body": "<h2>Se meten en las casas</h2>\n<p>Entran con engaño y cautivan a personas vulnerables, cargadas de culpa, con experiencias espirituales “novedosas”.</p>\n<p>Como Janes y Jambres, los magos que resistieron a Moisés (Éx 7:11).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-perseguidos",
+          "cat": "Señal",
+          "num": "Nodo 04",
+          "title": "Serán perseguidos",
+          "ref": "2 Ti 3:10-13",
+          "tags": [
+           "Persecución"
+          ],
+          "c": "c-senal",
+          "aria": "Serán perseguidos, 2 Ti 3:10-13",
+          "pos": [
+           760,
+           880
+          ],
+          "kicker": "Nodo 04 · 2 Ti 3:10-13",
+          "body": "<h2>De mal en peor</h2>\n<p>“Todos los que quieren vivir piadosamente en Cristo Jesús padecerán persecución; mas los malos hombres y los engañadores irán de mal en peor” (3:12-13).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-escritura",
+          "cat": "Argumento",
+          "num": "Nodo 05",
+          "title": "Toda la Escritura",
+          "ref": "2 Ti 3:14-17",
+          "tags": [
+           "2 Timoteo"
+          ],
+          "c": "c-argumento",
+          "aria": "Toda la Escritura, 2 Ti 3:14-17",
+          "pos": [
+           1260,
+           320
+          ],
+          "kicker": "Nodo 05 · 2 Ti 3:14-17",
+          "body": "<h2>El ancla</h2>\n<p>“Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia” (3:16). Permanecer en la Palabra es lo que sostiene frente al engaño.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-predica",
+          "cat": "Argumento",
+          "num": "Nodo 06",
+          "title": "Predica la Palabra",
+          "ref": "2 Ti 4:1-2",
+          "tags": [
+           "2 Timoteo"
+          ],
+          "c": "c-argumento",
+          "aria": "Predica la Palabra, 2 Ti 4:1-2",
+          "pos": [
+           1300,
+           900
+          ],
+          "kicker": "Nodo 06 · 2 Ti 4:1-2",
+          "body": "<h2>A tiempo y fuera de tiempo</h2>\n<p>Encargo solemne delante de Dios y de Cristo, “que juzgará a los vivos y a los muertos en su manifestación”.</p>\n<p>Cinco imperativos: predica, insta, redarguye, reprende, exhorta.</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-comezon",
+          "cat": "Señal",
+          "num": "Nodo 07",
+          "title": "Comezón de oír",
+          "ref": "2 Ti 4:3-5",
+          "tags": [
+           "2 Timoteo"
+          ],
+          "c": "c-senal",
+          "aria": "Comezón de oír, 2 Ti 4:3-5",
+          "pos": [
+           1800,
+           360
+          ],
+          "kicker": "Nodo 07 · 2 Ti 4:3-5",
+          "body": "<h2>No soportarán la sana doctrina</h2>\n<p>“Teniendo comezón de oír, se amontonarán maestros conforme a sus propias concupiscencias” (4:3). La sana doctrina enseña dominio propio, humildad y pureza: no rasca esa comezón.</p>\n<p>A Timoteo: “Sé sobrio en todo, soporta las aflicciones, haz obra de evangelista” (4:5).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "ti2-corona",
+          "cat": "Reino",
+          "num": "Nodo 08",
+          "title": "La corona de justicia",
+          "ref": "2 Ti 4:6-8",
+          "tags": [
+           "Venida"
+          ],
+          "c": "c-reino",
+          "aria": "La corona de justicia, 2 Ti 4:6-8",
+          "pos": [
+           1860,
+           920
+          ],
+          "kicker": "Nodo 08 · 2 Ti 4:6-8",
+          "body": "<h2>Terminar la carrera</h2>\n<p>“He peleado la buena batalla, he acabado la carrera, he guardado la fe” (4:7).</p>\n<p>Corona en griego: diadema (del que gobierna) y stephanos (del vencedor en los juegos). La corona de justicia es para “todos los que aman su venida” (4:8).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         }
+        ]
+       }
+      },
+      {
+       "id": "c09",
+       "n": "09",
+       "title": "2 Pedro 3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c10",
+       "n": "10",
+       "title": "2 Pedro 3 (II)",
+       "summary": "En estudio"
+      },
+      {
+       "id": "p-mt25",
+       "title": "Mateo 25",
+       "ref": "Mt 25",
+       "summary": "Lección en español · PDF #135"
+      },
+      {
+       "id": "p-mr13",
+       "title": "Marcos 13",
+       "ref": "Mr 13",
+       "summary": "Lección en español · PDF #136"
+      },
+      {
+       "id": "p-lc17",
+       "title": "Lucas 17",
+       "ref": "Lc 17",
+       "summary": "Lección en español · PDF #137"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-isaias",
+    "title": "Isaías",
+    "c": "c-profecia",
+    "pos": [
+     640,
+     560
+    ],
+    "children": {
+     "id": "m-isaias",
+     "title": "Isaías",
+     "nodes": [
+      {
+       "id": "c11",
+       "n": "11",
+       "title": "Is 2",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c12",
+       "n": "12",
+       "title": "Is 3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c13",
+       "n": "13",
+       "title": "Is 4",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c15",
+       "n": "15",
+       "title": "Is 10",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c16",
+       "n": "16",
+       "title": "Is 11",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c17",
+       "n": "17",
+       "title": "Is 12",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c18",
+       "n": "18",
+       "title": "Is 13",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c19",
+       "n": "19",
+       "title": "Is 14",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c20",
+       "n": "20",
+       "title": "Is 18",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c21",
+       "n": "21",
+       "title": "Is 19",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c22",
+       "n": "22",
+       "title": "Introducción al mini Apocalipsis",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c23",
+       "n": "23",
+       "title": "Is 24",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c24",
+       "n": "24",
+       "title": "Is 25",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c25",
+       "n": "25",
+       "title": "Is 26",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c26",
+       "n": "26",
+       "title": "Is 27",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c27",
+       "n": "27",
+       "title": "Esperanza en el juicio venidero",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c28",
+       "n": "28",
+       "title": "Is 28",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c29",
+       "n": "29",
+       "title": "Is 29",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c30",
+       "n": "30",
+       "title": "Is 30 I",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c31",
+       "n": "31",
+       "title": "Is 30 II",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c32",
+       "n": "32",
+       "title": "Is 32",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c33",
+       "n": "33",
+       "title": "Is 33",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c34",
+       "n": "34",
+       "title": "El mensaje dulce y amargo",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c36",
+       "n": "36",
+       "title": "Is 35",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c37",
+       "n": "37",
+       "title": "Is 40 I",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c38",
+       "n": "38",
+       "title": "Is 40 II",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c39",
+       "n": "39",
+       "title": "Is 41",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c40",
+       "n": "40",
+       "title": "Is 42",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c41",
+       "n": "41",
+       "title": "Is 43",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c42",
+       "n": "42",
+       "title": "Is 44",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c43",
+       "n": "43",
+       "title": "Is 49 I",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c44",
+       "n": "44",
+       "title": "Is 49 II",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c45",
+       "n": "45",
+       "title": "Is 51",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c46",
+       "n": "46",
+       "title": "Is 52",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c47",
+       "n": "47",
+       "title": "Is 54",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c48",
+       "n": "48",
+       "title": "Is 55",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c49",
+       "n": "49",
+       "title": "Is 56–57",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c50",
+       "n": "50",
+       "title": "Is 58–59",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c51",
+       "n": "51",
+       "title": "Is 60",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c52",
+       "n": "52",
+       "title": "Is 61",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c53",
+       "n": "53",
+       "title": "Is 62",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c54",
+       "n": "54",
+       "title": "Is 63–64",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c56",
+       "n": "56",
+       "title": "Is 66",
+       "summary": "En estudio"
+      },
+      {
+       "id": "p-is9",
+       "title": "Isaías 9",
+       "ref": "Is 9",
+       "summary": "Lección en español · PDF #138"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-menores",
+    "title": "Profetas menores",
+    "c": "c-senal",
+    "pos": [
+     1100,
+     200
+    ],
+    "children": {
+     "id": "m-menores",
+     "title": "Profetas menores",
+     "route": "e4",
+     "nodes": [
+      {
+       "id": "c57",
+       "n": "57",
+       "title": "Joel 2",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c58",
+       "n": "58",
+       "title": "Joel 3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c59",
+       "n": "59",
+       "title": "Oseas 1",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c60",
+       "n": "60",
+       "title": "Oseas 2–3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c61",
+       "n": "61",
+       "title": "Oseas 14 I",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c62",
+       "n": "62",
+       "title": "Oseas 14 II",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c63",
+       "n": "63",
+       "title": "Oseas: otros pasajes",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c64",
+       "n": "64",
+       "title": "Amós 9",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c65",
+       "n": "65",
+       "title": "Abdías",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c66",
+       "n": "66",
+       "title": "Nahúm 1",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c67",
+       "n": "67",
+       "title": "Miqueas 4",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c68",
+       "n": "68",
+       "title": "Miqueas 5",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c69",
+       "n": "69",
+       "title": "Miqueas 7",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c71",
+       "n": "71",
+       "title": "Habacuc 3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c72",
+       "n": "72",
+       "title": "Sofonías 3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c73",
+       "n": "73",
+       "title": "Sofonías 1",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c74",
+       "n": "74",
+       "title": "Sofonías 2",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c75",
+       "n": "75",
+       "title": "Zacarías 1",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c76",
+       "n": "76",
+       "title": "Zacarías 2",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c77",
+       "n": "77",
+       "title": "Zacarías 3",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c78",
+       "n": "78",
+       "title": "Zacarías 4",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c79",
+       "n": "79",
+       "title": "Zacarías 5",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c80",
+       "n": "80",
+       "title": "Zacarías 6",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c81",
+       "n": "81",
+       "title": "Zacarías 7",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c82",
+       "n": "82",
+       "title": "Zacarías 8",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c83",
+       "n": "83",
+       "title": "Zacarías 9",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c84",
+       "n": "84",
+       "title": "Zacarías 10",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c85",
+       "n": "85",
+       "title": "Zacarías 11",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c86",
+       "n": "86",
+       "title": "Zacarías 12",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c87",
+       "n": "87",
+       "title": "Zacarías 13",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c88",
+       "n": "88",
+       "title": "Zacarías 14",
+       "summary": "En estudio",
+       "xref": [
+        {
+         "label": "La Venida › Sus pies sobre el monte",
+         "to": [
+          "b-apocalipsis",
+          "lavenida",
+          "ap10"
+         ]
+        }
+       ]
+      },
+      {
+       "id": "r-zacarias",
+       "n": "Recorrido",
+       "title": "Recorrido · Lugares de Zacarías",
+       "summary": "9 paradas en el mapa",
+       "c": "x-gold",
+       "openRoute": true
+      },
+      {
+       "id": "p-mal3",
+       "title": "Malaquías 3",
+       "ref": "Mal 3",
+       "summary": "Lección en español · PDF #140"
+      },
+      {
+       "id": "p-mal4",
+       "title": "Malaquías 4",
+       "ref": "Mal 4",
+       "summary": "Lección en español · PDF #141"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-ezequiel",
+    "title": "Ezequiel",
+    "c": "c-lugar",
+    "pos": [
+     1200,
+     880
+    ],
+    "children": {
+     "id": "m-ezequiel",
+     "title": "Ezequiel",
+     "nodes": [
+      {
+       "id": "c89",
+       "n": "89",
+       "title": "Ez 33",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c90",
+       "n": "90",
+       "title": "Ez 34",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c91",
+       "n": "91",
+       "title": "Ez 20",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c92",
+       "n": "92",
+       "title": "Ez 36",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c93",
+       "n": "93",
+       "title": "Ez 37",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c94",
+       "n": "94",
+       "title": "Ez 38",
+       "summary": "En estudio",
+       "xref": [
+        {
+         "label": "La Venida › Armagedón",
+         "to": [
+          "b-apocalipsis",
+          "lavenida",
+          "ap9"
+         ]
+        }
+       ]
+      },
+      {
+       "id": "c95",
+       "n": "95",
+       "title": "Ez 39",
+       "summary": "En estudio",
+       "xref": [
+        {
+         "label": "La Venida › Armagedón",
+         "to": [
+          "b-apocalipsis",
+          "lavenida",
+          "ap9"
+         ]
+        }
+       ]
+      },
+      {
+       "id": "c96",
+       "n": "96",
+       "title": "Ez 40–48 · Reino y Templo milenario",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c97",
+       "n": "97",
+       "title": "Ez 40–42",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c98",
+       "n": "98",
+       "title": "Ez 43",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c99",
+       "n": "99",
+       "title": "Ez 44–46",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c100",
+       "n": "100",
+       "title": "Ez 47–48",
+       "summary": "En estudio"
+      },
+      {
+       "id": "p-ez35",
+       "title": "Ezequiel 35",
+       "ref": "Ez 35",
+       "summary": "Lección en español · PDF #139"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-salmos",
+    "title": "Salmos",
+    "c": "c-celebracion",
+    "pos": [
+     700,
+     1080
+    ],
+    "children": {
+     "id": "m-salmos",
+     "title": "Salmos",
+     "nodes": [
+      {
+       "id": "c101",
+       "n": "101",
+       "title": "Sal 2",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c102",
+       "n": "102",
+       "title": "Sal 24",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c103",
+       "n": "103",
+       "title": "Sal 118",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c104",
+       "n": "104",
+       "title": "Sal 45",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c105",
+       "n": "105",
+       "title": "Sal 46",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c106",
+       "n": "106",
+       "title": "Sal 47",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c107",
+       "n": "107",
+       "title": "Sal 48",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c108",
+       "n": "108",
+       "title": "Sal 50",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c109",
+       "n": "109",
+       "title": "Sal 53",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c110",
+       "n": "110",
+       "title": "Sal 68 I",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c111",
+       "n": "111",
+       "title": "Sal 68 II",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c112",
+       "n": "112",
+       "title": "Sal 67",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c113",
+       "n": "113",
+       "title": "Sal 72",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c114",
+       "n": "114",
+       "title": "Sal 75",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c115",
+       "n": "115",
+       "title": "Sal 83",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c116",
+       "n": "116",
+       "title": "Sal 93",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c117",
+       "n": "117",
+       "title": "Sal 94",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c118",
+       "n": "118",
+       "title": "Sal 96",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c119",
+       "n": "119",
+       "title": "Sal 97",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c120",
+       "n": "120",
+       "title": "Sal 98",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c121",
+       "n": "121",
+       "title": "Sal 99",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c121b",
+       "n": "121b",
+       "title": "Sal 110",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c123",
+       "n": "123",
+       "title": "Sal 132",
+       "summary": "En estudio"
+      },
+      {
+       "id": "p-sal14",
+       "title": "Salmo 14",
+       "ref": "Sal 14",
+       "summary": "Lección en español · PDF #142"
+      },
+      {
+       "id": "p-sal58",
+       "title": "Salmo 58",
+       "ref": "Sal 58",
+       "summary": "Lección en español · PDF #143"
+      },
+      {
+       "id": "p-sal79",
+       "title": "Salmo 79",
+       "ref": "Sal 79",
+       "summary": "Lección en español · PDF #144"
+      },
+      {
+       "id": "p-sal80",
+       "title": "Salmo 80",
+       "ref": "Sal 80",
+       "summary": "Lección en español · PDF #145"
+      },
+      {
+       "id": "p-sal85",
+       "title": "Salmo 85",
+       "ref": "Sal 85",
+       "summary": "Lección en español · PDF #146"
+      },
+      {
+       "id": "p-sal87",
+       "title": "Salmo 87",
+       "ref": "Sal 87",
+       "summary": "Lección en español · PDF #147"
+      },
+      {
+       "id": "p-sal102",
+       "title": "Salmo 102",
+       "ref": "Sal 102",
+       "summary": "Lección en español · PDF #148"
+      },
+      {
+       "id": "p-sal147",
+       "title": "Salmo 147",
+       "ref": "Sal 147",
+       "summary": "Lección en español · PDF #149"
+      },
+      {
+       "id": "p-sal149",
+       "title": "Salmo 149",
+       "ref": "Sal 149",
+       "summary": "Lección en español · PDF #150"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-ley",
+    "title": "La Ley",
+    "c": "c-historia",
+    "pos": [
+     180,
+     880
+    ],
+    "children": {
+     "id": "m-ley",
+     "title": "La Ley",
+     "nodes": [
+      {
+       "id": "c124",
+       "n": "124",
+       "title": "Deut 28 y Lev 26",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c125",
+       "n": "125",
+       "title": "Deut 30",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c126",
+       "n": "126",
+       "title": "Deut 32",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c127",
+       "n": "127",
+       "title": "Números 23",
+       "summary": "En estudio"
+      },
+      {
+       "id": "c128",
+       "n": "128",
+       "title": "Números 24",
+       "summary": "En estudio"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-daniel",
+    "title": "Daniel",
+    "c": "c-evento",
+    "pos": [
+     1620,
+     520
+    ],
+    "children": {
+     "id": "m-daniel",
+     "title": "Daniel",
+     "kind": "Estudio",
+     "route": "e3",
+     "nodes": [
+      {
+       "id": "daniel-fin",
+       "n": "01",
+       "title": "Daniel — Entendiendo los tiempos finales",
+       "summary": "En estudio"
+      },
+      {
+       "id": "r-daniel",
+       "n": "Recorrido",
+       "title": "Recorrido · Lugares de Daniel",
+       "summary": "7 paradas en el mapa",
+       "c": "x-gold",
+       "openRoute": true
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-apocalipsis",
+    "title": "Apocalipsis",
+    "c": "c-juicio",
+    "center": true,
+    "pos": [
+     2060,
+     240
+    ],
+    "children": {
+     "id": "m-apocalipsis",
+     "title": "Apocalipsis",
+     "kind": "Expediente",
+     "nodes": [
+      {
+       "id": "lavenida",
+       "n": "01",
+       "title": "La Venida de Jesús",
+       "summary": "Expediente con 13 nodos",
+       "children": {
+        "id": "m-lavenida",
+        "set": "e2",
+        "rich": true,
+        "title": "La Venida de Jesús",
+        "subtitle": "Expediente 02 · Apocalipsis · <b>La Venida</b>",
+        "intro": "La venida visible de Cristo después de la tribulación: la Iglesia la atraviesa y es reunida a la final trompeta.",
+        "timeline": {
+         "title": "Línea de tiempo",
+         "marks": [
+          {
+           "target": "ap1",
+           "label": "Tribulación"
+          },
+          {
+           "target": "ap2",
+           "label": "Señales cósmicas"
+          },
+          {
+           "target": "ap5",
+           "label": "Final trompeta y reunión"
+          },
+          {
+           "target": "ap8",
+           "label": "Venida en gloria",
+           "gold": true
+          },
+          {
+           "target": "ap9",
+           "label": "Armagedón"
+          },
+          {
+           "target": "ap11",
+           "label": "Satanás atado"
+          },
+          {
+           "target": "ap13",
+           "label": "Milenio"
+          }
+         ]
+        },
+        "links": [
+         [
+          "ap1",
+          "ap2"
+         ],
+         [
+          "ap1",
+          "ap3"
+         ],
+         [
+          "ap2",
+          "ap3"
+         ],
+         [
+          "ap3",
+          "ap8"
+         ],
+         [
+          "ap4",
+          "ap5"
+         ],
+         [
+          "ap1",
+          "ap5"
+         ],
+         [
+          "ap5",
+          "ap6"
+         ],
+         [
+          "ap5",
+          "ap12"
+         ],
+         [
+          "ap6",
+          "ap8"
+         ],
+         [
+          "ap7",
+          "ap8"
+         ],
+         [
+          "ap8",
+          "ap9"
+         ],
+         [
+          "ap8",
+          "ap10"
+         ],
+         [
+          "ap9",
+          "ap11"
+         ],
+         [
+          "ap11",
+          "ap13"
+         ],
+         [
+          "ap12",
+          "ap13"
+         ],
+         [
+          "ap4",
+          "ap13"
+         ]
+        ],
+        "nodes": [
+         {
+          "id": "ap1",
+          "cat": "Señal",
+          "num": "01",
+          "title": "Inmediatamente después de la tribulación",
+          "ref": "Mt 24:29-31",
+          "c": "c-senal",
+          "aria": "Inmediatamente después de la tribulación, Mt 24:29-31",
+          "pos": [
+           120,
+           260
+          ],
+          "kicker": "Nodo 01 · Mt 24:29-31",
+          "body": "<h2>Inmediatamente después de la tribulación</h2>\n<p class=\"x-verse\">“E inmediatamente después de la tribulación de aquellos días, el sol se oscurecerá, y la luna no dará su resplandor, y las estrellas caerán del cielo, y las potencias de los cielos serán conmovidas.” <small>Mt 24:29-31</small></p>\n<p>Jesús ubica su venida y la reunión de los escogidos después de la tribulación.</p>"
+         },
+         {
+          "id": "ap2",
+          "cat": "Señal",
+          "num": "02",
+          "title": "El sexto sello",
+          "ref": "Ap 6:12-17",
+          "c": "c-senal",
+          "aria": "El sexto sello, Ap 6:12-17",
+          "pos": [
+           560,
+           470
+          ],
+          "kicker": "Nodo 02 · Ap 6:12-17",
+          "body": "<h2>El sexto sello</h2>\n<p class=\"x-verse\">“Miré cuando abrió el sexto sello, y he aquí hubo un gran terremoto; y el sol se puso negro como tela de cilicio, y la luna se volvió toda como sangre” <small>Ap 6:12-17</small></p>\n<p>Las mismas señales de Mateo 24:29; los reyes huyen “del gran día de su ira” (6:17).</p>"
+         },
+         {
+          "id": "ap3",
+          "cat": "Venida",
+          "num": "03",
+          "title": "Viene con las nubes",
+          "ref": "Ap 1:7",
+          "c": "c-venida",
+          "aria": "Viene con las nubes, Ap 1:7",
+          "pos": [
+           980,
+           260
+          ],
+          "kicker": "Nodo 03 · Ap 1:7",
+          "body": "<h2>Viene con las nubes</h2>\n<p class=\"x-verse\">“He aquí que viene con las nubes, y todo ojo le verá, y los que le traspasaron; y todos los linajes de la tierra harán lamentación por él. Sí, amén.” <small>Ap 1:7</small></p>\n<p>Una venida pública y visible.</p>"
+         },
+         {
+          "id": "ap4",
+          "cat": "Venida",
+          "num": "04",
+          "title": "La séptima trompeta",
+          "ref": "Ap 11:15",
+          "c": "c-venida",
+          "aria": "La séptima trompeta, Ap 11:15",
+          "pos": [
+           160,
+           820
+          ],
+          "kicker": "Nodo 04 · Ap 11:15",
+          "body": "<h2>La séptima trompeta</h2>\n<p class=\"x-verse\">“El séptimo ángel tocó la trompeta, y hubo grandes voces en el cielo, que decían: Los reinos del mundo han venido a ser de nuestro Señor y de su Cristo; y él reinará por los siglos de los siglos.” <small>Ap 11:15</small></p>\n<p>La última trompeta del Apocalipsis.</p>"
+         },
+         {
+          "id": "ap5",
+          "cat": "Reunión",
+          "num": "05",
+          "title": "La final trompeta",
+          "ref": "1 Co 15:52 · 1 Ts 4:16-17",
+          "c": "c-reunion",
+          "aria": "La final trompeta, 1 Co 15:52; 1 Ts 4:16-17",
+          "pos": [
+           600,
+           960
+          ],
+          "kicker": "Nodo 05 · 1 Co 15:52; 1 Ts 4:16-17",
+          "body": "<h2>La final trompeta</h2>\n<p class=\"x-verse\">“en un momento, en un abrir y cerrar de ojos, a la final trompeta; porque se tocará la trompeta, y los muertos serán resucitados incorruptibles, y nosotros seremos transformados.” <small>1 Co 15:52</small></p>\n<p>Resurrección de los santos y reunión de la Iglesia con el Señor en el aire (1 Ts 4:16-17).</p>"
+         },
+         {
+          "id": "ap6",
+          "cat": "Reunión",
+          "num": "06",
+          "title": "La siega de la tierra",
+          "ref": "Ap 14:14-16",
+          "c": "c-reunion",
+          "aria": "La siega de la tierra, Ap 14:14-16",
+          "pos": [
+           1000,
+           760
+          ],
+          "kicker": "Nodo 06 · Ap 14:14-16",
+          "body": "<h2>La siega de la tierra</h2>\n<p class=\"x-verse\">“Miré, y he aquí una nube blanca; y sobre la nube uno sentado semejante al Hijo del Hombre, que tenía en la cabeza una corona de oro, y en la mano una hoz aguda.” <small>Ap 14:14-16</small></p>\n<p>El Hijo del Hombre recoge la cosecha de la tierra.</p>"
+         },
+         {
+          "id": "ap7",
+          "cat": "Celebración",
+          "num": "07",
+          "title": "Las bodas del Cordero",
+          "ref": "Ap 19:7-9",
+          "c": "c-celebracion",
+          "aria": "Las bodas del Cordero, Ap 19:7-9",
+          "pos": [
+           1420,
+           250
+          ],
+          "kicker": "Nodo 07 · Ap 19:7-9",
+          "body": "<h2>Las bodas del Cordero</h2>\n<p class=\"x-verse\">“Gocémonos y alegrémonos y démosle gloria; porque han llegado las bodas del Cordero, y su esposa se ha preparado.” <small>Ap 19:7-9</small></p>\n<p>La esposa vestida de lino fino, “las acciones justas de los santos” (19:8).</p>"
+         },
+         {
+          "id": "ap8",
+          "cat": "Venida",
+          "num": "08",
+          "title": "Fiel y Verdadero",
+          "ref": "Ap 19:11-16",
+          "c": "x-gold",
+          "center": true,
+          "lg": true,
+          "aria": "Fiel y Verdadero, Ap 19:11-16",
+          "pos": [
+           1420,
+           640
+          ],
+          "kicker": "Nodo 08 · Ap 19:11-16 · centro del caso",
+          "body": "<h2>Fiel y Verdadero</h2>\n<p class=\"x-verse\">“Entonces vi el cielo abierto; y he aquí un caballo blanco, y el que lo montaba se llamaba Fiel y Verdadero, y con justicia juzga y pelea.” <small>Ap 19:11-16</small></p>\n<p>Su nombre: “REY DE REYES Y SEÑOR DE SEÑORES” (19:16); los ejércitos celestiales lo siguen (19:14).</p>"
+         },
+         {
+          "id": "ap9",
+          "cat": "Juicio",
+          "num": "09",
+          "title": "Armagedón",
+          "ref": "Ap 16:16 · 19:19-21",
+          "photo": {
+           "src": "img/ob_megiddo.jpg",
+           "alt": "Tel Meguido sobre el valle de Jezreel",
+           "caption": "Tel Meguido · Foto: Liorca, CC BY-SA 4.0 · vía OpenBible.info"
+          },
+          "c": "c-juicio",
+          "aria": "Armagedón, Ap 16:16; 19:19-21",
+          "pos": [
+           1900,
+           230
+          ],
+          "kicker": "Nodo 09 · Ap 16:16; 19:19-21",
+          "body": "<h2>Armagedón</h2>\n<p class=\"x-verse\">“Y los reunió en el lugar que en hebreo se llama Armagedón.” <small>Ap 16:16</small></p>\n<p>Har Meguido, sobre el valle de Jezreel. La bestia y el falso profeta “fueron lanzados vivos dentro de un lago de fuego que arde con azufre” (19:20).</p>\n<p class=\"fineprint\">Foto: Tel Meguido · Liorca, CC BY-SA 4.0 · vía OpenBible.info.</p>"
+         },
+         {
+          "id": "ap10",
+          "cat": "Lugar",
+          "num": "10",
+          "title": "Sus pies sobre el monte",
+          "ref": "Zac 14:4 · Hch 1:11",
+          "photo": {
+           "src": "img/olivos2_s.jpg",
+           "alt": "Ladera del Monte de los Olivos",
+           "caption": "Monte de los Olivos · Foto: Wikimedia Commons"
+          },
+          "c": "c-lugar",
+          "aria": "Sus pies sobre el monte, Zac 14:4; Hch 1:11",
+          "pos": [
+           1880,
+           860
+          ],
+          "kicker": "Nodo 10 · Zac 14:4; Hch 1:11",
+          "body": "<h2>Sus pies sobre el monte</h2>\n<p class=\"x-verse\">“Y se afirmarán sus pies en aquel día sobre el monte de los Olivos, que está en frente de Jerusalén al oriente” <small>Zac 14:4</small></p>\n<p>Vuelve como se fue, al mismo monte (Hch 1:11).</p>\n<p class=\"fineprint\">Foto: Wikimedia Commons.</p>"
+         },
+         {
+          "id": "ap11",
+          "cat": "Juicio",
+          "num": "11",
+          "title": "Satanás atado",
+          "ref": "Ap 20:1-3",
+          "c": "c-juicio",
+          "aria": "Satanás atado, Ap 20:1-3",
+          "pos": [
+           2380,
+           300
+          ],
+          "kicker": "Nodo 11 · Ap 20:1-3",
+          "body": "<h2>Satanás atado</h2>\n<p class=\"x-verse\">“Y prendió al dragón, la serpiente antigua, que es el diablo y Satanás, y lo ató por mil años” <small>Ap 20:1-3</small></p>\n<p>Encerrado para que no engañe más a las naciones.</p>"
+         },
+         {
+          "id": "ap12",
+          "cat": "Reino",
+          "num": "12",
+          "title": "La primera resurrección",
+          "ref": "Ap 20:4-6",
+          "c": "c-reino",
+          "aria": "La primera resurrección, Ap 20:4-6",
+          "pos": [
+           1060,
+           1220
+          ],
+          "kicker": "Nodo 12 · Ap 20:4-6",
+          "body": "<h2>La primera resurrección</h2>\n<p class=\"x-verse\">“...y vivieron y reinaron con Cristo mil años... Esta es la primera resurrección.” <small>Ap 20:4-6</small></p>\n<p>Incluye a quienes “no habían adorado a la bestia ni a su imagen” (20:4).</p>"
+         },
+         {
+          "id": "ap13",
+          "cat": "Reino",
+          "num": "13",
+          "title": "El reino de mil años",
+          "ref": "Ap 20:6",
+          "c": "c-reino",
+          "aria": "El reino de mil años, Ap 20:6",
+          "pos": [
+           2420,
+           740
+          ],
+          "kicker": "Nodo 13 · Ap 20:6",
+          "body": "<h2>El reino de mil años</h2>\n<p class=\"x-verse\">“Bienaventurado y santo el que tiene parte en la primera resurrección; la segunda muerte no tiene potestad sobre éstos, sino que serán sacerdotes de Dios y de Cristo, y reinarán con él mil años.” <small>Ap 20:6</small></p>\n<p>Cristo reina con sus santos.</p>"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": "b-jeremias",
+    "title": "Jeremías",
+    "c": "c-profecia",
+    "pos": [
+     1680,
+     900
+    ],
+    "children": {
+     "id": "m-jeremias",
+     "title": "Jeremías",
+     "nodes": [
+      {
+       "id": "p-jr3",
+       "title": "Jeremías 3",
+       "ref": "Jer 3",
+       "summary": "Lección en español · PDF #129"
+      },
+      {
+       "id": "p-jr30",
+       "title": "Jeremías 30",
+       "ref": "Jer 30",
+       "summary": "Lección en español · PDF #130"
+      },
+      {
+       "id": "p-jr31",
+       "title": "Jeremías 31",
+       "ref": "Jer 31",
+       "summary": "Lección en español · PDF #131"
+      },
+      {
+       "id": "p-jr33",
+       "title": "Jeremías 33",
+       "ref": "Jer 33",
+       "summary": "Lección en español · PDF #132"
+      },
+      {
+       "id": "p-jr50",
+       "title": "Jeremías 50",
+       "ref": "Jer 50",
+       "summary": "Lección en español · PDF #133"
+      },
+      {
+       "id": "p-jr51",
+       "title": "Jeremías 51",
+       "ref": "Jer 51",
+       "summary": "Lección en español · PDF #134"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

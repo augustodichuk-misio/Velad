@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <title>Velad: Mapa de los Últimos Tiempos</title>
+    <meta name="description" content="Mapa de investigación bíblica de los últimos tiempos: Mateo 24, Daniel, Zacarías y Apocalipsis, con lugares, fotos e hilos que los conectan."/>
+    <meta property="og:title" content="Velad: Mapa de los Últimos Tiempos"/>
+    <meta property="og:description" content="Mapa de investigación bíblica de los últimos tiempos: Mateo 24, Daniel, Zacarías y Apocalipsis."/>
+    <meta property="og:image" content="https://augustodichuk-misio.github.io/Velad/og.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://augustodichuk-misio.github.io/Velad/"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="675"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Velad: Mapa de los Últimos Tiempos"/>
+    <meta name="twitter:image" content="https://augustodichuk-misio.github.io/Velad/og.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/edit.css"/>
+  </head>
+  <body>
+    <img src="og.jpg" alt="Velad: Mapa de los Últimos Tiempos" width="1200" height="675" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden;clip:rect(0 0 0 0)" aria-hidden="true"/>
+    <div class="page" id="top">
+      <main class="main">
+        <header class="x-hud">
+          <div class="x-hud__id">
+            <nav class="x-crumbs" id="crumbs" aria-label="Ruta de mapas"></nav>
+            <h1 id="exp-title">Los últimos tiempos</h1>
+            <p class="x-hud__label" id="exp-label">Mapa general</p>
+            <p class="x-hint">Tocá cualquier nodo para ver sus conexiones</p>
+          </div>
+          <div class="x-hud__act">
+            <button class="btn" type="button" id="up" hidden="">↑ Subir</button>
+            <div class="x-stack">
+            <div class="x-switch" role="group" aria-label="Vista" id="vista" hidden="">
+              <button class="x-vw" type="button" data-view="board" aria-pressed="true">Tablero</button>
+              <button class="x-vw" type="button" data-view="route" aria-pressed="false">Recorrido</button>
+            </div>
+            </div>
+            <button class="btn" type="button" id="reset">Ver todo</button>
+          </div>
+        </header>
+
+        <div class="x-view" id="view" aria-label="Tablero de investigación: Mateo 24">
+          <div class="x-board" id="board">
+            <svg class="x-strings" id="strings" aria-hidden="true"></svg>
+            <svg class="x-pins" id="pins" aria-hidden="true"></svg>
+            <div class="x-set" id="set-gen" hidden=""></div>
+          </div>
+        </div>
+
+        <section class="x-route" id="route" hidden="" aria-label="Recorrido geográfico">
+          <div class="x-rmap" id="rmap">
+            <svg class="x-geo" id="rgeo" aria-hidden="true" preserveAspectRatio="none"></svg>
+            <svg class="x-ink" id="rink" aria-hidden="true"></svg>
+            <p class="x-attr"><a href="https://www.openbible.info/geo/" rel="noopener" target="_blank">Ubicaciones: OpenBible.info · CC BY 4.0</a><span aria-hidden="true">·</span><button type="button" data-credits="">Créditos</button></p>
+          </div>
+          <article class="x-rcard" id="rcard" aria-live="polite">
+            <div class="x-rcard__top">
+              <p class="x-rcard__count" id="r-count">Parada 1 de 6</p>
+              <div class="x-rdots" id="r-dots" aria-hidden="true"></div>
+            </div>
+            <div class="x-rcard__scroll" id="r-scroll">
+              <figure class="x-rcard__fig" id="r-fig">
+                <img data-k="templo_s.jpg" src="img/templo_s.jpg" alt="Maqueta del Segundo Templo en el Museo de Israel" hidden=""/>
+                <img data-k="olivos_s.jpg" src="img/olivos_s.jpg" alt="Vista desde el Monte de los Olivos sobre el Monte del Templo" hidden=""/>
+                <img data-k="pella_s.jpg" src="img/pella_s.jpg" alt="Ruinas de Pella, Jordania" hidden=""/>
+                <img data-k="titus_s.jpg" src="img/titus_s.jpg" alt="Arco de Tito en Roma" hidden=""/>
+                <img data-k="olivos2_s.jpg" src="img/olivos2_s.jpg" alt="Ladera del Monte de los Olivos" hidden=""/>
+                <img data-k="ob_jerusalem.jpg" src="img/ob_jerusalem.jpg" alt="Vista aérea del Monte del Templo, Jerusalén" hidden=""/>
+                <img data-k="ob_judea-1.jpg" src="img/ob_judea-1.jpg" alt="Serranía de los montes de Judea" hidden=""/>
+                <img data-k="ob_mount-of-olives.jpg" src="img/ob_mount-of-olives.jpg" alt="Monte de los Olivos, Jerusalén" hidden=""/>
+                <img data-k="ob_patmos.jpg" src="img/ob_patmos.jpg" alt="Skala, el puerto de Patmos" hidden=""/>
+                <img data-k="ob_euphrates.jpg" src="img/ob_euphrates.jpg" alt="El río Éufrates" hidden=""/>
+                <img data-k="ob_megiddo.jpg" src="img/ob_megiddo.jpg" alt="Tel Meguido sobre el valle de Jezreel" hidden=""/>
+                <img data-k="ob_mount-zion.jpg" src="img/ob_mount-zion.jpg" alt="Monte Sion visto desde Abu Tor" hidden=""/>
+                <img data-k="ob_babylon-1.jpg" src="img/ob_babylon-1.jpg" alt="Puerta de Ishtar de Babilonia en el Museo de Pérgamo" hidden=""/>
+                <img data-k="ob_susa.jpg" src="img/ob_susa.jpg" alt="Fundamentos del palacio de Darío en Susa" hidden=""/>
+                <img data-k="ob_persia.jpg" src="img/ob_persia.jpg" alt="Ruinas de Persépolis" hidden=""/>
+                <img data-k="ob_greece.jpg" src="img/ob_greece.jpg" alt="Monte Olimpo, Grecia" hidden=""/>
+                <img data-k="ob_tigris.jpg" src="img/ob_tigris.jpg" alt="El río Tigris" hidden=""/>
+                <img data-k="ob_damascus.jpg" src="img/ob_damascus.jpg" alt="Muralla norte de la ciudadela de Damasco" hidden=""/>
+                <img data-k="ob_tyre.jpg" src="img/ob_tyre.jpg" alt="Columnas antiguas en Al-Mina, Tiro" hidden=""/>
+                <img data-k="ob_ashkelon.jpg" src="img/ob_ashkelon.jpg" alt="Puerta cananea de Ascalón" hidden=""/>
+                <img data-k="ob_salt-sea.jpg" src="img/ob_salt-sea.jpg" alt="Orilla del Mar Muerto" hidden=""/>
+                <figcaption id="r-cap"></figcaption>
+              </figure>
+              <div class="x-rcard__body">
+                <h2 id="r-title"></h2>
+                <p class="x-rcard__place" id="r-place"></p>
+                <p class="x-rverse"><span id="r-text"></span><small id="r-ref"></small></p>
+                <p class="x-rcard__note" id="r-note"></p>
+                <a class="x-oblink" hidden="" href="https://www.openbible.info/geo/" id="r-ob" rel="noopener" target="_blank">Ficha OpenBible ↗</a>
+                <button class="btn" type="button" id="r-extra" hidden="">Abrir La Venida</button>
+              </div>
+            </div>
+            <div class="x-rcard__nav">
+              <button class="btn" type="button" id="r-prev">← Anterior</button>
+              <button class="btn" type="button" id="r-next">Siguiente →</button>
+            </div>
+          </article>
+        </section>
+
+        <button class="x-credlink" type="button" data-credits="">Créditos y fuentes</button>
+        <aside class="x-dossier x-credits" id="credits" aria-label="Créditos y fuentes" aria-hidden="true">
+          <span class="x-handle"></span>
+          <div class="x-dossier__bar">
+            <p>Créditos y fuentes</p>
+            <button class="btn x-close" type="button" id="credits-close" aria-label="Cerrar créditos">Cerrar ✕</button>
+          </div>
+          <div class="x-dossier__body">
+            <h2>Créditos y fuentes</h2>
+            <p class="fineprint"><b>Velad: Mapa de los Últimos Tiempos</b></p>
+            <p class="fineprint">Ubicaciones: <a href="https://www.openbible.info/geo/" rel="noopener" target="_blank">OpenBible.info Bible Geocoding</a>, licencia <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">Creative Commons Attribution 4.0</a>. Algunos datos geográficos provienen de OpenStreetMap. Las fotos son de Wikimedia Commons seleccionadas por OpenBible.info, cada una con su licencia:</p>
+            <ul>
+              <li><b>Jerusalén</b> · Godot13 · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Jerusalem-2013(2)-Aerial-Temple_Mount-(south_exposure).jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Montes de Judea</b> · Davidbena · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Mountain_scenery_in_Judean_mountains.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Monte de los Olivos</b> · xiquinhosilva · CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:121296-Jerusalem-Mount-of-Olives_(27524566831).jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Patmos</b> · IWYLLPA · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Patmos_Skala_from_Near_Monastary_-_panoramio.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Río Éufrates</b> · Ferrus · dominio público · <a href="https://commons.wikimedia.org/wiki/File:Ferat_(Dîlok_-_Riha).jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Tel Meguido</b> · Liorca · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:4.10.17-%D7%94%D7%A9%D7%A2%D7%A8_%D7%94%D7%A8%D7%90%D7%A9%D7%99_%D7%9E%D7%91%D7%98_%D7%9C%D7%9B%D7%99%D7%95%D7%95%D7%9F_%D7%93%D7%A8%D7%95%D7%9D.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Monte Sion</b> · Eman · CC0 · <a href="https://commons.wikimedia.org/wiki/File:MtZion_from_Abu_Tor.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Puerta de Ishtar (Babilonia)</b> · Radomir Vrbovsky · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Ishtar_gate_in_Pergamon_museum_in_Berlin..jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Susa</b> · Carole Raddato · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:The_foundations_of_the_Palace_of_Darius_the_Great,_Susa,_capital_of_Elam_and_of_the_Achaemenid_Empire,_Iran_(47686677532).jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Persépolis</b> · Hadis Faghiri · CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Persepolis_20190310_02.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Monte Olimpo (Grecia)</b> · George E. Koronaios · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Mount_Olympus_on_October_10,_2020.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Río Tigris</b> · Dûrzan cîrano · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Tigris_2015.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Damasco</b> · Dosseman · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Damascus_road_along_northern_Citadel_wall_5588.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Tiro</b> · Vyacheslav Argenberg · CC BY 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Remains_of_ancient_columns_at_Al_Mina_excavation_site,_Tyre,_Lebanon.jpg" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Ascalón</b> · Hanay · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Ashkelon_%E2%80%93_The_Canaanite_city_gate_(1).JPG" rel="noopener" target="_blank">original ↗</a></li>
+              <li><b>Mar Muerto</b> · Mujaddara · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:67_border_on_Dead_sea_-_panoramio.jpg" rel="noopener" target="_blank">original ↗</a></li>
+            </ul>
+            <p class="fineprint">Fotos adaptadas (redimensionadas). Citas bíblicas: Reina-Valera 1960.</p>
+          </div>
+        </aside>
+
+        <aside class="x-dossier" id="dossier" aria-label="Dossier del nodo" aria-hidden="true">
+          <span class="x-handle"></span>
+          <div class="x-dossier__bar">
+            <p id="dossier-kicker">Dossier</p>
+            <button class="btn x-close" type="button" id="close" aria-label="Cerrar dossier">Cerrar ✕</button>
+          </div>
+          <div class="x-dossier__body" id="dossier-body"></div>
+        </aside>
+      </main>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/edit.js"></script>
+  </body></html>
