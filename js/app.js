@@ -199,6 +199,30 @@ function veladMain(DATA) {
         var body = document.getElementById("dossier-body");
         var kicker = document.getElementById("dossier-kicker");
         var hud = document.querySelector(".x-hud");
+        /* ---------- desglose a la izquierda: el texto completo del capítulo junto a su mapa ---------- */
+        var lectura = document.getElementById("lectura"), lecBody = document.getElementById("lectura-body"),
+          lecKicker = document.getElementById("lectura-kicker"), leerBtn = document.getElementById("leer");
+        var LEC_KEY = "velad-lectura";
+        function wide() { return window.innerWidth >= 1000; }
+        function lecOpen() { return lectura.classList.contains("is-open"); }
+        function readL() { return wide() && lecOpen() ? lectura.offsetWidth + 24 : 0; }
+        function setLectura(open, remember) {
+          lectura.classList.toggle("is-open", open);
+          lectura.setAttribute("aria-hidden", open ? "false" : "true");
+          leerBtn.setAttribute("aria-pressed", open ? "true" : "false");
+          document.body.classList.toggle("x-reading", open && wide());
+          if (remember) { try { localStorage.setItem(LEC_KEY, open ? "on" : "off"); } catch (e) { /* nada */ } }
+        }
+        function syncLectura(owner) {
+          var has = !!(owner && owner.body);
+          leerBtn.hidden = !has;
+          if (!has) { setLectura(false); lecBody.innerHTML = ""; return; }
+          lecKicker.textContent = owner.kicker || "Desglose";
+          lecBody.innerHTML = owner.body.replace(/<p class="x-lead">[\s\S]*?<\/p>\s*/, "");
+          lecBody.scrollTop = 0;
+          var pref = null; try { pref = localStorage.getItem(LEC_KEY); } catch (e) { /* nada */ }
+          setLectura(wide() && pref !== "off");
+        }
         /* ---------- one data tree: maps inside maps, all drawn by the same renderer ---------- */
         var TREE = DATA.tree;
         /* inherited category colour lives in a non-enumerable field, so it never ends up in data.json */
@@ -282,6 +306,7 @@ function veladMain(DATA) {
           stack = path; MAP = mapAt(path); cur = MAP.id;
           inherit(TREE, "x-muted");
           var owner = path[path.length - 1];
+          syncLectura(owner);
           POS = {};
           if (MAP.rich) {
             setEl.innerHTML = (MAP.intro ? '<p class="x-intro">' + MAP.intro + "</p>" : "") +
@@ -427,7 +452,7 @@ function veladMain(DATA) {
           board.style.transform = "translate(" + cam.x + "px," + cam.y + "px) scale(" + cam.s + ")";
         }
         function fitScale() {
-          return Math.min(1, Math.min(window.innerWidth / BW, window.innerHeight / BH) * 0.96);
+          return Math.min(1, Math.min((window.innerWidth - readL()) / BW, window.innerHeight / BH) * 0.96);
         }
         function clampS(s) { return Math.max(fitScale() * 0.7, Math.min(3, s)); }
         function clampPos() {
@@ -449,7 +474,8 @@ function veladMain(DATA) {
             return;
           }
           cam.s = s;
-          cam.x = (vw - BW * s) / 2;
+          var L = readL();
+          cam.x = L + (vw - L - BW * s) / 2;
           cam.y = Math.max((vh - BH * s) / 2, top);
           apply(anim);
         }
@@ -462,7 +488,7 @@ function veladMain(DATA) {
         function region() {
           var vw = window.innerWidth, vh = window.innerHeight;
           var top = hud.offsetHeight + 20;
-          if (vw >= 760) return { l: 0, t: top, r: vw - dossier.offsetWidth - 24, b: vh };
+          if (vw >= 760) return { l: readL(), t: top, r: vw - dossier.offsetWidth - 24, b: vh };
           return { l: 0, t: top, r: vw, b: vh - dossier.offsetHeight };
         }
         function centerOn(el, linked) {
@@ -499,6 +525,7 @@ function veladMain(DATA) {
         function focusItem(id) {
           var el = items[id];
           if (!el) return;
+          if (!wide() && lecOpen()) setLectura(false);
           if (focused && items[focused]) items[focused].classList.remove("is-focus");
           focused = id;
           el.classList.add("is-focus");
@@ -711,6 +738,17 @@ function veladMain(DATA) {
           var el = closeFocus();
           if (el) el.focus({ preventScroll: true });
         });
+        leerBtn.addEventListener("click", function () {
+          var open = !lecOpen();
+          if (open && !wide() && focused) closeFocusQuiet();
+          setLectura(open, true);
+          if (wide()) { if (focused && items[focused]) centerOn(items[focused], linksOf(focused)); else fitView(true); }
+        });
+        document.getElementById("lectura-close").addEventListener("click", function () {
+          setLectura(false, true);
+          if (wide()) { if (focused && items[focused]) centerOn(items[focused], linksOf(focused)); else fitView(true); }
+          leerBtn.focus({ preventScroll: true });
+        });
         document.getElementById("orden").addEventListener("click", function () {
           var all = userPos(); delete all[mapKey()]; saveUserPos(all);
           var f = focused; if (f) closeFocusQuiet();
@@ -728,6 +766,7 @@ function veladMain(DATA) {
         window.addEventListener("resize", function () {
           clearTimeout(rz);
           rz = setTimeout(function () {
+            document.body.classList.toggle("x-reading", lecOpen() && wide());
             drawStrings();
             if (focused && items[focused]) centerOn(items[focused], linksOf(focused)); else fitView(false);
           }, 120);

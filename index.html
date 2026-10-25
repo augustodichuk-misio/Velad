@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
-    <link rel="stylesheet" href="css/app.css?v=4"/>
-    <link rel="stylesheet" href="css/edit.css?v=4"/>
+    <link rel="stylesheet" href="css/app.css?v=5"/>
+    <link rel="stylesheet" href="css/edit.css?v=5"/>
   <script>try{var t=localStorage.getItem("velad-tema");if(t==="medio"||t==="claro")document.documentElement.setAttribute("data-velad",t);}catch(e){}</script>
   </head>
   <body>
@@ -40,6 +40,7 @@
               <button class="x-vw" type="button" data-view="route" aria-pressed="false">Recorrido</button>
             </div>
             </div>
+            <button class="btn" type="button" id="leer" hidden="" aria-pressed="false">Desglose</button>
             <button class="btn" type="button" id="orden" hidden="" title="Volver las tarjetas a su lugar original">↺ Orden original</button>
             <button class="btn" type="button" id="reset">Ver todo</button>
             <button class="x-theme" type="button" id="tema" aria-label="Cambiar tema"></button>
@@ -139,6 +140,14 @@
           </div>
         </aside>
 
+        <aside class="x-dossier x-read" id="lectura" aria-label="Desglose del capítulo" aria-hidden="true">
+          <span class="x-handle" aria-hidden="true"></span>
+          <div class="x-dossier__bar">
+            <p id="lectura-kicker">Desglose</p>
+            <button class="btn x-close" type="button" id="lectura-close" aria-label="Ocultar desglose">Ocultar</button>
+          </div>
+          <div class="x-dossier__body" id="lectura-body"></div>
+        </aside>
         <aside class="x-dossier" id="dossier" aria-label="Dossier del nodo" aria-hidden="true">
           <span class="x-handle"></span>
           <div class="x-dossier__bar">
@@ -149,6 +158,6 @@
         </aside>
       </main>
     </div>
-    <script src="js/app.js?v=4"></script>
-    <script src="js/edit.js?v=4"></script>
+    <script src="js/app.js?v=5"></script>
+    <script src="js/edit.js?v=5"></script>
   </body></html>
