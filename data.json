@@ -66,7 +66,7 @@
        "id": "c01",
        "n": "01",
        "title": "Mateo 24",
-       "summary": "Expediente con 16 nodos",
+       "summary": "Expediente con 27 nodos",
        "children": {
         "id": "m-mateo24",
         "set": "e1",
@@ -194,6 +194,74 @@
          ],
          [
           "esposo",
+          "porque"
+         ],
+         [
+          "casa-desierta",
+          "monte"
+         ],
+         [
+          "casa-desierta",
+          "venida"
+         ],
+         [
+          "evangelio",
+          "persecucion"
+         ],
+         [
+          "evangelio",
+          "senales22"
+         ],
+         [
+          "ramera",
+          "persecucion"
+         ],
+         [
+          "huida",
+          "abominacion"
+         ],
+         [
+          "pella",
+          "huida"
+         ],
+         [
+          "pella",
+          "titus"
+         ],
+         [
+          "muertes",
+          "tribulacion"
+         ],
+         [
+          "prodigios",
+          "tribulacion"
+         ],
+         [
+          "prodigios",
+          "exhortaciones"
+         ],
+         [
+          "generacion",
+          "higuera"
+         ],
+         [
+          "ladron",
+          "higuera"
+         ],
+         [
+          "siervo",
+          "esposo"
+         ],
+         [
+          "siervo",
+          "ladron"
+         ],
+         [
+          "trompeta",
+          "venida"
+         ],
+         [
+          "trompeta",
           "porque"
          ]
         ],
@@ -516,6 +584,252 @@
           ],
           "kicker": "Nodo 16 · Mt 25:1, 31-46",
           "body": "<h2>Cómo se revela Jesús</h2>\n<ul>\n<li><b>Esposo</b> que desea relación (25:1).</li>\n<li><b>Rey</b> lleno de poder, sentado en su trono (25:31).</li>\n<li><b>Juez</b> celoso que quita todo lo que estorba al amor (25:32-46).</li>\n</ul>\n<p>La iglesia va a estar mejor preparada para estos tiempos si conoce a Jesús así; es el mismo retrato de Apocalipsis.</p>\n<p>Mateo 24–25 es un solo discurso: señales (24:5-14), advertencias (24:15-28), la respuesta que espera de los suyos (24:32–25:30) y el juicio de las naciones (25:31-46).</p>\n<p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos.</p>"
+         },
+         {
+          "id": "casa-desierta",
+          "cat": "Cita",
+          "num": "17",
+          "title": "“Vuestra casa os es dejada desierta”",
+          "ref": "Mt 23:38-39 · Sal 118:26",
+          "tags": [
+           "Contexto",
+           "Salmos"
+          ],
+          "c": "c-profecia",
+          "aria": "“Vuestra casa os es dejada desierta”, Mt 23:38-39 · Sal 118:26",
+          "pos": [
+           120,
+           1500
+          ],
+          "kicker": "Nodo 17 · Mt 23:38-39 · Sal 118:26",
+          "body": "<h2>El contexto de la pregunta</h2><p class=\"x-verse\">“He aquí vuestra casa os es dejada desierta. Porque os digo que desde ahora no me veréis, hasta que digáis: Bendito el que viene en el nombre del Señor.”<small>Mt 23:38-39</small></p><p>Justo antes de Mateo 24, Jesús les dice a los líderes que su casa, el templo, queda desierta, y que no lo volverán a ver hasta que lo reciban con las palabras del Salmo 118.</p><p class=\"x-verse\">“Bendito el que viene en el nombre de Jehová; Desde la casa de Jehová os bendecimos.”<small>Sal 118:26</small></p><p>Por eso la pregunta de los discípulos en el Monte de los Olivos es, en el fondo: ¿cuándo volverás?</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "evangelio",
+          "cat": "Señal",
+          "num": "18",
+          "title": "El evangelio a todas las naciones",
+          "ref": "Mt 24:14 · Ap 14:6",
+          "tags": [
+           "Positiva",
+           "Apocalipsis"
+          ],
+          "c": "c-senal",
+          "aria": "El evangelio a todas las naciones, Mt 24:14 · Ap 14:6",
+          "pos": [
+           560,
+           1500
+          ],
+          "kicker": "Nodo 18 · Mt 24:14 · Ap 14:6",
+          "body": "<h2>Una señal positiva</h2><p class=\"x-verse\">“Y será predicado este evangelio del reino en todo el mundo, para testimonio a todas las naciones; y entonces vendrá el fin.”<small>Mt 24:14</small></p><p>Entre las señales del final, el desglose marca dos positivas. La primera: la predicación del evangelio en todas las naciones con gran poder.</p><p class=\"x-verse\">“Vi volar por en medio del cielo a otro ángel, que tenía el evangelio eterno para predicarlo a los moradores de la tierra, a toda nación, tribu, lengua y pueblo.”<small>Ap 14:6</small></p><p>Apocalipsis muestra el mismo evangelio anunciado a toda nación, tribu, lengua y pueblo antes del juicio.</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "ramera",
+          "cat": "Profecía",
+          "num": "19",
+          "title": "La gran ramera",
+          "ref": "Ap 17:6",
+          "tags": [
+           "Apocalipsis",
+           "Persecución"
+          ],
+          "c": "c-profecia",
+          "aria": "La gran ramera, Ap 17:6",
+          "pos": [
+           1000,
+           1500
+          ],
+          "kicker": "Nodo 19 · Ap 17:6",
+          "body": "<h2>El sistema detrás de la persecución</h2><p class=\"x-verse\">“Vi a la mujer ebria de la sangre de los santos, y de la sangre de los mártires de Jesús; y cuando la vi, quedé asombrado con gran asombro.”<small>Ap 17:6</small></p><p>A partir de los últimos 7 años, Satanás opera con un sistema religioso (Ap 17) y político (Ap 18) llamado la Gran Ramera de Babilonia. Es su estrategia para engañar a muchos y perseguir a los santos (Mt 24:9-10).</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "huida",
+          "cat": "Señal",
+          "num": "20",
+          "title": "Ni en invierno ni en día de reposo",
+          "ref": "Mt 24:16, 20",
+          "tags": [
+           "Israel",
+           "Huida"
+          ],
+          "c": "c-senal",
+          "aria": "Ni en invierno ni en día de reposo, Mt 24:16, 20",
+          "pos": [
+           1440,
+           1500
+          ],
+          "kicker": "Nodo 20 · Mt 24:16, 20",
+          "body": "<h2>La huida de Judea</h2><p class=\"x-verse\">“entonces los que estén en Judea, huyan a los montes.”<small>Mt 24:16</small></p><p class=\"x-verse\">“Orad, pues, que vuestra huida no sea en invierno ni en día de reposo.”<small>Mt 24:20</small></p><p>Jesús da por hecho que en ese tiempo el día de reposo vuelve a marcar la vida en Israel. El desglose lo cuenta como la segunda señal positiva: la restauración del Shabat.</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "pella",
+          "cat": "Historia",
+          "num": "21",
+          "title": "Pella · la huida del siglo I",
+          "ref": "Mt 24:16 · Lc 21:20-21",
+          "tags": [
+           "Historia",
+           "Lugar"
+          ],
+          "c": "c-historia",
+          "aria": "Pella · la huida del siglo I, Mt 24:16 · Lc 21:20-21",
+          "pos": [
+           1880,
+           1500
+          ],
+          "kicker": "Nodo 21 · Mt 24:16 · Lc 21:20-21",
+          "body": "<h2>Un anticipo en la historia</h2><p>Según Eusebio de Cesarea (Historia eclesiástica 3.5.3), antes de la guerra contra Roma los cristianos de Jerusalén recibieron un aviso y huyeron a Pella, una ciudad de la Decápolis al otro lado del Jordán.</p><p>Muchos lo leen como obediencia a la orden de Jesús: cuando vieran a Jerusalén rodeada de ejércitos, huir a los montes. El año 70 fue el anticipo; el cumplimiento final viene con la abominación de los últimos tiempos.</p><p class=\"fineprint\">Dato histórico: Eusebio, Historia eclesiástica III, 5, 3 (s. IV).</p>"
+         },
+         {
+          "id": "muertes",
+          "cat": "Profecía",
+          "num": "22",
+          "title": "Dos olas de muerte",
+          "ref": "Ap 6:8 · Ap 9:15",
+          "tags": [
+           "Apocalipsis",
+           "Gran tribulación"
+          ],
+          "c": "c-profecia",
+          "aria": "Dos olas de muerte, Ap 6:8 · Ap 9:15",
+          "pos": [
+           2320,
+           1500
+          ],
+          "kicker": "Nodo 22 · Ap 6:8 · Ap 9:15",
+          "body": "<h2>“Si aquellos días no fuesen acortados”</h2><p>Mateo 24:22 habla de un número de muertes sin precedentes. El desglose lo conecta con dos olas en Apocalipsis:</p><p class=\"x-verse\">“Miré, y he aquí un caballo amarillo, y el que lo montaba tenía por nombre Muerte, y el Hades le seguía; y le fue dada potestad sobre la cuarta parte de la tierra, para matar con espada, con hambre, con mortandad, y con las fieras de la tierra.”<small>Ap 6:8</small></p><p class=\"x-verse\">“Y fueron desatados los cuatro ángeles que estaban preparados para la hora, día, mes y año, a fin de matar a la tercera parte de los hombres.”<small>Ap 9:15</small></p><p>Una cuarta parte, y luego un tercio de los que quedan: en total, cerca de la mitad de la población de la tierra.</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "prodigios",
+          "cat": "Señal",
+          "num": "23",
+          "title": "Señales y prodigios mentirosos",
+          "ref": "Mt 24:24 · 2 Ts 2:9",
+          "tags": [
+           "Engaño",
+           "2 Tesalonicenses"
+          ],
+          "c": "c-senal",
+          "aria": "Señales y prodigios mentirosos, Mt 24:24 · 2 Ts 2:9",
+          "pos": [
+           120,
+           1840
+          ],
+          "kicker": "Nodo 23 · Mt 24:24 · 2 Ts 2:9",
+          "body": "<h2>Engañar, si fuere posible, a los escogidos</h2><p class=\"x-verse\">“Porque se levantarán falsos Cristos, y falsos profetas, y harán grandes señales y prodigios, de tal manera que engañarán, si fuere posible, aun a los escogidos.”<small>Mt 24:24</small></p><p class=\"x-verse\">“inicuo cuyo advenimiento es por obra de Satanás, con gran poder y señales y prodigios mentirosos.”<small>2 Ts 2:9</small></p><p>En los últimos 3½ años el engaño viene con poder sobrenatural. Por eso Jesús insiste tanto en no ser engañados (24:4, 23, 26).</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>",
+          "xref": [
+           {
+            "label": "2 Tesalonicenses",
+            "to": [
+             "b-evangelios",
+             "c04"
+            ]
+           }
+          ]
+         },
+         {
+          "id": "generacion",
+          "cat": "Argumento",
+          "num": "24",
+          "title": "Esta generación",
+          "ref": "Mt 24:34 · Gn 15:13-16",
+          "tags": [
+           "Higuera",
+           "Génesis"
+          ],
+          "c": "c-argumento",
+          "aria": "Esta generación, Mt 24:34 · Gn 15:13-16",
+          "pos": [
+           560,
+           1840
+          ],
+          "kicker": "Nodo 24 · Mt 24:34 · Gn 15:13-16",
+          "body": "<h2>¿Qué generación?</h2><p class=\"x-verse\">“De cierto os digo, que no pasará esta generación hasta que todo esto acontezca.”<small>Mt 24:34</small></p><p>La generación que vea todas estas señales juntas es la que verá su venida. El desglose toma Génesis 15 para medir una generación en unos 100 años: los 400 años de Egipto son cuatro generaciones.</p><p class=\"x-verse\">“Entonces Jehová dijo a Abram: Ten por cierto que tu descendencia morará en tierra ajena, y será esclava allí, y será oprimida cuatrocientos años. Y en la cuarta generación volverán acá; porque aún no ha llegado a su colmo la maldad del amorreo hasta aquí.”<small>Gn 15:13, 16</small></p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "ladron",
+          "cat": "Argumento",
+          "num": "25",
+          "title": "Parábola del ladrón",
+          "ref": "Mt 24:43-44 · 1 Ts 5:2-4",
+          "tags": [
+           "Parábola",
+           "Velad"
+          ],
+          "c": "c-argumento",
+          "aria": "Parábola del ladrón, Mt 24:43-44 · 1 Ts 5:2-4",
+          "pos": [
+           1000,
+           1840
+          ],
+          "kicker": "Nodo 25 · Mt 24:43-44 · 1 Ts 5:2-4",
+          "body": "<h2>Velar para no sufrir pérdida</h2><p class=\"x-verse\">“Pero sabed esto, que si el padre de familia supiese a qué hora el ladrón habría de venir, velaría, y no dejaría minar su casa. Por tanto, también vosotros estad preparados; porque el Hijo del Hombre vendrá a la hora que no pensáis.”<small>Mt 24:43-44</small></p><p>Es un llamado a ser fieles durante la demora. Pablo toma la misma imagen y aclara que el día no tiene por qué sorprender a los que velan:</p><p class=\"x-verse\">“Porque vosotros sabéis perfectamente que el día del Señor vendrá así como ladrón en la noche; Mas vosotros, hermanos, no estáis en tinieblas, para que aquel día os sorprenda como ladrón.”<small>1 Ts 5:2, 4</small></p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>",
+          "xref": [
+           {
+            "label": "1 Tesalonicenses › Como ladrón",
+            "to": [
+             "b-evangelios",
+             "c03",
+             "ts1-ladron"
+            ]
+           }
+          ]
+         },
+         {
+          "id": "siervo",
+          "cat": "Argumento",
+          "num": "26",
+          "title": "El siervo fiel y el malo",
+          "ref": "Mt 24:45-51",
+          "tags": [
+           "Parábola",
+           "Liderazgo"
+          ],
+          "c": "c-argumento",
+          "aria": "El siervo fiel y el malo, Mt 24:45-51",
+          "pos": [
+           1440,
+           1840
+          ],
+          "kicker": "Nodo 26 · Mt 24:45-51",
+          "body": "<h2>Dos clases de siervos</h2><p class=\"x-verse\">“¿Quién es, pues, el siervo fiel y prudente, al cual puso su señor sobre su casa para que les dé el alimento a tiempo? Bienaventurado aquel siervo al cual, cuando su señor venga, le halle haciendo así.”<small>Mt 24:45-46</small></p><p class=\"x-verse\">“Pero si aquel siervo malo dijere en su corazón: Mi señor tarda en venir; vendrá el señor de aquel siervo en día que éste no espera, y a la hora que no sabe.”<small>Mt 24:48, 50</small></p><p>En estos tiempos habrá dos tipos de líderes que dicen seguir a Cristo: los fieles, que alimentan a la casa a tiempo, y los malos, que piensan que su señor tarda.</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>"
+         },
+         {
+          "id": "trompeta",
+          "cat": "Profecía",
+          "num": "27",
+          "title": "La trompeta y la reunión",
+          "ref": "Mt 24:31 · 1 Ts 4:16-17 · 1 Co 15:52",
+          "tags": [
+           "Arrebatamiento",
+           "Pablo"
+          ],
+          "c": "c-profecia",
+          "aria": "La trompeta y la reunión, Mt 24:31 · 1 Ts 4:16-17 · 1 Co 15:52",
+          "pos": [
+           1880,
+           1840
+          ],
+          "kicker": "Nodo 27 · Mt 24:31 · 1 Ts 4:16-17 · 1 Co 15:52",
+          "body": "<h2>Una sola trompeta, un solo evento</h2><p>Mateo 24:31 dice que el Hijo del Hombre envía a sus ángeles “con gran voz de trompeta” para juntar a sus escogidos. Pablo describe lo mismo:</p><p class=\"x-verse\">“Porque el Señor mismo con voz de mando, con voz de arcángel, y con trompeta de Dios, descenderá del cielo; y los muertos en Cristo resucitarán primero. Luego nosotros los que vivimos, los que hayamos quedado, seremos arrebatados juntamente con ellos en las nubes para recibir al Señor en el aire, y así estaremos siempre con el Señor.”<small>1 Ts 4:16-17</small></p><p class=\"x-verse\">“en un momento, en un abrir y cerrar de ojos, a la final trompeta; porque se tocará la trompeta, y los muertos serán resucitados incorruptibles, y nosotros seremos transformados.”<small>1 Co 15:52</small></p><p>Venida, ángeles, trompeta y reunión: los tres pasajes hablan del mismo momento, después de la tribulación.</p><p class=\"fineprint\">Desglose en base al estudio de Mike Bickle (IHOPKC), serie 150 capítulos de los últimos tiempos. Texto bíblico: RVR1960.</p>",
+          "xref": [
+           {
+            "label": "1 Tesalonicenses › La última trompeta",
+            "to": [
+             "b-evangelios",
+             "c03",
+             "ts1-trompeta"
+            ]
+           },
+           {
+            "label": "1 Corintios › El misterio",
+            "to": [
+             "b-evangelios",
+             "c05",
+             "co1-misterio"
+            ]
+           }
+          ]
          }
         ]
        },
