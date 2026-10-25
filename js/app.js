@@ -274,6 +274,10 @@ function veladMain(DATA) {
           });
           crumbs.innerHTML = h;
         }
+        var UPOS_KEY = "velad-posiciones";
+        function userPos() { try { return JSON.parse(localStorage.getItem(UPOS_KEY)) || {}; } catch (e) { return {}; } }
+        function saveUserPos(all) { try { localStorage.setItem(UPOS_KEY, JSON.stringify(all)); } catch (e) { /* sin almacenamiento */ } }
+        function mapKey() { return stack.map(function (n) { return n.id; }).join("/") || "_raiz"; }
         function useMap(path) {
           stack = path; MAP = mapAt(path); cur = MAP.id;
           inherit(TREE, "x-muted");
@@ -290,6 +294,11 @@ function veladMain(DATA) {
             if (MAP.nodes.every(function (nd) { return nd.pos; })) { MAP.nodes.forEach(function (nd) { POS[nd.id] = nd.pos; }); BW = MAP.w || 2400; }
             else { var A = autoPos(MAP); POS = A.pos; BW = A.w; }
           }
+          /* posiciones propias del visitante (solo en su navegador) */
+          var mine = userPos()[mapKey()] || {};
+          if (!editing()) Object.keys(mine).forEach(function (id) { if (POS[id]) POS[id] = mine[id]; });
+          var rb = document.getElementById("orden");
+          if (rb) rb.hidden = editing() || !Object.keys(mine).length;
           setEl.hidden = false;
           items = {};
           setEl.querySelectorAll(".x-item").forEach(function (el) { items[el.dataset.id] = el; });
@@ -565,7 +574,18 @@ function veladMain(DATA) {
         }
 
         /* ---------- gestures ---------- */
-        var pointers = new Map(), start = null, pinch = null, moved = false, tapTarget = null;
+        var pointers = new Map(), start = null, pinch = null, moved = false, tapTarget = null, udrag = null;
+        function endUserDrag() {
+          var d = udrag; udrag = null;
+          d.el.classList.remove("is-moving");
+          var all = userPos(), k = mapKey();
+          all[k] = all[k] || {};
+          all[k][d.id] = [d.el.offsetLeft, d.el.offsetTop];
+          POS[d.id] = all[k][d.id];
+          saveUserPos(all);
+          drawStrings();
+          var rb = document.getElementById("orden"); if (rb) rb.hidden = false;
+        }
         function beginPan(p) { start = { x: p.x, y: p.y, cx: cam.x, cy: cam.y }; }
         function editing() { return window.XEdit && window.XEdit.active(); }
         view.addEventListener("pointerdown", function (e) {
@@ -584,8 +604,11 @@ function veladMain(DATA) {
             moved = false;
             tapTarget = e.target.closest(".x-item, .x-mark");
             beginPan(pointers.get(e.pointerId));
+            var uc = !editing() && e.target.closest(".x-item");
+            udrag = uc ? { id: uc.dataset.id, el: uc, ox: uc.offsetLeft, oy: uc.offsetTop } : null;
           } else if (pointers.size === 2) {
             moved = true;
+            if (udrag && udrag.on) endUserDrag(); else udrag = null;
             var pts = Array.from(pointers.values());
             pinch = {
               d: Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y) || 1,
@@ -600,7 +623,12 @@ function veladMain(DATA) {
           if (pointers.size === 1 && start) {
             var dx = e.clientX - start.x, dy = e.clientY - start.y;
             if (!moved && Math.hypot(dx, dy) > 7) { moved = true; view.classList.add("is-grab"); }
-            if (moved) { cam.x = start.cx + dx; cam.y = start.cy + dy; clampPos(); apply(false); }
+            if (moved && udrag) {
+              if (!udrag.on) { udrag.on = true; udrag.el.classList.add("is-moving"); view.classList.remove("is-grab"); }
+              udrag.el.style.left = Math.round(udrag.ox + dx / cam.s) + "px";
+              udrag.el.style.top = Math.round(Math.max(0, udrag.oy + dy / cam.s)) + "px";
+              drawThreads(); if (focused) markLinks(focused);
+            } else if (moved) { cam.x = start.cx + dx; cam.y = start.cy + dy; clampPos(); apply(false); }
           } else if (pointers.size >= 2 && pinch) {
             var pts = Array.from(pointers.values());
             var d = Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y);
@@ -617,6 +645,7 @@ function veladMain(DATA) {
           if (pointers.size === 1) { pinch = null; beginPan(Array.from(pointers.values())[0]); return; }
           if (pointers.size > 0) return;
           view.classList.remove("is-grab");
+          if (udrag && udrag.on) endUserDrag(); udrag = null;
           pinch = null; start = null;
           if (!moved && e.type === "pointerup" && !tapTarget) closeFocus();
           /* taps on pistas and marks are handled by their click events */
@@ -680,6 +709,11 @@ function veladMain(DATA) {
         document.getElementById("close").addEventListener("click", function () {
           var el = closeFocus();
           if (el) el.focus({ preventScroll: true });
+        });
+        document.getElementById("orden").addEventListener("click", function () {
+          var all = userPos(); delete all[mapKey()]; saveUserPos(all);
+          var f = focused; if (f) closeFocusQuiet();
+          useMap(stack); drawStrings(); fitView(true);
         });
         document.getElementById("reset").addEventListener("click", function () {
           if (focused) closeFocus(); else fitView(true);

@@ -229,6 +229,7 @@
       }
       on = true;
       A().closeFocus();
+      A().refresh(); /* sin las posiciones personales del visitante */
       document.body.classList.add("ve-on");
       ui.bar.hidden = false;
       setMode("mover");

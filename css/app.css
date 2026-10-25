@@ -1119,3 +1119,6 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
       .x-theme:focus-visible { outline: 1.5px solid var(--x-gold); outline-offset: 2px; }
       .x-theme svg { width: 18px; height: 18px; }
       @media (max-width: 720px) { .x-theme { width: var(--tap); height: var(--tap); } }
+
+      .x-item.is-moving { z-index: 5; cursor: grabbing; box-shadow: 0 14px 34px rgb(var(--x-shade-rgb) / 0.45); transition: none; }
+      .x-hint { }
