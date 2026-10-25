@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
-    <link rel="stylesheet" href="css/app.css?v=6"/>
-    <link rel="stylesheet" href="css/edit.css?v=6"/>
+    <link rel="stylesheet" href="css/app.css?v=7"/>
+    <link rel="stylesheet" href="css/edit.css?v=7"/>
   <script>try{var t=localStorage.getItem("velad-tema");if(t==="medio"||t==="claro")document.documentElement.setAttribute("data-velad",t);}catch(e){}</script>
   </head>
   <body>
@@ -27,7 +27,10 @@
       <main class="main">
         <header class="x-hud">
           <div class="x-hud__id">
+            <div class="x-hud__row">
+            <button class="x-burger" type="button" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
             <nav class="x-crumbs" id="crumbs" aria-label="Ruta de mapas"></nav>
+            </div>
             <h1 id="exp-title">Los últimos tiempos</h1>
             <p class="x-hud__label" id="exp-label">Mapa general</p>
             <p class="x-hint">Tocá cualquier nodo para ver sus conexiones</p>
@@ -140,10 +143,36 @@
           </div>
         </aside>
 
+        <aside class="x-dossier x-menu" id="menu" aria-label="Menú" aria-hidden="true">
+          <span class="x-handle" aria-hidden="true"></span>
+          <div class="x-dossier__bar">
+            <p>Menú</p>
+            <button class="btn x-close" type="button" id="menu-close" aria-label="Cerrar menú">Cerrar ✕</button>
+          </div>
+          <div class="x-menu__tabs" role="tablist">
+            <button class="x-chip" type="button" role="tab" data-tab="buscar" aria-pressed="true">Buscar</button>
+            <button class="x-chip" type="button" role="tab" data-tab="indice" aria-pressed="false">Índice de estudio</button>
+          </div>
+          <div class="x-dossier__body" id="menu-body">
+            <section class="x-menu__pane" data-pane="buscar">
+              <input class="x-search" id="q" type="search" placeholder="Capítulo, versículo, tema o palabra…" autocomplete="off" aria-label="Buscar en Velad"/>
+              <p class="x-menu__hint" id="q-hint">Buscá por libro (Joel 2), cita (Mt 24:15), tema (abominación) o cualquier palabra de los desgloses.</p>
+              <ol class="x-results" id="q-res"></ol>
+            </section>
+            <section class="x-menu__pane" data-pane="indice" hidden="">
+              <p class="x-menu__hint">Los 150 capítulos en el orden de estudio. Tocá uno para abrirlo con su desglose.</p>
+              <ol class="x-index" id="indice"></ol>
+            </section>
+          </div>
+        </aside>
         <aside class="x-dossier x-read" id="lectura" aria-label="Desglose del capítulo" aria-hidden="true">
           <span class="x-handle" aria-hidden="true"></span>
           <div class="x-dossier__bar">
             <p id="lectura-kicker">Desglose</p>
+            <div class="x-lec-opts" role="group" aria-label="Opciones de lectura">
+              <button class="x-chip" type="button" id="opt-seguir" aria-pressed="true" title="El tablero sigue tu lectura">Seguir</button>
+              <button class="x-chip" type="button" id="opt-info" aria-pressed="true" title="Abrir la info de cada tarjeta mientras leés">Info</button>
+            </div>
             <button class="btn x-close" type="button" id="lectura-close" aria-label="Ocultar desglose">Ocultar</button>
           </div>
           <div class="x-dossier__body" id="lectura-body"></div>
@@ -158,6 +187,6 @@
         </aside>
       </main>
     </div>
-    <script src="js/app.js?v=6"></script>
-    <script src="js/edit.js?v=6"></script>
+    <script src="js/app.js?v=7"></script>
+    <script src="js/edit.js?v=7"></script>
   </body></html>
