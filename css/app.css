@@ -1122,3 +1122,8 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
 
       .x-item.is-moving { z-index: 5; cursor: grabbing; box-shadow: 0 14px 34px rgb(var(--x-shade-rgb) / 0.45); transition: none; }
       .x-hint { }
+      .x-dossier__body .x-lead { color: var(--x-muted); font-size: 14px; }
+      .x-dossier__body .x-sub { padding-left: 14px; }
+      .x-dossier__body ul { padding-left: 18px; }
+      .x-dossier__body h3.x-sec { font: 600 19px/1.35 var(--x-serif); color: var(--x-text); text-transform: none; letter-spacing: 0; }
+      .x-dossier__body .x-lt { color: var(--x-gold); }

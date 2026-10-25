@@ -521,7 +521,8 @@ function veladMain(DATA) {
             k.className = "x-key";
             k.innerHTML = "<p>Esta tarjeta contiene un mapa: <b>" + esc(nd.children.title) + "</b>, " + countOf(nd) + ".</p>" +
               '<button class="btn x-open" type="button" data-open="' + esc(id) + '">Abrir mapa →</button>';
-            body.appendChild(k);
+            var firstH = nd.body ? body.querySelector("h3") : null;
+            if (firstH) body.insertBefore(k, firstH); else body.appendChild(k);
           }
           if (nd.openRoute) {
             var rk = document.createElement("div");
