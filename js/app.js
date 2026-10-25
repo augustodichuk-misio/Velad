@@ -220,9 +220,47 @@ function veladMain(DATA) {
           lecKicker.textContent = owner.kicker || "Desglose";
           lecBody.innerHTML = owner.body.replace(/<p class="x-lead">[\s\S]*?<\/p>\s*/, "");
           lecBody.scrollTop = 0;
+          spotId = null;
+          [].slice.call(lecBody.querySelectorAll("[data-node]")).forEach(function (a) {
+            var t = items[a.dataset.node]; if (!t) return;
+            var b = document.createElement("button");
+            b.type = "button"; b.className = "x-anchor"; b.dataset.spot = a.dataset.node;
+            b.textContent = "↗ " + t.querySelector("h3").textContent;
+            a.appendChild(b);
+          });
           var pref = null; try { pref = localStorage.getItem(LEC_KEY); } catch (e) { /* nada */ }
           setLectura(wide() && pref !== "off");
         }
+        /* el desglose guía al tablero: al leer, el tablero va a la tarjeta de ese tramo (las tarjetas no mueven el desglose) */
+        var spotId = null, spotT = null;
+        function lecAnchor() {
+          var as = lecBody.querySelectorAll("[data-node]"); if (!as.length) return null;
+          var R = lecBody.getBoundingClientRect(), line = R.top + lecBody.clientHeight * 0.35, cur = null;
+          if (lecBody.scrollTop + lecBody.clientHeight >= lecBody.scrollHeight - 4) line = R.bottom;
+          for (var i = 0; i < as.length; i++) { if (as[i].getBoundingClientRect().top <= line) cur = as[i]; else break; }
+          return cur;
+        }
+        function spotlight(id) {
+          if (id === spotId) return;
+          spotId = id;
+          lecBody.querySelectorAll(".is-current").forEach(function (a) { a.classList.remove("is-current"); });
+          if (!id || !items[id]) { if (!focused) { board.classList.remove("is-focus"); drawLinks(null); Object.keys(items).forEach(function (k) { items[k].classList.remove("is-linked", "is-spot"); }); fitView(true); } return; }
+          lecBody.querySelectorAll('[data-node="' + id + '"]').forEach(function (a) { a.classList.add("is-current"); });
+          if (focused) closeFocusQuiet();
+          Object.keys(items).forEach(function (k) { items[k].classList.toggle("is-spot", k === id); });
+          board.classList.add("is-focus");
+          var linked = markLinks(id);
+          drawLinks(id);
+          centerOn(items[id], linked, true);
+        }
+        lecBody.addEventListener("scroll", function () {
+          clearTimeout(spotT);
+          spotT = setTimeout(function () { var a = lecAnchor(); spotlight(a ? a.dataset.node : null); }, 160);
+        }, { passive: true });
+        lecBody.addEventListener("click", function (e) {
+          var b = e.target.closest("[data-spot]");
+          if (b) { spotId = null; focusItem(b.dataset.spot); }
+        });
         /* ---------- one data tree: maps inside maps, all drawn by the same renderer ---------- */
         var TREE = DATA.tree;
         /* inherited category colour lives in a non-enumerable field, so it never ends up in data.json */
@@ -306,7 +344,6 @@ function veladMain(DATA) {
           stack = path; MAP = mapAt(path); cur = MAP.id;
           inherit(TREE, "x-muted");
           var owner = path[path.length - 1];
-          syncLectura(owner);
           POS = {};
           if (MAP.rich) {
             setEl.innerHTML = (MAP.intro ? '<p class="x-intro">' + MAP.intro + "</p>" : "") +
@@ -327,6 +364,7 @@ function veladMain(DATA) {
           setEl.hidden = false;
           items = {};
           setEl.querySelectorAll(".x-item").forEach(function (el) { items[el.dataset.id] = el; });
+          syncLectura(owner);
           setEl.querySelectorAll("img").forEach(function (img) {
             if (!img.complete) img.addEventListener("load", function () { drawStrings(); if (!focused) fitView(false); });
           });
@@ -353,6 +391,7 @@ function veladMain(DATA) {
         }
         function openPath(path, focusId) {
           if (focused) closeFocus();
+          spotId = null; board.classList.remove("is-focus");
           useMap(path);
           drawStrings();
           fitView(false);
@@ -485,14 +524,15 @@ function veladMain(DATA) {
           cam.s = s; cam.x = px - bx * s; cam.y = py - by * s;
           clampPos(); apply(false);
         }
-        function region() {
+        function region(spot) {
           var vw = window.innerWidth, vh = window.innerHeight;
           var top = hud.offsetHeight + 20;
+          if (spot) return wide() ? { l: readL(), t: top, r: vw, b: vh } : { l: 0, t: top, r: vw, b: vh - (lecOpen() ? lectura.offsetHeight : 0) };
           if (vw >= 760) return { l: readL(), t: top, r: vw - dossier.offsetWidth - 24, b: vh };
           return { l: 0, t: top, r: vw, b: vh - dossier.offsetHeight };
         }
-        function centerOn(el, linked) {
-          var g = region();
+        function centerOn(el, linked, spot) {
+          var g = region(spot);
           var aw = Math.max(120, g.r - g.l), ah = Math.max(120, g.b - g.t);
           var w = el.offsetWidth * 1.08, h = el.offsetHeight * 1.08;
           var s = Math.min(2, (aw * 0.86) / w, (ah * 0.86) / h);
@@ -527,6 +567,7 @@ function veladMain(DATA) {
           if (!el) return;
           if (!wide() && lecOpen()) setLectura(false);
           if (focused && items[focused]) items[focused].classList.remove("is-focus");
+          Object.keys(items).forEach(function (k) { items[k].classList.remove("is-spot"); });
           focused = id;
           el.classList.add("is-focus");
           board.classList.add("is-focus");
@@ -585,6 +626,12 @@ function veladMain(DATA) {
           dossier.classList.add("is-open");
           dossier.setAttribute("aria-hidden", "false");
           centerOn(el, linked);
+        }
+        /* un capítulo con desglose se abre directo: tablero de énfasis + desglose a la izquierda */
+        function tapItem(id) {
+          var nd = nodeById(id);
+          if (nd && nd.children && nd.body) { openPath(stack.concat([nd])); return; }
+          focusItem(id);
         }
         function closeFocus() {
           if (!focused) return;
@@ -675,7 +722,7 @@ function veladMain(DATA) {
           view.classList.remove("is-grab");
           if (udrag && udrag.on) endUserDrag(); udrag = null;
           pinch = null; start = null;
-          if (!moved && e.type === "pointerup" && !tapTarget) closeFocus();
+          if (!moved && e.type === "pointerup" && !tapTarget) { if (focused) closeFocus(); else if (spotId) spotlight(null); }
           /* taps on pistas and marks are handled by their click events */
         }
         window.addEventListener("pointerup", endPointer);
@@ -697,7 +744,7 @@ function veladMain(DATA) {
           var it = e.target.closest(".x-item");
           if (it && (e.key === "Enter" || e.key === " ")) {
             e.preventDefault();
-            if (editing()) window.XEdit.tap(it.dataset.id); else focusItem(it.dataset.id);
+            if (editing()) window.XEdit.tap(it.dataset.id); else tapItem(it.dataset.id);
           }
         });
         board.addEventListener("click", function (e) {
@@ -708,7 +755,7 @@ function veladMain(DATA) {
           }
           if (moved) return;
           var it = e.target.closest(".x-item");
-          if (it) { focusItem(it.dataset.id); return; }
+          if (it) { tapItem(it.dataset.id); return; }
           var m = e.target.closest(".x-mark");
           if (m) focusItem(m.dataset.target);
         });

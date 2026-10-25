@@ -1135,3 +1135,10 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
       }
       @media (min-width: 760px) and (max-width: 999px) { .x-read { width: min(460px, 70vw); z-index: 41; } }
       #leer[aria-pressed="true"] { border-color: var(--x-gold-soft); color: var(--x-gold); }
+      /* desglose ↔ tablero */
+      .x-read [data-node] { position: relative; transition: background-color .3s, box-shadow .3s; border-radius: 6px; }
+      .x-read [data-node].is-current { background: rgb(var(--x-gold-rgb) / 0.07); box-shadow: inset 3px 0 0 var(--x-gold); padding-left: 12px; }
+      .x-anchor { display: block; margin-top: 6px; padding: 0; border: 0; background: none; font: 600 11px/1.4 Inter, system-ui, sans-serif; letter-spacing: .04em; color: rgb(var(--x-gold-rgb) / 0.75); cursor: pointer; text-align: left; }
+      .x-anchor:hover, .x-anchor:focus-visible { color: var(--x-gold); text-decoration: underline; }
+      .x-item.is-spot { z-index: 6; border-color: var(--x-gold-soft); box-shadow: 0 0 0 1px rgb(var(--x-gold-rgb) / 0.25), 0 22px 50px rgb(var(--x-shade-rgb) / calc(0.5 * var(--x-shade-k))); }
+      .x-board.is-focus .x-item.is-spot { opacity: 1 !important; }
