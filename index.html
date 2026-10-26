@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
-    <link rel="stylesheet" href="css/app.css?v=7"/>
-    <link rel="stylesheet" href="css/edit.css?v=7"/>
+    <link rel="stylesheet" href="css/app.css?v=8"/>
+    <link rel="stylesheet" href="css/edit.css?v=8"/>
   <script>try{var t=localStorage.getItem("velad-tema");if(t==="medio"||t==="claro")document.documentElement.setAttribute("data-velad",t);}catch(e){}</script>
   </head>
   <body>
@@ -111,6 +111,12 @@
         </section>
 
         <button class="x-credlink" type="button" data-credits="">Créditos y fuentes</button>
+        <nav class="x-mbar" id="mbar" aria-label="Navegación">
+          <button type="button" id="mb-indice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg><span>Índice</span></button>
+          <button type="button" id="mb-buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg><span>Buscar</span></button>
+          <button type="button" id="mb-vista" hidden=""><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 7l8-1M7 9l4 7M17 8l-4 8"/></svg><span>Tablero</span></button>
+          <button type="button" id="mb-tema"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 5a7 7 0 0 0 0 14z" fill="currentColor"/></svg><span>Tema</span></button>
+        </nav>
         <aside class="x-dossier x-credits" id="credits" aria-label="Créditos y fuentes" aria-hidden="true">
           <span class="x-handle"></span>
           <div class="x-dossier__bar">
@@ -160,6 +166,7 @@
               <ol class="x-results" id="q-res"></ol>
             </section>
             <section class="x-menu__pane" data-pane="indice" hidden="">
+              <button class="x-continue" type="button" id="seguir-leyendo" hidden=""><small>Seguir leyendo</small><b></b></button>
               <p class="x-menu__hint">Los 150 capítulos en el orden de estudio. Tocá uno para abrirlo con su desglose.</p>
               <ol class="x-index" id="indice"></ol>
             </section>
@@ -187,6 +194,6 @@
         </aside>
       </main>
     </div>
-    <script src="js/app.js?v=7"></script>
-    <script src="js/edit.js?v=7"></script>
+    <script src="js/app.js?v=8"></script>
+    <script src="js/edit.js?v=8"></script>
   </body></html>

@@ -204,6 +204,7 @@ function veladMain(DATA) {
           lecKicker = document.getElementById("lectura-kicker"), leerBtn = document.getElementById("leer");
         var LEC_KEY = "velad-lectura";
         function wide() { return window.innerWidth >= 1000; }
+        function mob() { return window.innerWidth < 760; }
         function lecOpen() { return lectura.classList.contains("is-open"); }
         function readL() { return wide() && lecOpen() ? lectura.offsetWidth + 24 : 0; }
         function setLectura(open, remember) {
@@ -229,7 +230,8 @@ function veladMain(DATA) {
             a.appendChild(b);
           });
           var pref = null; try { pref = localStorage.getItem(LEC_KEY); } catch (e) { /* nada */ }
-          setLectura(wide() && pref !== "off");
+          setLectura(mob() || (wide() && pref !== "off"));
+          if (mob()) paintBar();
         }
         /* el desglose guía al tablero: al leer, el tablero va a la tarjeta de ese tramo (las tarjetas no mueven el desglose) */
         var spotId = null, spotT = null;
@@ -248,6 +250,7 @@ function veladMain(DATA) {
           var cur = lecBody.querySelectorAll('[data-node="' + id + '"]');
           cur.forEach(function (a) { a.classList.add("is-current"); });
           var fol = optOn("seguir"), inf = optOn("info");
+          if (mob() && lecOpen()) { if (inf) inlineInfo(id, lecAnchor()); return; }
           if (inf && wide()) { focusItem(id, { spot: true, noCenter: !fol }); items[id].classList.add("is-spot"); return; }
           if (inf) inlineInfo(id, lecAnchor());
           if (!fol) return;
@@ -396,6 +399,7 @@ function veladMain(DATA) {
           items = {};
           setEl.querySelectorAll(".x-item").forEach(function (el) { items[el.dataset.id] = el; });
           syncLectura(owner);
+          if (owner && owner.body) { try { localStorage.setItem("velad-ultimo", JSON.stringify({ ids: path.map(function (n) { return n.id; }), t: owner.title })); } catch (e) { /* nada */ } }
           setEl.querySelectorAll("img").forEach(function (img) {
             if (!img.complete) img.addEventListener("load", function () { drawStrings(); if (!focused) fitView(false); });
           });
@@ -432,6 +436,29 @@ function veladMain(DATA) {
           open: function (ids) { var r = resolve(ids, false); openPath(r.path); },
           set: function () { return MAP.set || MAP.route || null; }
         };
+        /* ---------- celular: barra inferior (Índice · Buscar · Texto/Tablero · Tema) ---------- */
+        var mbar = document.getElementById("mbar"), mbVista = document.getElementById("mb-vista");
+        function paintBar() {
+          if (!mbar) return;
+          var has = !!(stack.length && stack[stack.length - 1].body);
+          mbVista.hidden = !has;
+          mbVista.querySelector("span").textContent = lecOpen() ? "Tablero" : "Texto";
+          mbVista.setAttribute("aria-pressed", lecOpen() ? "false" : "true");
+        }
+        if (mbVista) mbVista.addEventListener("click", function () {
+          if (lecOpen()) {
+            var id = spotId; setLectura(false);
+            if (focused) closeFocusQuiet();
+            if (id && items[id]) {
+              Object.keys(items).forEach(function (k) { items[k].classList.toggle("is-spot", k === id); });
+              board.classList.add("is-focus"); var ln = markLinks(id); drawLinks(id); centerOn(items[id], ln, true);
+            } else fitView(true);
+          } else { if (focused) closeFocus(); setLectura(true); }
+          paintBar();
+        });
+        if (mbar) {
+          document.getElementById("mb-tema").addEventListener("click", function () { document.getElementById("tema").click(); });
+        }
         /* ---------- menú ☰: búsqueda + índice de estudio ---------- */
         (function veladMenu() {
           var menu = document.getElementById("menu"), mbtn = document.getElementById("menu-btn");
@@ -523,6 +550,26 @@ function veladMain(DATA) {
             if (open && window.innerWidth >= 760) setTimeout(function () { if (!menu.querySelector('[data-pane="buscar"]').hidden) q.focus(); }, 80);
           }
           mbtn.addEventListener("click", function () { setMenu(!menu.classList.contains("is-open")); });
+          function tab(name) { var t = menu.querySelector('[data-tab="' + name + '"]'); if (t) t.click(); }
+          function paintSeguir() {
+            var sb = document.getElementById("seguir-leyendo"); if (!sb) return;
+            var u = null; try { u = JSON.parse(localStorage.getItem("velad-ultimo")); } catch (e) { /* nada */ }
+            sb.hidden = !(u && u.ids && u.ids.length);
+            if (u && u.t) sb.querySelector("b").textContent = u.t;
+            sb.onclick = function () { setMenu(false); var r = resolve(u.ids, false); openPath(r.path); };
+          }
+          ["indice", "buscar"].forEach(function (k) {
+            var b = document.getElementById("mb-" + k); if (!b) return;
+            b.addEventListener("click", function () {
+              var same = menu.classList.contains("is-open") && !menu.querySelector('[data-pane="' + k + '"]').hidden;
+              if (same) { setMenu(false); return; }
+              tab(k); paintSeguir(); setMenu(true);
+              if (k === "buscar") setTimeout(function () { q.focus(); }, 60);
+            });
+          });
+          paintSeguir();
+          /* en el celu, Velad abre en el índice */
+          if (window.innerWidth < 760 && !location.hash) { tab("indice"); setMenu(true); }
           document.getElementById("menu-close").addEventListener("click", function () { setMenu(false); mbtn.focus({ preventScroll: true }); });
           document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && menu.classList.contains("is-open")) { setMenu(false); e.stopPropagation(); }
@@ -808,7 +855,7 @@ function veladMain(DATA) {
             moved = false;
             tapTarget = e.target.closest(".x-item, .x-mark");
             beginPan(pointers.get(e.pointerId));
-            var uc = !editing() && e.target.closest(".x-item");
+            var uc = !editing() && !mob() && e.target.closest(".x-item");
             udrag = uc ? { id: uc.dataset.id, el: uc, ox: uc.offsetLeft, oy: uc.offsetTop } : null;
           } else if (pointers.size === 2) {
             moved = true;
