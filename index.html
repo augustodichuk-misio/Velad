@@ -17,8 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
-    <link rel="stylesheet" href="css/app.css?v=8"/>
-    <link rel="stylesheet" href="css/edit.css?v=8"/>
+    <link rel="stylesheet" href="css/app.css?v=9"/>
+    <link rel="stylesheet" href="css/edit.css?v=9"/>
+    <link rel="stylesheet" href="css/extras.css?v=9"/>
   <script>try{var t=localStorage.getItem("velad-tema");if(t==="medio"||t==="claro")document.documentElement.setAttribute("data-velad",t);}catch(e){}</script>
   </head>
   <body>
@@ -146,6 +147,7 @@
               <li><b>Mar Muerto</b> · Mujaddara · CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:67_border_on_Dead_sea_-_panoramio.jpg" rel="noopener" target="_blank">original ↗</a></li>
             </ul>
             <p class="fineprint">Fotos adaptadas (redimensionadas). Citas bíblicas: Reina-Valera 1960.</p>
+            <p class="fineprint">Texto bíblico: Reina-Valera 1960 © Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas.</p>
           </div>
         </aside>
 
@@ -158,11 +160,12 @@
           <div class="x-menu__tabs" role="tablist">
             <button class="x-chip" type="button" role="tab" data-tab="buscar" aria-pressed="true">Buscar</button>
             <button class="x-chip" type="button" role="tab" data-tab="indice" aria-pressed="false">Índice de estudio</button>
+            <button class="x-chip" type="button" role="tab" data-tab="estudio" aria-pressed="false" hidden>Estudio</button>
           </div>
           <div class="x-dossier__body" id="menu-body">
             <section class="x-menu__pane" data-pane="buscar">
               <input class="x-search" id="q" type="search" placeholder="Capítulo, versículo, tema o palabra…" autocomplete="off" aria-label="Buscar en Velad"/>
-              <p class="x-menu__hint" id="q-hint">Buscá por libro (Joel 2), cita (Mt 24:15), tema (abominación) o cualquier palabra de los desgloses.</p>
+              <p class="x-menu__hint" id="q-hint">Buscá por libro (Joel 2), cita (Mt 24:15), tema (abominación), término del glosario o cualquier palabra de los desgloses.</p>
               <ol class="x-results" id="q-res"></ol>
             </section>
             <section class="x-menu__pane" data-pane="indice" hidden="">
@@ -170,6 +173,7 @@
               <p class="x-menu__hint">Los 150 capítulos en el orden de estudio. Tocá uno para abrirlo con su desglose.</p>
               <ol class="x-index" id="indice"></ol>
             </section>
+            <section class="x-menu__pane" data-pane="estudio" hidden=""></section>
           </div>
         </aside>
         <aside class="x-dossier x-read" id="lectura" aria-label="Desglose del capítulo" aria-hidden="true">
@@ -194,6 +198,8 @@
         </aside>
       </main>
     </div>
-    <script src="js/app.js?v=8"></script>
-    <script src="js/edit.js?v=8"></script>
+    <script src="js/refs.js?v=9"></script>
+    <script src="js/app.js?v=9"></script>
+    <script src="js/extras.js?v=9"></script>
+    <script src="js/edit.js?v=9"></script>
   </body></html>

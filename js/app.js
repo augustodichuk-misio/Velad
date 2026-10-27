@@ -434,7 +434,13 @@ function veladMain(DATA) {
         }
         window.XNav = {
           open: function (ids) { var r = resolve(ids, false); openPath(r.path); },
-          set: function () { return MAP.set || MAP.route || null; }
+          set: function () { return MAP.set || MAP.route || null; },
+          /* ids desde la raíz: abre el capítulo/mapa, o el mapa que contiene la tarjeta y la enfoca */
+          go: function (ids) {
+            var r = resolve(ids, false);
+            if (r.path.length >= ids.length) openPath(r.path);
+            else openPath(r.path, ids[r.path.length]);
+          }
         };
         /* ---------- celular: barra inferior (Índice · Buscar · Texto/Tablero · Tema) ---------- */
         var mbar = document.getElementById("mbar"), mbVista = document.getElementById("mb-vista");
@@ -497,11 +503,11 @@ function veladMain(DATA) {
             var a = Math.max(0, i - 50), b = Math.min(body.length, i + t.length + 70);
             return (a ? "…" : "") + esc(body.slice(a, i)) + "<mark>" + esc(body.slice(i, i + t.length)) + "</mark>" + esc(body.slice(i + t.length, b)) + (b < body.length ? "…" : "");
           }
-          var shown = [];
+          var shown = [], extra = [];
           function search() {
             var t = norm(q.value.trim());
             hint.hidden = !!t;
-            if (t.length < 2) { res.innerHTML = ""; shown = []; return; }
+            if (t.length < 2) { res.innerHTML = ""; shown = []; extra = []; return; }
             var head = [], deep = [];
             ALL.forEach(function (e) {
               if (e.head.indexOf(t) >= 0) head.push(e);
@@ -509,15 +515,27 @@ function veladMain(DATA) {
             });
             shown = head.slice(0, 30).map(function (e) { return { e: e, deep: false }; })
               .concat(deep.slice(0, 40).map(function (e) { return { e: e, deep: true }; }));
-            res.innerHTML = shown.length ? shown.map(function (r, i) {
+            /* glosario y funciones de estudio (js/extras.js), si cargaron */
+            extra = [];
+            try { if (window.VeladExtras) extra = window.VeladExtras.search(t) || []; } catch (er) { extra = []; }
+            var xh = extra.map(function (x, i) {
+              return '<li><button type="button" class="x-res-x" data-x="' + i + '"><span>' + esc(x.title) + "</span><small>" + esc(x.sub) + "</small></button></li>";
+            }).join("");
+            res.innerHTML = xh + (shown.length ? shown.map(function (r, i) {
               var e = r.e;
               return '<li><button type="button" data-r="' + i + '"><span>' + esc(e.nd.title) + (e.nd.ref ? " · " + esc(e.nd.ref) : "") + "</span><small>" +
                 (r.deep ? snip(e.body, e.nbody, t) + "<br>" : "") + esc(e.where) + "</small></button></li>";
-            }).join("") : '<li class="x-menu__hint">Sin resultados.</li>';
+            }).join("") : (xh ? "" : '<li class="x-menu__hint">Sin resultados.</li>'));
           }
           var qt; q.addEventListener("input", function () { clearTimeout(qt); qt = setTimeout(search, 140); });
-          q.addEventListener("keydown", function (e) { if (e.key === "Enter" && shown[0]) go(shown[0].e, shown[0].deep ? q.value.trim() : null); });
+          q.addEventListener("keydown", function (e) {
+            if (e.key !== "Enter") return;
+            if (extra[0]) { setMenu(false); extra[0].go(); return; }
+            if (shown[0]) go(shown[0].e, shown[0].deep ? q.value.trim() : null);
+          });
           res.addEventListener("click", function (e) {
+            var xb = e.target.closest("[data-x]");
+            if (xb) { var xi = extra[+xb.dataset.x]; setMenu(false); if (xi) xi.go(); return; }
             var b = e.target.closest("[data-r]"); if (!b) return;
             var r = shown[+b.dataset.r]; go(r.e, r.deep ? q.value.trim() : null);
           });
