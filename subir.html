@@ -1,0 +1,22 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subir datos · Velad</title>
+<style>body{font:16px/1.5 system-ui,sans-serif;max-width:560px;margin:40px auto;padding:0 16px}label{display:block;margin:14px 0}input{font:inherit}button{font:inherit;padding:8px 18px}pre{background:#f3f3f3;padding:10px;white-space:pre-wrap}</style></head><body>
+<h1>Subir datos de Velad</h1>
+<p>Elegí el archivo <code>data.json</code> (u otros) y pegá el token. Cada archivo se guarda en la raíz del repo con su mismo nombre.</p>
+<label>Archivo(s): <input id="files" type="file" name="files" multiple></label>
+<label>Token: <input id="tok" type="password" name="token" autocomplete="off"></label>
+<label>Mensaje: <input id="msg" type="text" value="Capítulos nuevos"></label>
+<button id="go">Subir</button><pre id="log"></pre>
+<script>
+const OWNER="augustodichuk-misio",REPO="Velad",BR="main";
+const log=m=>{document.getElementById("log").textContent+=m+"\n"};
+async function gh(path,method="GET",body){const r=await fetch("https://api.github.com/repos/"+OWNER+"/"+REPO+path,{method,headers:{"Authorization":"Bearer "+document.getElementById("tok").value.trim(),"Accept":"application/vnd.github+json","Content-Type":"application/json"},body:body?JSON.stringify(body):undefined});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(method+" "+path+" -> "+r.status+" "+(j.message||""));return j;}
+const b64=f=>new Promise((ok,ko)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(",")[1]);r.onerror=ko;r.readAsDataURL(f);});
+document.getElementById("go").onclick=async()=>{try{
+ const fs=[...document.getElementById("files").files];if(!fs.length)throw new Error("no elegiste archivos");
+ for(const f of fs){if(f.name.endsWith(".json")){JSON.parse(await f.text());log("JSON válido: "+f.name+" ("+f.size+" bytes)");}}
+ log("Leyendo rama...");const ref=await gh("/git/ref/heads/"+BR);const base=ref.object.sha;const bc=await gh("/git/commits/"+base);
+ const tree=[];let i=0;for(const f of fs){const b=await gh("/git/blobs","POST",{content:await b64(f),encoding:"base64"});tree.push({path:f.name,mode:"100644",type:"blob",sha:b.sha});log("ok "+(++i)+"/"+fs.length+" "+f.name);}
+ const t=await gh("/git/trees","POST",{base_tree:bc.tree.sha,tree});const c=await gh("/git/commits","POST",{message:document.getElementById("msg").value||"Datos",tree:t.sha,parents:[base]});
+ await gh("/git/refs/heads/"+BR,"PATCH",{sha:c.sha});log("LISTO commit "+c.sha);
+}catch(e){log("ERROR "+e.message);}};
+</script></body></html>
