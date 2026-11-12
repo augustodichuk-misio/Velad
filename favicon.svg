@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<style>.g{fill:#9c762c;stroke:#9c762c}@media (prefers-color-scheme:dark){.g{fill:#e8d6a8;stroke:#e8d6a8}}</style>
+<g class="g" stroke-linejoin="round">
+<rect x="270" y="140" width="484" height="56" rx="14" stroke="none"/>
+<rect x="270" y="828" width="484" height="56" rx="14" stroke="none"/>
+<polyline points="330,196 492,500 492,524 330,828" fill="none" stroke-width="61"/>
+<polyline points="694,196 532,500 532,524 694,828" fill="none" stroke-width="61"/>
+<polygon points="452,430 572,430 512,492" stroke="none"/>
+<line x1="512" y1="500" x2="512" y2="700" stroke-width="10"/>
+<polygon points="372,806 652,806 512,700" stroke="none"/>
+</g></svg>
