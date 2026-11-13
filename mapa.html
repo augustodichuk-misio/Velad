@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
-    <link rel="stylesheet" href="css/app.css?v=9"/>
+    <link rel="stylesheet" href="css/app.css?v=10"/>
     <link rel="stylesheet" href="css/edit.css?v=9"/>
     <link rel="stylesheet" href="css/extras.css?v=9"/>
   <script>try{var t=localStorage.getItem("velad-tema");if(t==="medio"||t==="claro")document.documentElement.setAttribute("data-velad",t);}catch(e){}</script>
@@ -160,11 +160,12 @@
             <p>Menú</p>
             <button class="btn x-close" type="button" id="menu-close" aria-label="Cerrar menú">Cerrar ✕</button>
           </div>
-          <div class="x-menu__tabs" role="tablist">
-            <button class="x-chip" type="button" role="tab" data-tab="buscar" aria-pressed="true">Buscar</button>
-            <button class="x-chip" type="button" role="tab" data-tab="indice" aria-pressed="false">Índice de estudio</button>
-            <button class="x-chip" type="button" role="tab" data-tab="estudio" aria-pressed="false" hidden>Estudio</button>
-          </div>
+          <nav class="x-menu__tabs" aria-label="Secciones">
+            <a class="x-chip x-menu__home" href="index.html">Inicio</a>
+            <button class="x-chip" type="button" data-tab="buscar" aria-pressed="true">Buscar</button>
+            <button class="x-chip" type="button" data-tab="indice" aria-pressed="false">Índice de estudio</button>
+            <button class="x-chip" type="button" data-tab="estudio" aria-pressed="false" hidden>Estudio</button>
+          </nav>
           <div class="x-dossier__body" id="menu-body">
             <section class="x-menu__pane" data-pane="buscar">
               <input class="x-search" id="q" type="search" placeholder="Capítulo, versículo, tema o palabra…" autocomplete="off" aria-label="Buscar en Velad"/>

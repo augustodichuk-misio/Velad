@@ -1217,3 +1217,12 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
   .x-continue small { font: 500 11px/1 var(--x-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--x-gold); }
   .x-index button { min-height: 48px; }
 }
+
+/* menú en una columna (13/11) */
+.x-menu__tabs { flex-direction: column; gap: 0; padding: 8px 12px 10px; border-bottom: 1px solid var(--x-line); }
+.x-menu__tabs .x-chip { display: flex; align-items: center; width: 100%; min-height: 44px; padding: 0 12px 0 14px; border: 0; border-left: 2px solid transparent; border-radius: 0 8px 8px 0; background: none; color: var(--x-text); font: 500 15px/1.2 var(--x-sans); letter-spacing: 0; text-align: left; text-decoration: none; }
+.x-menu__tabs .x-chip[hidden] { display: none; }
+.x-menu__tabs .x-chip:hover { background: rgb(var(--x-gold-rgb) / 0.06); }
+.x-menu__tabs .x-chip[aria-pressed="true"] { color: var(--x-gold); border-left-color: var(--x-gold); background: rgb(var(--x-gold-rgb) / 0.08); }
+.x-menu__tabs .x-menu__home { color: var(--x-muted); }
+.x-menu__tabs .x-menu__home::after { content: "↗"; margin-left: auto; font-size: 13px; opacity: .6; }
