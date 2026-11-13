@@ -306,7 +306,7 @@ function veladMain(DATA) {
         }
         inherit(TREE, "x-muted");
         var crumbs = document.getElementById("crumbs"), upBtn = document.getElementById("up"), setEl = document.getElementById("set-gen");
-        var BRAND = '<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" style="stroke:var(--x-gold)" stroke-width="1"><circle cx="10" cy="10" r="9" /><path d="M10 5v10M6.5 8.5h7" /></svg>';
+        var BRAND = '<img src="img/sello.png" alt="" width="36" height="36" style="flex:none;width:36px;height:36px;filter:drop-shadow(0 1px 2px rgb(0 0 0 / .35))"/>';
         var stack = [], MAP, cur, items, LINKS, POS, tl;
         var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         var cam = { x: 0, y: 0, s: 1 };
@@ -361,7 +361,7 @@ function veladMain(DATA) {
             }).join("") + "</nav>";
         }
         function renderCrumbs() {
-          var h = '<button type="button" class="x-crumb x-crumb--brand" data-depth="0">' + BRAND + esc(TREE.brand) + "</button>";
+          var h = '<button type="button" class="x-crumb x-crumb--brand" data-depth="0" aria-label="Velad: volver al mapa general" title="Volver al mapa general">' + BRAND + "</button>";
           var trail = [TREE.title].concat(stack.map(function (n) { return n.title; }));
           trail.forEach(function (t, i) {
             h += '<span class="x-sep" aria-hidden="true">›</span>';
