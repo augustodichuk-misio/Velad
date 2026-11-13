@@ -318,6 +318,23 @@ function veladMain(DATA) {
         function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
         function mapAt(path) { var m = TREE; path.forEach(function (n) { m = n.children; }); return m; }
         function nodeById(id) { for (var i = 0; i < MAP.nodes.length; i++) if (MAP.nodes[i].id === id) return MAP.nodes[i]; return null; }
+        var BLOQ = {
+          "b-evangelios": ["Jesús y los apóstoles sobre su venida", "Lo que Jesús y los apóstoles enseñaron sobre su venida, la gran tribulación y la resurrección de los santos."],
+          "b-isaias": ["El Día del Señor y el Mesías que reina", "El profeta del Día del Señor: juicio sobre las naciones, el Mesías que reina y Sion restaurada."],
+          "b-menores": ["De Joel a Malaquías: el Día del Señor", "De Joel a Malaquías: el Día del Señor, el regreso de Israel a Dios y el reino que viene, con Zacarías capítulo por capítulo."],
+          "b-ezequiel": ["Restauración, Gog y el templo", "El atalaya de Israel: el regreso a la tierra, la guerra de Gog y Magog, y el templo del reino milenario."],
+          "b-salmos": ["Cantos del Rey que viene", "Cantos del Rey que viene: el Mesías entronizado, las naciones en rebelión y la alabanza de toda la tierra."],
+          "b-ley": ["Las promesas y advertencias de Moisés", "Las promesas y advertencias de Moisés: dispersión, regreso y el cántico final de Deuteronomio 32."],
+          "b-daniel": ["Las bestias y las setenta semanas", "Los imperios, el cuerno pequeño y las setenta semanas: el mapa del tiempo del fin."],
+          "b-apocalipsis": ["El regreso glorioso de Jesús", "La revelación de Jesucristo: los sellos, las trompetas, las copas y su regreso glorioso."],
+          "b-jeremias": ["Angustia de Jacob y nuevo pacto", "El tiempo de angustia para Jacob, el nuevo pacto y la caída de Babilonia."]
+        };
+        function blq(nd, i) { var b = BLOQ[nd.id]; return b ? b[i] : ""; }
+        function insideHTML(nd) {
+          var t = nd.children.nodes.filter(function (x) { return !/^Recorrido/.test(x.title); }).map(function (x) { return x.title; });
+          var more = t.length > 6; t = t.slice(0, 6);
+          return '<p class="x-inc-h">Adentro</p><div class="x-inc x-noref">' + t.map(function (x) { return "<span>" + esc(x) + "</span>"; }).join("") + (more ? '<span class="x-inc-more">y más</span>' : "") + "</div>";
+        }
         function countOf(nd) { var k = nd.children.nodes.length; return k + (k === 1 ? " tarjeta" : " tarjetas"); }
         function pad2(i) { return String(i).padStart(2, "0"); }
         /* organic grid: staggered rows, a little deterministic jitter */
@@ -337,7 +354,7 @@ function veladMain(DATA) {
             '" tabindex="0" role="button" aria-label="' + esc(nd.title) + (nd.children ? ", contiene un mapa" : "") + '" style="--c:var(--' + nd._c + ')">' +
             '<p class="x-cat">' + esc(m.kind || "Capítulo") + " <em>· " + esc(n) + "</em></p><h3>" + esc(nd.title) + "</h3>" +
             (nd.ref ? '<p class="x-ref">' + esc(nd.ref) + "</p>" : "") +
-            '<p class="x-note">' + esc(nd.summary || (nd.children ? countOf(nd) : "En estudio")) + "</p></article>";
+            '<p class="x-note">' + esc(nd.summary || blq(nd, 0) || (nd.children ? countOf(nd) : "En estudio")) + "</p></article>";
         }
         /* expediente card: photo, category, tags, notes */
         function richCardHTML(nd, i) {
@@ -407,7 +424,7 @@ function veladMain(DATA) {
           board.style.width = BW + "px";
           document.getElementById("exp-title").textContent = MAP.title;
           document.getElementById("exp-label").innerHTML = MAP.subtitle ||
-            esc(owner ? (mapAt(path.slice(0, -1)).kind || "Capítulo") + " · " + MAP.title : MAP.title) + " · <b>" + countOf(owner || { children: MAP }) + "</b>";
+            esc(owner ? (mapAt(path.slice(0, -1)).kind || "Capítulo") + (blq(owner, 0) ? " · " + blq(owner, 0) : "") : MAP.title);
           document.title = TREE.brand + " — " + [TREE.title].concat(path.map(function (n) { return n.title; })).join(" › ");
           view.setAttribute("aria-label", "Tablero de investigación: " + MAP.title);
           upBtn.hidden = !path.length;
@@ -776,12 +793,14 @@ function veladMain(DATA) {
             body.innerHTML = nd.body;
           } else {
             kicker.textContent = nd.kicker || ((MAP.kind || "Capítulo") + " · " + (nd.status === "pending" ? "Pendiente" : nd.n || pad2(MAP.nodes.indexOf(nd) + 1)) + (nd.ref ? " · " + nd.ref : ""));
-            body.innerHTML = "<h2>" + esc(nd.title) + "</h2><p>" + esc(nd.summary || nd.note || (nd.children ? countOf(nd) : "En estudio")) + "</p>";
+            body.innerHTML = "<h2>" + esc(nd.title) + "</h2><p>" + esc(nd.summary || nd.note || blq(nd, 1) || (nd.children ? countOf(nd) : "En estudio")) + "</p>";
           }
           if (nd.children) {
             var k = document.createElement("div");
             k.className = "x-key";
-            k.innerHTML = "<p>Esta tarjeta contiene un mapa: <b>" + esc(nd.children.title) + "</b>, " + countOf(nd) + ".</p>" +
+            var same = (nd.children.title || "") === (nd.title || "");
+            if (same) k.className = "x-key x-key--bare";
+            k.innerHTML = (same ? insideHTML(nd) : "<p>Esta tarjeta contiene un mapa: <b>" + esc(nd.children.title) + "</b>, " + countOf(nd) + ".</p>") +
               '<button class="btn x-open" type="button" data-open="' + esc(id) + '">Abrir mapa →</button>';
             var firstH = nd.body ? body.querySelector("h3") : null;
             if (firstH) body.insertBefore(k, firstH); else body.appendChild(k);

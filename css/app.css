@@ -1237,3 +1237,14 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
   .x-hud__label { margin: 0; padding-left: 18px; border-left: 1px solid var(--x-line); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .x-hint { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); margin: 0; padding: 6px 14px; border: 1px solid var(--x-line); border-radius: 999px; background: rgb(var(--x-bg-rgb) / 0.7); backdrop-filter: blur(6px); z-index: 5; pointer-events: none; white-space: nowrap; }
 }
+
+/* sin repeticiones (13/11): la ruta hace de título también en el celu; tarjeta-mapa con el mismo nombre = solo el botón */
+.x-hud h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.x-crumbs [aria-current] { font: 600 18px/1.15 var(--x-serif); letter-spacing: -0.005em; text-transform: none; color: var(--x-text); }
+.x-key--bare { padding: 0; border: 0; background: none; }
+.x-key--bare { gap: 10px; }
+.x-inc-h { font: 500 11px/1.3 var(--x-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--x-muted); }
+.x-inc { display: flex; flex-wrap: wrap; gap: 6px; }
+.x-inc span { padding: 5px 10px; border: 1px solid var(--x-line); border-radius: 999px; font: 400 13px/1.2 var(--x-sans); color: var(--x-text); }
+.x-inc .x-inc-more { border-style: dashed; color: var(--x-muted); }
+.x-key--bare .x-open { justify-self: start; margin-top: 4px; }
