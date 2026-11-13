@@ -1226,3 +1226,14 @@ tr.is-highlight > :last-child { box-shadow: 12px 0 var(--fill-tertiary); }
 .x-menu__tabs .x-chip[aria-pressed="true"] { color: var(--x-gold); border-left-color: var(--x-gold); background: rgb(var(--x-gold-rgb) / 0.08); }
 .x-menu__tabs .x-menu__home { color: var(--x-muted); }
 .x-menu__tabs .x-menu__home::after { content: "↗"; margin-left: auto; font-size: 13px; opacity: .6; }
+
+/* encabezado de compu en una sola franja (13/11) */
+@media (min-width: 760px) {
+  .x-hud { align-items: center; flex-wrap: nowrap; padding-top: 12px; padding-bottom: 12px; }
+  .x-hud__id { display: flex; align-items: center; gap: 0 18px; min-width: 0; flex: 1; }
+  .x-hud__row { flex: none; }
+  .x-hud h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .x-crumbs [aria-current] { font: 600 19px/1.15 var(--x-serif); letter-spacing: -0.005em; text-transform: none; color: var(--x-text); }
+  .x-hud__label { margin: 0; padding-left: 18px; border-left: 1px solid var(--x-line); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .x-hint { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); margin: 0; padding: 6px 14px; border: 1px solid var(--x-line); border-radius: 999px; background: rgb(var(--x-bg-rgb) / 0.7); backdrop-filter: blur(6px); z-index: 5; pointer-events: none; white-space: nowrap; }
+}
