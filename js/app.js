@@ -604,7 +604,7 @@ function veladMain(DATA) {
           });
           paintSeguir();
           /* en el celu, Velad abre en el índice */
-          if (window.innerWidth < 760 && !location.hash) { tab("indice"); setMenu(true); }
+          /* 19/11: en celular ya no abre el Índice solo; entra directo al mapa (pista en mapa.html #vl-hint) */
           document.getElementById("menu-close").addEventListener("click", function () { setMenu(false); mbtn.focus({ preventScroll: true }); });
           document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && menu.classList.contains("is-open")) { setMenu(false); e.stopPropagation(); }
