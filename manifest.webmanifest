@@ -1,0 +1,16 @@
+{
+  "name": "Velad: Mapa de los Últimos Tiempos",
+  "short_name": "Velad",
+  "description": "Mapa bíblico de los últimos tiempos, de Génesis a Apocalipsis.",
+  "lang": "es",
+  "start_url": "mapa.html?app=1",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07090c",
+  "theme_color": "#07090c",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
