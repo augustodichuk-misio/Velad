@@ -165,6 +165,7 @@
             <button class="x-chip" type="button" data-tab="buscar" aria-pressed="true">Buscar</button>
             <button class="x-chip" type="button" data-tab="indice" aria-pressed="false">Índice de estudio</button>
             <button class="x-chip" type="button" data-tab="estudio" aria-pressed="false" hidden>Estudio</button>
+            <button class="x-chip" type="button" id="vl-inst">Instalar app</button>
           </nav>
           <div class="x-dossier__body" id="menu-body">
             <section class="x-menu__pane" data-pane="buscar">
@@ -300,4 +301,32 @@
   </script>
 </div>
 
+<div id="vl-instm" hidden role="dialog" aria-modal="true" aria-labelledby="vl-instt"><div class="vl-ib"><button type="button" class="vl-ix" aria-label="Cerrar">×</button><img src="icon-192.png" alt="" width="56" height="56"/><h2 id="vl-instt">Velad como app</h2><p class="vl-isub">Abrila desde tu pantalla de inicio o el Dock, en su propia ventana, como cualquier app.</p><ol id="vl-isteps"></ol></div></div>
+<style>
+#vl-instm{position:fixed;inset:0;z-index:9999;background:rgba(4,5,8,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px}
+#vl-instm[hidden]{display:none}
+#vl-instm .vl-ib{position:relative;max-width:380px;width:100%;background:#0e1116;border:1px solid rgba(201,162,74,.35);border-radius:14px;padding:26px 24px 20px;color:#e8e2d4;font-family:Inter,system-ui,sans-serif;text-align:center}
+#vl-instm img{display:block;border-radius:12px;margin:0 auto 8px}
+#vl-instm h2{font-size:1.15rem;margin:4px 0 6px;color:#e8d6a8;font-weight:600}
+#vl-instm .vl-isub{font-size:.88rem;opacity:.75;margin:0 0 14px;line-height:1.45}
+#vl-instm ol{text-align:left;margin:0;padding-left:1.2em;font-size:.92rem;line-height:1.55}
+#vl-instm li{margin:6px 0}#vl-instm b{color:#e8d6a8;font-weight:600}
+#vl-instm .vl-ix{position:absolute;top:8px;right:10px;background:none;border:0;color:#e8e2d4;font-size:1.5rem;cursor:pointer;opacity:.7}
+</style>
+<script>(function(){
+var dp=null,b=document.getElementById('vl-inst'),m=document.getElementById('vl-instm'),st=document.getElementById('vl-isteps');
+var sa=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+if(sa){b.hidden=true;return;}
+addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e;});
+addEventListener('appinstalled',function(){b.hidden=true;m.hidden=true;});
+function pasos(){var u=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(u)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/.test(u),mac=/Macintosh/.test(u)&&!ios,cr=/CriOS|Chrome|Edg/.test(u),sf=/Safari/.test(u)&&!/CriOS|FxiOS|Chrome|Edg/.test(u);
+if(ios)return['Tocá el botón <b>Compartir</b> (el cuadrado con la flecha hacia arriba)'+(cr?', arriba a la derecha.':', abajo.'),'Bajá y elegí <b>Agregar a inicio</b>.','Tocá <b>Agregar</b>. Velad aparece en tu pantalla de inicio.'];
+if(and)return['Tocá el menú <b>⋮</b> de Chrome, arriba a la derecha.','Elegí <b>Instalar app</b> o <b>Agregar a la pantalla principal</b>.','Confirmá con <b>Instalar</b>.'];
+if(mac&&sf)return['En la barra de menú, abrí <b>Archivo</b> (o tocá <b>Compartir</b>).','Elegí <b>Agregar al Dock</b>.','Confirmá con <b>Agregar</b>. Velad queda en tu Dock.'];
+if(cr)return['Hacé clic en el ícono de <b>instalar</b> de la barra de direcciones (un monitor con una flecha), a la derecha.','Si no aparece: menú <b>⋮</b> → <b>Transmitir, guardar y compartir</b> → <b>Instalar página como app</b>.','Confirmá con <b>Instalar</b>.'];
+return['Abrí Velad en <b>Chrome</b>, <b>Edge</b> o <b>Safari</b>.','Buscá en el menú del navegador la opción <b>Instalar</b> o <b>Agregar a inicio</b>.'];}
+b.addEventListener('click',function(){if(dp){dp.prompt();dp.userChoice.finally(function(){dp=null;});return;}st.innerHTML=pasos().map(function(x){return'<li>'+x+'</li>';}).join('');m.hidden=false;});
+m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('vl-ix'))m.hidden=true;});
+addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true;});
+})();</script>
 <script>if("serviceWorker"in navigator)addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});</script></body></html>
