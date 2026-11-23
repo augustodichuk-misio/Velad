@@ -161,11 +161,11 @@
             <button class="btn x-close" type="button" id="menu-close" aria-label="Cerrar menú">Cerrar ✕</button>
           </div>
           <nav class="x-menu__tabs" aria-label="Secciones">
-            <a class="x-chip x-menu__home" href="index.html">Inicio</a>
-            <button class="x-chip" type="button" data-tab="buscar" aria-pressed="true">Buscar</button>
-            <button class="x-chip" type="button" data-tab="indice" aria-pressed="false">Índice de estudio</button>
-            <button class="x-chip" type="button" data-tab="estudio" aria-pressed="false" hidden>Estudio</button>
-            <button class="x-chip" type="button" id="vl-inst">Instalar app</button>
+            <a class="x-chip x-menu__home" href="index.html"><svg class="vl-mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Inicio</span></a>
+            <button class="x-chip" type="button" data-tab="buscar" aria-pressed="true"><svg class="vl-mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg><span>Buscar</span></button>
+            <button class="x-chip" type="button" data-tab="indice" aria-pressed="false"><svg class="vl-mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Índice de estudio</span></button>
+            <button class="x-chip" type="button" data-tab="estudio" aria-pressed="false" hidden><svg class="vl-mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5z"/><path d="M12 6.5v13"/></svg><span>Estudio</span></button>
+            <button class="x-chip" type="button" id="vl-inst"><svg class="vl-mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg><span>Instalar app</span></button>
           </nav>
           <div class="x-dossier__body" id="menu-body">
             <section class="x-menu__pane" data-pane="buscar">
@@ -301,6 +301,7 @@
   </script>
 </div>
 
+<style>.x-menu__tabs .x-chip{display:flex;align-items:center;gap:12px}.x-menu__tabs .x-chip[hidden]{display:none}.vl-mi{width:20px;height:20px;flex:none;fill:none;stroke:#c9a24a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.85}.x-chip[aria-pressed="true"] .vl-mi{opacity:1}#vl-inst .vl-mi{stroke:#e8d6a8}#q-hint.x-menu__hint{font-size:.8rem;line-height:1.5;opacity:.6;margin:10px 4px 0;max-width:46ch}</style>
 <div id="vl-instm" hidden role="dialog" aria-modal="true" aria-labelledby="vl-instt"><div class="vl-ib"><button type="button" class="vl-ix" aria-label="Cerrar">×</button><img src="icon-192.png" alt="" width="56" height="56"/><h2 id="vl-instt">Velad como app</h2><p class="vl-isub">Abrila desde tu pantalla de inicio o el Dock, en su propia ventana, como cualquier app.</p><ol id="vl-isteps"></ol></div></div>
 <style>
 #vl-instm{position:fixed;inset:0;z-index:9999;background:rgba(4,5,8,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px}
