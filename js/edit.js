@@ -160,7 +160,17 @@
         throw e;
       });
   }
-  function serialize() { return JSON.stringify(A().data(), null, 1) + "\n"; }
+  /* los nodos de entrada (nodos-raiz.json, con "tipo") nunca se guardan en data.json */
+  function clean(d) {
+    var c = JSON.parse(JSON.stringify(d)), t = c.tree;
+    if (t && t.nodes) {
+      var x = {}; t.nodes = t.nodes.filter(function (n) { if (n.tipo) { x[n.id] = true; return false; } return true; });
+      if (t.links) t.links = t.links.filter(function (l) { return !x[l[0]] && !x[l[1]]; });
+      if (Object.keys(x).length && t.w === 2800) t.w = 2500;
+    }
+    return c;
+  }
+  function serialize() { return JSON.stringify(clean(A().data()), null, 1) + "\n"; }
   function buildPut(sha) {
     var body = { message: "Edición desde la web", content: utf8ToB64(serialize()), branch: CONFIG.branch };
     if (sha) body.sha = sha;

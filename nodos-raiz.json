@@ -1,0 +1,731 @@
+{
+ "w": 2460,
+ "root": {
+  "title": "Mapa de los Últimos Tiempos",
+  "subtitle": "Para curiosear · <b>datos, lugares y preguntas</b>"
+ },
+ "nodes": [
+  {
+   "id": "q-israel",
+   "tipo": "pregunta",
+   "c": "c-lugar",
+   "title": "¿Terminó Dios con Israel?",
+   "note": "Tocá para ver la respuesta",
+   "kicker": "Pregunta",
+   "body": "<h2>¿Terminó Dios con Israel?</h2><p>No. Pablo lo dice sin vueltas: el endurecimiento de Israel es parcial y tiene fecha de vencimiento.</p><blockquote class=\"x-dq\"><p>«Porque no quiero, hermanos, que ignoréis este misterio, para que no seáis arrogantes en cuanto a vosotros mismos: que ha acontecido a Israel endurecimiento en parte, hasta que haya entrado la plenitud de los gentiles; y luego todo Israel será salvo, como está escrito: Vendrá de Sion el Libertador, Que apartará de Jacob la impiedad.»</p><cite>Ro 11:25-26</cite></blockquote><p>Los profetas anuncian lo mismo: un pueblo traído de vuelta a su tierra, un tiempo de angustia y, al final, una nación que mira al que traspasaron.</p>",
+   "xref": [
+    {
+     "label": "Ezequiel 37",
+     "to": [
+      "mapa",
+      "b-ezequiel",
+      "c93"
+     ]
+    },
+    {
+     "label": "Jeremías 30",
+     "to": [
+      "mapa",
+      "b-jeremias",
+      "p-jr30"
+     ]
+    }
+   ],
+   "pos": [
+    704,
+    451
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "t-israel",
+   "tipo": "tema",
+   "c": "c-lugar",
+   "title": "El papel de Israel en los Últimos Tiempos",
+   "note": "Del regreso a la tierra a la salvación de todo Israel",
+   "kicker": "Tema",
+   "body": "<h2>El papel de Israel en los Últimos Tiempos</h2><p>Israel es el reloj del plan de Dios. Cuatro momentos atraviesan los profetas:</p><ol class=\"x-dl\"><li><b>Vuelta a la tierra.</b> Los huesos secos que vuelven a vivir.</li><li><b>Angustia de Jacob.</b> El tiempo más duro de su historia.</li><li><b>El reconocimiento.</b> Miran al que traspasaron.</li><li><b>La salvación.</b> Todo Israel será salvo.</li></ol><blockquote class=\"x-dq\"><p>«¡Ah, cuán grande es aquel día! tanto, que no hay otro semejante a él; tiempo de angustia para Jacob; pero de ella será librado.»</p><cite>Jer 30:7</cite></blockquote><blockquote class=\"x-dq\"><p>«Y derramaré sobre la casa de David, y sobre los moradores de Jerusalén, espíritu de gracia y de oración; y mirarán a mí, a quien traspasaron, y llorarán como se llora por hijo unigénito, afligiéndose por él como quien se aflige por el primogénito.»</p><cite>Zac 12:10</cite></blockquote>",
+   "xref": [
+    {
+     "label": "Ezequiel 37",
+     "to": [
+      "mapa",
+      "b-ezequiel",
+      "c93"
+     ]
+    },
+    {
+     "label": "Jeremías 30",
+     "to": [
+      "mapa",
+      "b-jeremias",
+      "p-jr30"
+     ]
+    },
+    {
+     "label": "Zacarías 12",
+     "to": [
+      "mapa",
+      "b-menores",
+      "c86"
+     ]
+    }
+   ],
+   "pos": [
+    60,
+    639
+   ],
+   "sz": "xl"
+  },
+  {
+   "id": "img-tito",
+   "tipo": "imagen",
+   "c": "c-historia",
+   "title": "El Arco de Tito",
+   "note": "Roma celebró la caída de Jerusalén. Jesús la había anunciado.",
+   "photo": {
+    "src": "img/titus_s.jpg",
+    "alt": "Arco de Tito, Roma"
+   },
+   "kicker": "Imagen",
+   "body": "<h2>El Arco de Tito</h2><p>Arco de triunfo en el Foro Romano que celebra la toma de Jerusalén por Tito en el año 70. En uno de sus relieves, los soldados se llevan el candelabro del templo.</p><p>Casi cuarenta años antes, Jesús lo había anunciado:</p><blockquote class=\"x-dq\"><p>«Y caerán a filo de espada, y serán llevados cautivos a todas las naciones; y Jerusalén será hollada por los gentiles, hasta que los tiempos de los gentiles se cumplan.»</p><cite>Lc 21:24</cite></blockquote><p>La última frase sigue abierta: los tiempos de los gentiles tienen un final.</p>",
+   "xref": [
+    {
+     "label": "Lucas 21",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c02"
+     ]
+    }
+   ],
+   "pos": [
+    1168,
+    60
+   ],
+   "sz": "l"
+  },
+  {
+   "id": "img-olivos",
+   "tipo": "imagen",
+   "c": "c-venida",
+   "title": "El monte de los Olivos",
+   "note": "Donde se van a afirmar sus pies",
+   "photo": {
+    "src": "img/ob_mount-of-olives.jpg",
+    "alt": "Monte de los Olivos, Jerusalén"
+   },
+   "kicker": "Imagen",
+   "body": "<h2>El monte de los Olivos</h2><p>Frente a Jerusalén, al oriente. Desde ahí Jesús subió al cielo, y ahí van a pisar sus pies cuando vuelva.</p><blockquote class=\"x-dq\"><p>«Y se afirmarán sus pies en aquel día sobre el monte de los Olivos, que está en frente de Jerusalén al oriente; y el monte de los Olivos se partirá por en medio…»</p><cite>Zac 14:4</cite></blockquote>",
+   "xref": [
+    {
+     "label": "Zacarías 14",
+     "to": [
+      "mapa",
+      "b-menores",
+      "c88"
+     ]
+    },
+    {
+     "label": "La Venida de Jesús",
+     "to": [
+      "mapa",
+      "b-apocalipsis",
+      "lavenida"
+     ]
+    }
+   ],
+   "pos": [
+    60,
+    60
+   ],
+   "sz": "xl"
+  },
+  {
+   "id": "img-megido",
+   "tipo": "imagen",
+   "c": "c-juicio",
+   "title": "Meguido",
+   "note": "El valle que dio nombre a Armagedón",
+   "photo": {
+    "src": "img/ob_megiddo.jpg",
+    "alt": "Ruinas de Meguido"
+   },
+   "kicker": "Imagen",
+   "body": "<h2>Meguido</h2><p>Ciudad fortificada que dominaba el valle de Jezreel, paso obligado de los ejércitos de la antigüedad. Har Meguido, «monte de Meguido», es el origen del nombre Armagedón.</p><blockquote class=\"x-dq\"><p>«Y los reunió en el lugar que en hebreo se llama Armagedón.»</p><cite>Ap 16:16</cite></blockquote>",
+   "xref": [
+    {
+     "label": "La Venida de Jesús",
+     "to": [
+      "mapa",
+      "b-apocalipsis",
+      "lavenida"
+     ]
+    }
+   ],
+   "pos": [
+    1632,
+    623
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "d-mt24",
+   "tipo": "desglose",
+   "c": "c-venida",
+   "title": "Mateo 24 en cuatro pasos",
+   "pasos": [
+    "Principios de dolores",
+    "La abominación desoladora",
+    "La gran tribulación",
+    "Inmediatamente después: su venida"
+   ],
+   "kicker": "Desglose",
+   "body": "<h2>Mateo 24 en cuatro pasos</h2><p>Jesús mismo ordena la secuencia en el monte de los Olivos:</p><ol class=\"x-dl\"><li><b>Principios de dolores</b> (24:4-14). Engaño, guerras, hambres y persecución.</li><li><b>La abominación desoladora</b> (24:15). La señal que Daniel había anunciado.</li><li><b>La gran tribulación</b> (24:21). Un tiempo sin igual.</li><li><b>Su venida</b> (24:29-31). Inmediatamente después, con poder y gran gloria.</li></ol><blockquote class=\"x-dq\"><p>«Por tanto, cuando veáis en el lugar santo la abominación desoladora de que habló el profeta Daniel (el que lee, entienda),»</p><cite>Mt 24:15</cite></blockquote>",
+   "xref": [
+    {
+     "label": "Mateo 24",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c01"
+     ]
+    }
+   ],
+   "pos": [
+    704,
+    629
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "q-cuando",
+   "tipo": "pregunta",
+   "c": "c-venida",
+   "title": "¿Antes o después de la tribulación?",
+   "note": "Tocá para ver la respuesta",
+   "kicker": "Pregunta",
+   "body": "<h2>¿Antes o después de la tribulación?</h2><p>Jesús pone el reloj: la reunión de los escogidos llega <b>inmediatamente después</b> de la tribulación de aquellos días.</p><blockquote class=\"x-dq\"><p>«E inmediatamente después de la tribulación de aquellos días, el sol se oscurecerá, y la luna no dará su resplandor, y las estrellas caerán del cielo, y las potencias de los cielos serán conmovidas. Entonces aparecerá la señal del Hijo del Hombre en el cielo; y entonces lamentarán todas las tribus de la tierra, y verán al Hijo del Hombre viniendo sobre las nubes del cielo, con poder y gran gloria.»</p><cite>Mt 24:29-30</cite></blockquote>",
+   "xref": [
+    {
+     "label": "¿Por qué postribulacional?",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c01",
+      "porque"
+     ]
+    },
+    {
+     "label": "Mateo 24",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c01"
+     ]
+    }
+   ],
+   "pos": [
+    704,
+    60
+   ],
+   "sz": "l"
+  },
+  {
+   "id": "t-hijo",
+   "tipo": "tema",
+   "c": "c-evento",
+   "title": "El Hijo del Hombre en las nubes",
+   "note": "Daniel lo vio, Jesús lo citó y Juan lo vuelve a anunciar",
+   "kicker": "Tema",
+   "body": "<h2>El Hijo del Hombre en las nubes</h2><p>Un mismo hilo atraviesa la Biblia: Daniel ve venir a uno como hijo de hombre, Jesús toma esas palabras para hablar de sí mismo y Juan cierra el canon con la misma escena.</p><blockquote class=\"x-dq\"><p>«Miraba yo en la visión de la noche, y he aquí con las nubes del cielo venía uno como un hijo de hombre, que vino hasta el Anciano de días, y le hicieron acercarse delante de él. Y le fue dado dominio, gloria y reino, para que todos los pueblos, naciones y lenguas le sirvieran; su dominio es dominio eterno, que nunca pasará, y su reino uno que no será destruido.»</p><cite>Dn 7:13-14</cite></blockquote><blockquote class=\"x-dq\"><p>«He aquí que viene con las nubes, y todo ojo le verá, y los que le traspasaron; y todos los linajes de la tierra harán lamentación por él. Sí, amén.»</p><cite>Ap 1:7</cite></blockquote>",
+   "xref": [
+    {
+     "label": "Daniel",
+     "to": [
+      "mapa",
+      "b-daniel",
+      "daniel-fin"
+     ]
+    },
+    {
+     "label": "La Venida de Jesús",
+     "to": [
+      "mapa",
+      "b-apocalipsis",
+      "lavenida"
+     ]
+    }
+   ],
+   "pos": [
+    1632,
+    389
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "v-sobrio",
+   "tipo": "vida",
+   "c": "c-venida",
+   "title": "¿Cómo me mantengo sobrio en este tiempo?",
+   "note": "1 P 4:7",
+   "body": "<h2>¿Cómo me mantengo sobrio en este tiempo?</h2><blockquote class=\"x-dq\"><p>«Mas el fin de todas las cosas se acerca; sed, pues, sobrios, y velad en oración.»</p><cite>1 P 4:7</cite></blockquote><p>Sobrio no es solo no emborracharse: es tener la mente despierta, sin anestesia. Jesús nombró las tres cosas que adormecen el corazón, y una de ellas es tan común que casi no la vemos: los afanes de esta vida.</p><blockquote class=\"x-dq\"><p>«Mirad también por vosotros mismos, que vuestros corazones no se carguen de glotonería y embriaguez y de los afanes de esta vida, y venga de repente sobre vosotros aquel día.»</p><cite>Lc 21:34</cite></blockquote><p>La salida que da Pedro va junto con la sobriedad: velar en oración.</p>",
+   "xref": [
+    {
+     "label": "Lucas 21",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c02"
+     ]
+    },
+    {
+     "label": "2 Pedro 3",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c10"
+     ]
+    }
+   ],
+   "pos": [
+    704,
+    288
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "v-miedo",
+   "tipo": "vida",
+   "c": "c-celebracion",
+   "title": "¿Y si tengo miedo de lo que viene?",
+   "note": "Lc 21:28",
+   "body": "<h2>¿Y si tengo miedo de lo que viene?</h2><p>Jesús no escondió lo difícil, pero tampoco dejó a los suyos con la cabeza gacha. La misma profecía que anuncia angustia termina en una orden:</p><blockquote class=\"x-dq\"><p>«Cuando estas cosas comiencen a suceder, erguíos y levantad vuestra cabeza, porque vuestra redención está cerca.»</p><cite>Lc 21:28</cite></blockquote><blockquote class=\"x-dq\"><p>«Estas cosas os he hablado para que en mí tengáis paz. En el mundo tendréis aflicción; pero confiad, yo he vencido al mundo.»</p><cite>Jn 16:33</cite></blockquote><p>Conocer lo que viene no es para asustarse: es para no ser tomado por sorpresa.</p>",
+   "xref": [
+    {
+     "label": "Lucas 21",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c02"
+     ]
+    },
+    {
+     "label": "La Venida de Jesús",
+     "to": [
+      "mapa",
+      "b-apocalipsis",
+      "lavenida"
+     ]
+    }
+   ],
+   "pos": [
+    1976,
+    607
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "v-vivir",
+   "tipo": "vida",
+   "c": "c-venida",
+   "title": "¿Cómo vivo si Él puede volver en mi generación?",
+   "note": "Tit 2:12-13",
+   "body": "<h2>¿Cómo vivo si Él puede volver en mi generación?</h2><p>Pablo no manda a dejar todo y sentarse a mirar el cielo. Manda a vivir distinto hoy, con la mirada puesta en ese día:</p><blockquote class=\"x-dq\"><p>«Porque la gracia de Dios se ha manifestado para salvación a todos los hombres, enseñándonos que, renunciando a la impiedad y a los deseos mundanos, vivamos en este siglo sobria, justa y piadosamente, aguardando la esperanza bienaventurada y la manifestación gloriosa de nuestro gran Dios y Salvador Jesucristo,»</p><cite>Tit 2:11-13</cite></blockquote><p>Esperar su venida no es una teoría: cambia cómo trabajo, cómo trato a los demás y en qué gasto el tiempo.</p>",
+   "xref": [
+    {
+     "label": "1 Tesalonicenses",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c03"
+     ]
+    },
+    {
+     "label": "2 Pedro 3",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c10"
+     ]
+    }
+   ],
+   "pos": [
+    1632,
+    969
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "v-amor",
+   "tipo": "vida",
+   "c": "c-juicio",
+   "title": "¿Qué hago para que no se me enfríe el amor?",
+   "note": "Mt 24:12-13",
+   "body": "<h2>¿Qué hago para que no se me enfríe el amor?</h2><p>Entre las señales del fin, Jesús puso una que no ocurre en el cielo ni en las naciones, sino adentro de cada uno:</p><blockquote class=\"x-dq\"><p>«y por haberse multiplicado la maldad, el amor de muchos se enfriará. Mas el que persevere hasta el fin, éste será salvo.»</p><cite>Mt 24:12-13</cite></blockquote><p>La maldad que crece alrededor no tiene por qué apagar lo de adentro. La respuesta que da Jesús es perseverar: seguir amando cuando cuesta.</p>",
+   "xref": [
+    {
+     "label": "Mateo 24",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c01"
+     ]
+    }
+   ],
+   "pos": [
+    748,
+    935
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "dt-puerta",
+   "tipo": "dato",
+   "c": "c-lugar",
+   "title": "La Puerta Oriental está sellada desde 1541",
+   "note": "Ez 44:1-2",
+   "photo": {
+    "src": "img/ob_jerusalem.jpg",
+    "alt": "Muralla de Jerusalén"
+   },
+   "body": "<h2>La Puerta Oriental está sellada desde 1541</h2><p>Cuando el sultán otomano Solimán el Magnífico reconstruyó las murallas de Jerusalén, la Puerta Oriental (o Puerta Dorada), la que mira al monte de los Olivos, quedó tapiada. Sigue cerrada hasta hoy.</p><p>Ezequiel había visto una puerta oriental cerrada por una razón:</p><blockquote class=\"x-dq\"><p>«Me hizo volver hacia la puerta exterior del santuario, la cual mira hacia el oriente; y estaba cerrada. Y me dijo Jehová: Esta puerta estará cerrada; no se abrirá, ni entrará por ella hombre, porque Jehová Dios de Israel entró por ella; estará, por tanto, cerrada.»</p><cite>Ez 44:1-2</cite></blockquote><p>La visión de Ezequiel habla del templo que él vio, no de la muralla de Solimán. Aun así, el detalle sigue llamando la atención.</p>",
+   "xref": [
+    {
+     "label": "Ezequiel 44–46",
+     "to": [
+      "mapa",
+      "b-ezequiel",
+      "c99"
+     ]
+    },
+    {
+     "label": "Ezequiel 43",
+     "to": [
+      "mapa",
+      "b-ezequiel",
+      "c98"
+     ]
+    }
+   ],
+   "pos": [
+    1168,
+    522
+   ],
+   "sz": "l"
+  },
+  {
+   "id": "dt-ciro",
+   "tipo": "dato",
+   "c": "c-profecia",
+   "title": "Isaías nombró a Ciro antes de que naciera",
+   "note": "Is 44:28; 45:1",
+   "body": "<h2>Isaías nombró a Ciro antes de que naciera</h2><p>Isaías profetizó alrededor del 700 a.C. Ciro, rey de Persia, conquistó Babilonia en el 539 a.C. y al año siguiente dejó volver a los judíos a reconstruir el templo (Esd 1:1-3). El profeta lo había llamado por su nombre:</p><blockquote class=\"x-dq\"><p>«que dice de Ciro: Es mi pastor, y cumplirá todo lo que yo quiero, al decir a Jerusalén: Serás edificada; y al templo: Serás fundado.»</p><cite>Is 44:28</cite></blockquote><blockquote class=\"x-dq\"><p>«Así dice Jehová a su ungido, a Ciro, al cual tomé yo por su mano derecha, para sujetar naciones delante de él y desatar lomos de reyes…»</p><cite>Is 45:1</cite></blockquote><p>El mismo Dios que cumplió eso al detalle es el que anunció el final.</p>",
+   "xref": [
+    {
+     "label": "Isaías 44",
+     "to": [
+      "mapa",
+      "b-isaias",
+      "c42"
+     ]
+    },
+    {
+     "label": "Isaías 43",
+     "to": [
+      "mapa",
+      "b-isaias",
+      "c41"
+     ]
+    }
+   ],
+   "pos": [
+    2240,
+    60
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "dt-grecia",
+   "tipo": "dato",
+   "c": "c-evento",
+   "title": "Daniel nombró a Grecia dos siglos antes",
+   "note": "Dn 8:20-21",
+   "photo": {
+    "src": "img/ob_greece.jpg",
+    "alt": "Grecia"
+   },
+   "body": "<h2>Daniel nombró a Grecia dos siglos antes</h2><p>En el siglo VI a.C., cuando Babilonia todavía dominaba, Daniel vio un carnero de dos cuernos vencido por un macho cabrío que corría sin tocar el suelo. El ángel le explicó quiénes eran:</p><blockquote class=\"x-dq\"><p>«En cuanto al carnero que viste, que tenía dos cuernos, éstos son los reyes de Media y de Persia. El macho cabrío es el rey de Grecia, y el cuerno grande que tenía entre sus ojos es el rey primero.»</p><cite>Dn 8:20-21</cite></blockquote><p>Unos dos siglos después, Alejandro Magno arrasó Persia en pocos años. Daniel 8 sigue más allá de Alejandro, hasta el tiempo del fin.</p>",
+   "xref": [
+    {
+     "label": "Daniel: los tiempos finales",
+     "to": [
+      "mapa",
+      "b-daniel",
+      "daniel-fin"
+     ]
+    }
+   ],
+   "pos": [
+    404,
+    935
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "dt-1948",
+   "tipo": "dato",
+   "c": "c-lugar",
+   "title": "Una nación en un día",
+   "note": "14 de mayo de 1948 · Is 66:8",
+   "body": "<h2>Una nación en un día</h2><p>El 14 de mayo de 1948 se declaró el Estado de Israel. Después de casi diecinueve siglos sin nación propia, el pueblo judío volvió a tener una en un solo día. Muchos lo leen a la luz de esta pregunta de Isaías:</p><blockquote class=\"x-dq\"><p>«¿Quién oyó cosa semejante? ¿quién vio tal cosa? ¿Concebirá la tierra en un día? ¿Nacerá una nación de una vez? Pues en cuanto Sion estuvo de parto, dio a luz sus hijos.»</p><cite>Is 66:8</cite></blockquote><p>La vuelta a la tierra no es el final de la historia de Israel: los profetas anuncian que todavía falta lo más grande.</p>",
+   "xref": [
+    {
+     "label": "Isaías 66",
+     "to": [
+      "mapa",
+      "b-isaias",
+      "c56"
+     ]
+    },
+    {
+     "label": "Ezequiel 37",
+     "to": [
+      "mapa",
+      "b-ezequiel",
+      "c93"
+     ]
+    }
+   ],
+   "pos": [
+    1976,
+    60
+   ],
+   "sz": "s"
+  },
+  {
+   "id": "l-patmos",
+   "tipo": "lugar",
+   "c": "c-juicio",
+   "title": "Patmos",
+   "note": "La isla donde Juan recibió el Apocalipsis",
+   "photo": {
+    "src": "img/ob_patmos.jpg",
+    "alt": "Isla de Patmos"
+   },
+   "body": "<h2>Patmos</h2><p>Una isla chica y rocosa del mar Egeo, que Roma usaba como lugar de destierro. Según la tradición, Juan fue desterrado ahí en tiempos de Domiciano, hacia fines del siglo I. Él mismo lo cuenta:</p><blockquote class=\"x-dq\"><p>«Yo Juan, vuestro hermano, y copartícipe vuestro en la tribulación, en el reino y en la paciencia de Jesucristo, estaba en la isla llamada Patmos, por causa de la palabra de Dios y el testimonio de Jesucristo.»</p><cite>Ap 1:9</cite></blockquote><p>El libro que cierra la Biblia se escribió desde el exilio, por alguien que se llama «copartícipe en la tribulación».</p>",
+   "xref": [
+    {
+     "label": "Apocalipsis",
+     "to": [
+      "mapa",
+      "b-apocalipsis"
+     ]
+    }
+   ],
+   "pos": [
+    1632,
+    60
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "l-pella",
+   "tipo": "lugar",
+   "c": "c-historia",
+   "title": "Pella",
+   "note": "Los que creyeron a Jesús y huyeron a tiempo",
+   "photo": {
+    "src": "img/pella_s.jpg",
+    "alt": "Ruinas de Pella, Jordania"
+   },
+   "body": "<h2>Pella</h2><p>Antes de que Roma sitiara Jerusalén, la iglesia de la ciudad huyó a Pella, al otro lado del Jordán. Lo cuenta el historiador Eusebio (Historia eclesiástica 3.5.3). Habían tomado en serio una advertencia:</p><blockquote class=\"x-dq\"><p>«Pero cuando viereis a Jerusalén rodeada de ejércitos, sabed entonces que su destrucción ha llegado. Entonces los que estén en Judea, huyan a los montes; y los que en medio de ella, váyanse; y los que estén en los campos, no entren en ella.»</p><cite>Lc 21:20-21</cite></blockquote><p>En el año 70 la ciudad cayó. Los que conocían la palabra supieron cuándo moverse.</p>",
+   "xref": [
+    {
+     "label": "Lucas 21",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c02"
+     ]
+    },
+    {
+     "label": "Mateo 24",
+     "to": [
+      "mapa",
+      "b-evangelios",
+      "c01"
+     ]
+    }
+   ],
+   "pos": [
+    60,
+    910
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "l-tiro",
+   "tipo": "lugar",
+   "c": "c-profecia",
+   "title": "Tiro",
+   "note": "«Tendedero de redes será en medio del mar»",
+   "photo": {
+    "src": "img/ob_tyre.jpg",
+    "alt": "Costa de Tiro, Líbano"
+   },
+   "body": "<h2>Tiro</h2><p>La gran ciudad fenicia, rica por su comercio marítimo. En el 332 a.C., Alejandro Magno la sitió y, para llegar a la parte que estaba en una isla, tiró al mar los escombros de la ciudad vieja y armó un terraplén.</p><blockquote class=\"x-dq\"><p>«Y demolerán los muros de Tiro, y derribarán sus torres; y barreré de ella hasta su polvo, y la dejaré como una peña lisa. Tendedero de redes será en medio del mar, porque yo he hablado, dice Jehová el Señor; y será saqueada por las naciones.»</p><cite>Ez 26:4-5</cite></blockquote><p>Ezequiel lo había dicho más de doscientos años antes.</p>",
+   "xref": [
+    {
+     "label": "Ezequiel",
+     "to": [
+      "mapa",
+      "b-ezequiel"
+     ]
+    }
+   ],
+   "pos": [
+    1168,
+    972
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "l-mar",
+   "tipo": "lugar",
+   "c": "c-celebracion",
+   "title": "El mar Muerto",
+   "note": "Un mar sin vida que va a vivir",
+   "photo": {
+    "src": "img/ob_salt-sea.jpg",
+    "alt": "Mar Muerto"
+   },
+   "body": "<h2>El mar Muerto</h2><p>Es el punto más bajo de la tierra firme y uno de los cuerpos de agua más salados del mundo: casi nada vive en él. Ezequiel vio un río que sale del templo y llega hasta ahí:</p><blockquote class=\"x-dq\"><p>«Y me dijo: Estas aguas salen a la región del oriente, y descenderán al Arabá, y entrarán en el mar; y entradas en el mar, recibirán sanidad las aguas. Y toda alma viviente que nadare por dondequiera que entraren estos dos ríos, vivirá; y habrá muchísimos peces por haber entrado allá estas aguas, y recibirán sanidad; y vivirá todo lo que entrare en este río.»</p><cite>Ez 47:8-9</cite></blockquote><p>Una imagen del reino que viene: donde hoy no hay vida, va a haber de sobra.</p>",
+   "xref": [
+    {
+     "label": "Ezequiel 47–48",
+     "to": [
+      "mapa",
+      "b-ezequiel",
+      "c100"
+     ]
+    }
+   ],
+   "pos": [
+    1976,
+    770
+   ],
+   "sz": "m"
+  },
+  {
+   "id": "mapa",
+   "tipo": "portal",
+   "c": "c-venida",
+   "title": "El mapa de estudio",
+   "note": "9 bloques bíblicos · 150 capítulos desglosados, de la Ley al Apocalipsis",
+   "pos": [
+    1976,
+    368
+   ],
+   "sz": "l"
+  }
+ ],
+ "links": [
+  [
+   "v-sobrio",
+   "d-mt24"
+  ],
+  [
+   "v-sobrio",
+   "v-vivir"
+  ],
+  [
+   "img-tito",
+   "l-pella"
+  ],
+  [
+   "img-tito",
+   "q-israel"
+  ],
+  [
+   "dt-puerta",
+   "img-olivos"
+  ],
+  [
+   "dt-puerta",
+   "t-hijo"
+  ],
+  [
+   "l-patmos",
+   "t-hijo"
+  ],
+  [
+   "l-patmos",
+   "img-megido"
+  ],
+  [
+   "dt-grecia",
+   "dt-ciro"
+  ],
+  [
+   "dt-grecia",
+   "t-hijo"
+  ],
+  [
+   "q-cuando",
+   "d-mt24"
+  ],
+  [
+   "q-cuando",
+   "v-miedo"
+  ],
+  [
+   "q-israel",
+   "t-israel"
+  ],
+  [
+   "t-israel",
+   "dt-1948"
+  ],
+  [
+   "t-israel",
+   "img-olivos"
+  ],
+  [
+   "l-tiro",
+   "dt-ciro"
+  ],
+  [
+   "l-mar",
+   "img-olivos"
+  ],
+  [
+   "v-amor",
+   "d-mt24"
+  ],
+  [
+   "v-miedo",
+   "v-vivir"
+  ],
+  [
+   "mapa",
+   "t-hijo"
+  ],
+  [
+   "mapa",
+   "q-cuando"
+  ],
+  [
+   "mapa",
+   "img-megido"
+  ],
+  [
+   "mapa",
+   "v-vivir"
+  ],
+  [
+   "l-pella",
+   "d-mt24"
+  ]
+ ]
+}

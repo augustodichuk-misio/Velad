@@ -349,12 +349,24 @@ function veladMain(DATA) {
         }
         /* chapter / block card (maps without their own design) */
         function cardHTML(nd, i, m) {
+          if (nd.tipo) return tipoHTML(nd);
           var pend = nd.status === "pending", n = pend ? "Pendiente" : nd.n || pad2(i + 1);
           return '<article class="x-item' + (pend ? " is-pending" : "") + (nd.center ? " x-item--center" : "") + (nd.children ? " has-map" : "") + '" data-id="' + esc(nd.id) +
             '" tabindex="0" role="button" aria-label="' + esc(nd.title) + (nd.children ? ", contiene un mapa" : "") + '" style="--c:var(--' + nd._c + ')">' +
             '<p class="x-cat">' + esc(m.kind || "Capítulo") + " <em>· " + esc(n) + "</em></p><h3>" + esc(nd.title) + "</h3>" +
             (nd.ref ? '<p class="x-ref">' + esc(nd.ref) + "</p>" : "") +
             '<p class="x-note">' + esc(nd.summary || blq(nd, 0) || (nd.children ? countOf(nd) : "En estudio")) + "</p></article>";
+        }
+        /* nodos de entrada del mapa general (nodos-raiz.json): pregunta, imagen, desglose, tema */
+        var TIPO = { pregunta: "Pregunta", imagen: "Imagen", desglose: "Desglose", tema: "Tema", dato: "Dato histórico", lugar: "Lugar", vida: "Para la vida", portal: "Para estudiar" };
+        function tipoHTML(nd) {
+          var t = nd.tipo, inner = '<p class="x-cat">' + esc(TIPO[t] || "Nota") + "</p><h3>" + esc(nd.title) + "</h3>";
+          if (t === "desglose" && nd.pasos) inner += '<ol class="x-pasos">' + nd.pasos.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ol>";
+          else if (nd.note) inner += '<p class="x-note">' + esc(nd.note) + "</p>";
+          if (t === "portal") inner += '<p class="x-go-in">Entrar al mapa →</p>';
+          if ((t === "imagen" || t === "lugar" || t === "dato") && nd.photo) inner = '<figure><img src="' + esc(nd.photo.src) + '" alt="' + esc(nd.photo.alt || "") + '"/></figure><div class="x-body">' + inner + "</div>";
+          return '<article class="x-item x-t x-t--' + esc(t) + (nd.sz ? " x-sz-" + esc(nd.sz) : "") + (nd.photo ? " x-photo" : "") + (nd.children ? " has-map" : "") + '" data-id="' + esc(nd.id) + '" tabindex="0" role="button" aria-label="' + esc((TIPO[t] || "") + ": " + nd.title) +
+            '" style="--c:var(--' + nd._c + ')">' + inner + "</article>";
         }
         /* expediente card: photo, category, tags, notes */
         function richCardHTML(nd, i) {
@@ -433,6 +445,8 @@ function veladMain(DATA) {
         }
         /* ids from the root to a node: the last id may be a node to open on arrival */
         function resolve(ids, focusLast) {
+          /* rutas viejas (b-ezequiel/…) siguen andando: si no están en la raíz, se buscan dentro del portal */
+          if (TREE.portal && ids && ids.length && ids[0] !== TREE.portal && !TREE.nodes.some(function (x) { return x.id === ids[0]; })) ids = [TREE.portal].concat(ids);
           var m = TREE, path = [], n = focusLast ? ids.length - 1 : ids.length;
           for (var i = 0; i < n; i++) {
             var nd = m.nodes.filter(function (x) { return x.id === ids[i]; })[0];
@@ -814,7 +828,7 @@ function veladMain(DATA) {
           }
           if (linked.length || xrefs.length) {
             var h = document.createElement("h3");
-            h.textContent = "Relacionado con";
+            h.textContent = nd.tipo ? "Seguir en el mapa" : "Relacionado con";
             var row = document.createElement("div");
             row.className = "x-gos";
             linked.forEach(function (k) {
@@ -843,7 +857,7 @@ function veladMain(DATA) {
         /* un capítulo con desglose se abre directo: tablero de énfasis + desglose a la izquierda */
         function tapItem(id) {
           var nd = nodeById(id);
-          if (nd && nd.children && nd.body) { openPath(stack.concat([nd])); return; }
+          if (nd && nd.children && (nd.body || nd.tipo === "portal")) { openPath(stack.concat([nd])); return; }
           focusItem(id);
         }
         function closeFocus() {
@@ -1423,6 +1437,18 @@ function veladMain(DATA) {
   }
   fetch("data.json", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) {
+      /* nodos de entrada del mapa general: viven en nodos-raiz.json, nunca en data.json */
+      return fetch("nodos-raiz.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (x) {
+        if (x && x.nodes && d.tree && !/[?&]edit/.test(location.search)) {
+          /* primera vista: tablero para curiosear; los 9 bloques quedan dentro del nodo portal "mapa" */
+          var T = d.tree, est = { id: "m-estudio", title: "", subtitle: T.subtitle, kind: T.kind, w: T.w, nodes: T.nodes, links: T.links || [] };
+          var nn = x.nodes.map(function (n) { if (n.tipo === "portal") { n.children = est; est.title = n.title; } return n; });
+          d.tree = { id: T.id, title: (x.root && x.root.title) || T.title, brand: T.brand, subtitle: (x.root && x.root.subtitle) || T.subtitle, kind: "Nota", w: x.w || T.w, nodes: nn, links: x.links || [], portal: "mapa" };
+        }
+        return d;
+      });
+    })
     .then(function (d) {
       veladMain(d);
       veladRoute();
