@@ -3,12 +3,13 @@
 (function () {
   "use strict";
   var doc = document, R = window.VeladRefs;
-  var V = "9";
+  var V = "10";
   var DATA = {}, VERSOS = null, versosP = null, CH = {};
   var VIEWS = [
     { k: "secuencia", t: "Secuencia del fin", d: "La línea de los acontecimientos, paso a paso" },
     { k: "glosario", t: "Glosario", d: "Términos clave con sus textos" },
     { k: "paralelos", t: "Pasajes paralelos", d: "Mateo 24, Marcos 13 y Lucas 21, lado a lado" },
+    { k: "posturas", t: "Las tres posturas", d: "Pre, mid y post: sus textos y cómo los leemos" },
     { k: "porque", t: "Por qué postribulación", d: "Los textos clave, uno por uno" }
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
@@ -311,7 +312,7 @@
     if (study.hidden) return;
     study.hidden = true; curView = null; hidePop();
     doc.body.classList.remove("x-studying");
-    try { if (/^#(secuencia|glosario|paralelos|porque)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* nada */ }
+    try { if (/^#(secuencia|glosario|paralelos|posturas|porque)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); } catch (e) { /* nada */ }
   }
   function onStudyClick(e) {
     var to = e.target.closest("[data-to]");
@@ -322,7 +323,13 @@
       return;
     }
     var o = e.target.closest("[data-study-open]");
-    if (o) { openStudy(o.dataset.studyOpen); return; }
+    if (o) {
+      var wn = o.dataset.n; openStudy(o.dataset.studyOpen);
+      if (wn) setTimeout(function () { var it = sBody.querySelectorAll(".x-why__item")[+wn - 1]; if (it) { sBody.scrollTop += it.getBoundingClientRect().top - sBody.getBoundingClientRect().top - 12; it.classList.add("x-hit"); } }, 40);
+      return;
+    }
+    var pj = e.target.closest("[data-pos-jump]");
+    if (pj) { var sec = sBody.querySelector("#pos-" + pj.dataset.posJump); if (sec) sBody.scrollTo({ top: sBody.scrollTop + sec.getBoundingClientRect().top - sBody.getBoundingClientRect().top - 12, behavior: "smooth" }); return; }
     var sc = e.target.closest("[data-seq]");
     if (sc) { var tr = sBody.querySelector(".x-seq"); if (tr) tr.scrollBy({ left: (+sc.dataset.seq) * Math.min(tr.clientWidth * 0.8, 960), behavior: "smooth" }); return; }
     var pt = e.target.closest("[data-pcol]");
@@ -382,6 +389,25 @@
             cols.map(function (c) { return cell(r, c); }).join("") + "</div>";
         }).join("") + "</div>";
     },
+    posturas: function (d) {
+      return '<div class="x-why x-pos">' + head("Panorama · " + d.posturas.length + " lecturas", d) +
+        '<div class="x-pos__jump">' + d.posturas.map(function (p) {
+          return '<button type="button" class="x-chip' + (p.nuestra ? " is-ours" : "") + '" data-pos-jump="' + esc(p.id) + '">' + esc(p.nombre) + "</button>";
+        }).join("") + "</div>" +
+        d.posturas.map(function (p) {
+          return '<section class="x-pos__sec' + (p.nuestra ? " is-ours" : "") + '" id="pos-' + esc(p.id) + '"><p class="x-skick">' + esc(p.cuando) + (p.nuestra ? " · La postura de Velad" : "") + "</p><h3 class=\"x-pos__name\">" + esc(p.nombre) + '</h3><p class="x-pos__sum">' + esc(p.resumen) + '</p><ol class="x-why__list">' +
+            p.args.map(function (a, i) {
+              return '<li class="x-why__item"><span class="x-why__n">' + String(i + 1).padStart(2, "0") + "</span><div><h3>" + esc(a.titulo) + "</h3>" + quoteHTML(a.verso) +
+                '<p><span class="x-pos__lab">' + (p.nuestra ? "Por qué la sostenemos" : "Lo que sostienen") + "</span>" + esc(a.cree) + "</p>" +
+                (a.resp ? '<div class="x-pos__resp"><p><span class="x-pos__lab">Cómo lo leemos</span>' + esc(a.resp) + "</p>" + (a.resp_verso ? quoteHTML(a.resp_verso, "x-q x-q--sm") : "") +
+                  (a.porque && DATA.porque ? '<button type="button" class="x-go x-pos__more" data-study-open="porque" data-n="' + a.porque + '" style="--c:var(--x-gold)">Ver en Por qué postribulación ↗</button>' : "") + "</div>" : "") +
+                "</div></li>";
+            }).join("") + "</ol></section>";
+        }).join("") +
+        '<section class="x-pos__end"><h3 class="x-pos__name">' + esc(d.cierre.titulo) + "</h3><p class=\"x-pos__sum\">" + esc(d.cierre.texto) + '</p><p class="x-pos__btns">' +
+        (DATA.porque ? '<button class="btn" type="button" data-study-open="porque">Por qué postribulación →</button>' : "") +
+        (DATA.secuencia ? '<button class="btn" type="button" data-study-open="secuencia">Ver la secuencia del fin →</button>' : "") + "</p></section></div>";
+    },
     porque: function (d) {
       return '<div class="x-why">' + head("Expediente · " + d.puntos.length + " textos", d) + '<ol class="x-why__list">' + d.puntos.map(function (p) {
         return '<li class="x-why__item"><span class="x-why__n">' + String(p.n).padStart(2, "0") + "</span><div><h3>" + esc(p.titulo) + "</h3>" + quoteHTML(p.verso) +
@@ -423,7 +449,7 @@
       var s = doc.createElement("div");
       s.className = "x-estrip";
       s.innerHTML = "<small>Estudio</small><div>" + list.map(function (v) {
-        return '<button class="x-chip" type="button" data-study-open="' + v.k + '">' + esc(v.t.replace("Pasajes paralelos", "Paralelos").replace("Secuencia del fin", "Secuencia").replace("Por qué postribulación", "Por qué post-trib.").replace("Por qué post-trib.", "Por qué")) + "</button>";
+        return '<button class="x-chip" type="button" data-study-open="' + v.k + '">' + esc(v.t.replace("Pasajes paralelos", "Paralelos").replace("Secuencia del fin", "Secuencia").replace("Por qué postribulación", "Por qué post-trib.").replace("Por qué post-trib.", "Por qué").replace("Las tres posturas", "Posturas")) + "</button>";
       }).join("") + "</div>";
       var hint = idxPane.querySelector(".x-menu__hint");
       idxPane.insertBefore(s, hint);
@@ -465,8 +491,8 @@
     watch(lec, function (el) { markGloss(el); markRefs(el); });
     watch(dos, markRefs);
     watch(set, function (el) { if (!mob()) el.querySelectorAll(".x-ref").forEach(markRefs); });
-    Promise.all(["secuencia", "glosario", "paralelos", "porque"].map(load)).then(function (r) {
-      ["secuencia", "glosario", "paralelos", "porque"].forEach(function (k, i) { if (r[i]) DATA[k] = r[i]; });
+    Promise.all(["secuencia", "glosario", "paralelos", "posturas", "porque"].map(load)).then(function (r) {
+      ["secuencia", "glosario", "paralelos", "posturas", "porque"].forEach(function (k, i) { if (r[i]) DATA[k] = r[i]; });
       if (DATA.glosario) { try { buildGloss(DATA.glosario); if (lec) { markGloss(lec); } } catch (e) { GL = null; if (window.console) console.warn(e); } }
       menuEntries();
       var h = (location.hash || "").slice(1);

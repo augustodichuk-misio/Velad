@@ -166,3 +166,19 @@
   .x-par__head { position: static; }
 }
 @media (prefers-reduced-motion: reduce) { .x-vref, .x-gl, .x-study-links button { transition: none; } }
+
+/* ---------- Las tres posturas (22/11) ---------- */
+.x-pos__jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.x-pos__jump .x-chip.is-ours { border-color: var(--x-gold); color: var(--x-gold); }
+.x-pos__sec { padding-top: 34px; margin-top: 18px; border-top: 1px solid var(--x-line); }
+.x-pos__sec.is-ours { border-top: 2px solid var(--x-gold); }
+.x-pos__name { font: 600 28px/1.2 var(--x-serif); color: var(--x-text); margin: 6px 0 10px; }
+.x-pos__sum { font: 400 16.5px/1.7 var(--x-sans); color: var(--x-body); margin: 0; max-width: 680px; }
+.x-pos__lab { display: block; font: 600 11px/1.6 var(--x-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--x-muted, #8d8470); margin-bottom: 4px; }
+.x-pos__resp { display: grid; gap: 10px; padding: 14px 16px; border-left: 2px solid var(--x-gold); background: color-mix(in srgb, var(--x-gold) 6%, transparent); border-radius: 0 10px 10px 0; }
+.x-pos__resp > p { font: 400 16px/1.7 var(--x-sans); color: var(--x-body); margin: 0; }
+.x-pos__resp .x-pos__lab { color: var(--x-gold); }
+.x-pos__more { justify-self: start; }
+.x-pos__end { margin-top: 28px; padding-top: 28px; border-top: 2px solid var(--x-gold); display: grid; gap: 4px; }
+.x-pos__btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
+@media (max-width: 759px) { .x-pos__name { font-size: 24px; } .x-pos__sum, .x-pos__resp > p { font-size: 15.5px; } }

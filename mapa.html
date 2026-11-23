@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600&amp;display=swap"/>
     <link rel="stylesheet" href="css/app.css?v=13"/>
     <link rel="stylesheet" href="css/edit.css?v=9"/>
-    <link rel="stylesheet" href="css/extras.css?v=9"/>
+    <link rel="stylesheet" href="css/extras.css?v=10"/>
   <script>try{var t=localStorage.getItem("velad-tema");if(t==="medio"||t==="claro")document.documentElement.setAttribute("data-velad",t);}catch(e){}</script>
   </head>
   <body>
@@ -204,9 +204,38 @@
     </div>
     <script src="js/refs.js?v=9"></script>
     <script src="js/app.js?v=13"></script>
-    <script src="js/extras.js?v=9"></script>
+    <script src="js/extras.js?v=10"></script>
     <script src="js/edit.js?v=9"></script>
-  <div id="vl-hint" hidden>
+  <div id="vl-cont" hidden>
+  <style>
+  #vl-cont{position:fixed;right:max(14px,env(safe-area-inset-right));top:calc(env(safe-area-inset-top,0px) + 74px);z-index:60;display:flex;align-items:stretch;opacity:0;transform:translateY(-6px);transition:opacity .6s ease,transform .6s ease;max-width:min(21rem,calc(100vw - 28px))}
+  #vl-cont.on{opacity:1;transform:none}
+  #vl-cont .go{display:flex;flex-direction:column;gap:.15rem;text-align:left;cursor:pointer;font:500 .8rem Inter,system-ui,sans-serif;color:#efe4c8;background:rgba(14,16,20,.94);border:1px solid rgba(201,162,78,.5);border-right:0;border-radius:12px 0 0 12px;padding:.55rem .85rem .6rem;box-shadow:0 6px 22px rgba(0,0,0,.4);min-width:0}
+  #vl-cont .go small{font:600 .66rem Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#c9a24e}
+  #vl-cont .go b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #vl-cont .go b::after{content:" →";color:#c9a24e}
+  #vl-cont .go:hover{background:rgba(24,26,30,.97)}
+  #vl-cont .x{cursor:pointer;color:#8d8470;background:rgba(14,16,20,.94);border:1px solid rgba(201,162,78,.5);border-left:1px solid rgba(201,162,78,.2);border-radius:0 12px 12px 0;padding:0 .7rem;font:400 1rem Inter,system-ui,sans-serif;box-shadow:0 6px 22px rgba(0,0,0,.4)}
+  #vl-cont .x:hover{color:#efe4c8}
+  @media (max-width:759px){#vl-cont{top:calc(env(safe-area-inset-top,0px) + 108px)}}
+  </style>
+  <button class="go" type="button"><small>Continuar donde lo dejaste</small><b></b></button><button class="x" type="button" aria-label="Cerrar">×</button>
+  <script>
+  (function(){var c=document.getElementById("vl-cont");if(!c||location.hash.length>1)return;
+  var u=null;try{u=JSON.parse(localStorage.getItem("velad-ultimo"))}catch(e){}
+  if(!u||!u.ids||!u.ids.length)return;
+  c.querySelector("b").textContent=u.t||"Tu último capítulo";
+  var t0=Date.now(),gone=false;
+  function off(){if(gone)return;gone=true;c.classList.remove("on");setTimeout(function(){c.remove()},700)}
+  c.querySelector(".x").addEventListener("click",off);
+  c.querySelector(".go").addEventListener("click",function(){off();if(window.XNav)XNav.open(u.ids)});
+  var tt=document.querySelector("title"),t1=document.title;
+  if(tt&&window.MutationObserver)new MutationObserver(function(){if(!c.hidden&&document.title!==t1)off()}).observe(tt,{childList:true,characterData:true,subtree:true});
+  (function wait(){if(document.readyState!=="complete"||Date.now()-t0<900||(document.getElementById("vl-intro")&&Date.now()-t0<9000))return setTimeout(wait,300);
+  t1=document.title;c.hidden=false;requestAnimationFrame(function(){c.classList.add("on")});})();})();
+  </script>
+</div>
+<div id="vl-hint" hidden>
   <style>
   #vl-hint{position:fixed;left:max(10px,env(safe-area-inset-left));bottom:calc(64px + env(safe-area-inset-bottom));z-index:60;pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .6s ease,transform .6s ease}
   #vl-hint.on{opacity:1;transform:none}
@@ -219,7 +248,7 @@
   <div class="b">¿Por dónde empezar? Abrí el Índice y seguí los capítulos en orden.</div><span class="a"></span>
   <script>
   (function(){var h=document.getElementById("vl-hint");if(!h||window.innerWidth>=760||location.hash.length>1)return;
-  try{if(sessionStorage.getItem("velad-hint")==="1")return}catch(e){}
+  try{if(sessionStorage.getItem("velad-hint")==="1"||localStorage.getItem("velad-ultimo"))return}catch(e){}
   var t0=Date.now();(function wait(){if(document.getElementById("vl-intro")&&Date.now()-t0<9000)return setTimeout(wait,300);
   h.hidden=false;requestAnimationFrame(function(){h.classList.add("on")});try{sessionStorage.setItem("velad-hint","1")}catch(e){}
   function off(){h.classList.remove("on");setTimeout(function(){h.remove()},700)}

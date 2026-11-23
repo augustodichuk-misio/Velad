@@ -1,0 +1,293 @@
+{
+ "titulo": "Las tres posturas",
+ "intro": "Entre los cristianos que creen en un arrebatamiento literal hay tres lecturas principales sobre cuándo ocurre: antes, en medio o después de la tribulación. Acá las presentamos con sus propios textos y razones, para que se entiendan bien. Después de cada argumento va cómo lo leemos nosotros, y al final, la postura que sostiene Velad.",
+ "posturas": [
+  {
+   "id": "pre",
+   "nombre": "Pretribulación",
+   "cuando": "Antes de los siete años",
+   "resumen": "La iglesia es arrebatada antes de que empiece la tribulación. Jesús viene primero por los suyos, en secreto, y siete años después vuelve con ellos de manera visible. Es la postura más difundida en las iglesias evangélicas de América Latina.",
+   "args": [
+    {
+     "titulo": "Guardados de la hora de la prueba",
+     "verso": {
+      "ref": "Ap 3:10",
+      "v": [
+       [
+        10,
+        "Por cuanto has guardado la palabra de mi paciencia, yo también te guardaré de la hora de la prueba que ha de venir sobre el mundo entero, para probar a los que moran sobre la tierra."
+       ]
+      ]
+     },
+     "cree": "Jesús promete guardar a la iglesia de la hora de la prueba que viene sobre todo el mundo. Para esta postura, la única manera de ser guardado de esa hora es no estar en la tierra cuando llegue.",
+     "resp": "Jesús usa la misma expresión al orar por sus discípulos: no pide que los saque del mundo, sino que los guarde del mal. Ser guardado no es ser quitado; es ser protegido en medio de la prueba.",
+     "resp_verso": {
+      "ref": "Jn 17:15",
+      "v": [
+       [
+        15,
+        "No ruego que los quites del mundo, sino que los guardes del mal."
+       ]
+      ]
+     },
+     "porque": 10
+    },
+    {
+     "titulo": "No estamos puestos para ira",
+     "verso": {
+      "ref": "1 Ts 5:9",
+      "v": [
+       [
+        9,
+        "Porque no nos ha puesto Dios para ira, sino para alcanzar salvación por medio de nuestro Señor Jesucristo,"
+       ]
+      ]
+     },
+     "cree": "Dios no nos puso para ira. Como la tribulación es el tiempo de la ira de Dios, la iglesia no puede pasar por ella.",
+     "resp": "La ira de Dios y la tribulación no son lo mismo. La tribulación viene de la bestia contra los santos; la ira de Dios cae sobre los impíos, y los sellados quedan protegidos aun en medio de ella. Jesús avisó que en el mundo tendríamos aflicción.",
+     "resp_verso": {
+      "ref": "Ap 9:4",
+      "v": [
+       [
+        4,
+        "Y se les mandó que no dañasen a la hierba de la tierra, ni a cosa verde alguna, ni a ningún árbol, sino solamente a los hombres que no tuviesen el sello de Dios en sus frentes."
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "La venida es inminente",
+     "verso": {
+      "ref": "Tit 2:13",
+      "v": [
+       [
+        13,
+        "aguardando la esperanza bienaventurada y la manifestación gloriosa de nuestro gran Dios y Salvador Jesucristo,"
+       ]
+      ]
+     },
+     "cree": "Si la iglesia tuviera que esperar señales como el anticristo, la venida no podría ocurrir en cualquier momento. Por eso el arrebatamiento tiene que ser antes de todas las señales.",
+     "resp": "Jesús mismo dio señales para reconocer que su venida está cerca, y Pablo dice que el día no vendrá sin que antes venga la apostasía y se manifieste el hombre de pecado. No saber el día ni la hora no significa que no haya nada que esperar antes.",
+     "resp_verso": {
+      "ref": "Mt 24:33",
+      "v": [
+       [
+        33,
+        "Así también vosotros, cuando veáis todas estas cosas, conoced que está cerca, a las puertas."
+       ]
+      ]
+     },
+     "porque": 4
+    },
+    {
+     "titulo": "La iglesia no aparece en Apocalipsis 4 al 18",
+     "verso": {
+      "ref": "Ap 4:1",
+      "v": [
+       [
+        1,
+        "Después de esto miré, y he aquí una puerta abierta en el cielo; y la primera voz que oí, como de trompeta, hablando conmigo, dijo: Sube acá, y yo te mostraré las cosas que sucederán después de estas."
+       ]
+      ]
+     },
+     "cree": "La palabra «iglesia» se usa en los capítulos 2 y 3 y después desaparece. El «Sube acá» de Juan sería una figura del arrebatamiento antes de los juicios.",
+     "resp": "El «Sube acá» es una invitación a Juan para ver la visión, no un arrebatamiento de la iglesia. En esos capítulos hay santos en la tierra, que guardan los mandamientos de Dios y la fe de Jesús, y contra los que la bestia hace guerra.",
+     "resp_verso": {
+      "ref": "Ap 13:7",
+      "v": [
+       [
+        7,
+        "Y se le permitió hacer guerra contra los santos, y vencerlos. También se le dio autoridad sobre toda tribu, pueblo, lengua y nación."
+       ]
+      ]
+     },
+     "porque": 5
+    },
+    {
+     "titulo": "El que lo detiene",
+     "verso": {
+      "ref": "2 Ts 2:7",
+      "v": [
+       [
+        7,
+        "Porque ya está en acción el misterio de la iniquidad; sólo que hay quien al presente lo detiene, hasta que él a su vez sea quitado de en medio."
+       ]
+      ]
+     },
+     "cree": "Quien detiene al hombre de pecado sería el Espíritu Santo obrando en la iglesia. Cuando la iglesia es quitada, el anticristo puede manifestarse.",
+     "resp": "El texto no dice quién es el que detiene. Lo que sí dice, tres versículos antes, es el orden: nuestra reunión con Él no llega sin que antes se manifieste el hombre de pecado.",
+     "resp_verso": {
+      "ref": "2 Ts 2:1-3",
+      "v": [
+       [
+        1,
+        "Pero con respecto a la venida de nuestro Señor Jesucristo, y nuestra reunión con él, os rogamos, hermanos,"
+       ],
+       [
+        2,
+        "que no os dejéis mover fácilmente de vuestro modo de pensar, ni os conturbéis, ni por espíritu, ni por palabra, ni por carta como si fuera nuestra, en el sentido de que el día del Señor está cerca."
+       ],
+       [
+        3,
+        "Nadie os engañe en ninguna manera; porque no vendrá sin que antes venga la apostasía, y se manifieste el hombre de pecado, el hijo de perdición,"
+       ]
+      ]
+     },
+     "porque": 4
+    }
+   ]
+  },
+  {
+   "id": "mid",
+   "nombre": "Mediotribulación",
+   "cuando": "A la mitad de los siete años",
+   "resumen": "La iglesia pasa la primera mitad de la tribulación y es arrebatada a la mitad, antes de los juicios más fuertes de la segunda mitad.",
+   "args": [
+    {
+     "titulo": "«A la mitad de la semana»",
+     "verso": {
+      "ref": "Dn 9:27",
+      "v": [
+       [
+        27,
+        "Y por otra semana confirmará el pacto con muchos; a la mitad de la semana hará cesar el sacrificio y la ofrenda. Después con la muchedumbre de las abominaciones vendrá el desolador, hasta que venga la consumación, y lo que está determinado se derrame sobre el desolador."
+       ]
+      ]
+     },
+     "cree": "Daniel divide la última semana en dos mitades. La segunda mitad sería el tiempo de la ira, y la iglesia sería quitada en el punto medio.",
+     "resp": "En la mitad de la semana empieza la abominación, no el arrebatamiento. Jesús ubica ahí el comienzo de la gran tribulación, y la reunión de los escogidos llega inmediatamente después de esa tribulación.",
+     "resp_verso": {
+      "ref": "Mt 24:15",
+      "v": [
+       [
+        15,
+        "Por tanto, cuando veáis en el lugar santo la abominación desoladora de que habló el profeta Daniel (el que lee, entienda),"
+       ]
+      ]
+     },
+     "porque": 1
+    },
+    {
+     "titulo": "La séptima trompeta es la final trompeta",
+     "verso": {
+      "ref": "Ap 11:15",
+      "v": [
+       [
+        15,
+        "El séptimo ángel tocó la trompeta, y hubo grandes voces en el cielo, que decían: Los reinos del mundo han venido a ser de nuestro Señor y de su Cristo; y él reinará por los siglos de los siglos."
+       ]
+      ]
+     },
+     "cree": "Pablo habla de la final trompeta, y Apocalipsis tiene siete. La séptima suena en el capítulo 11, que para esta postura es la mitad del libro y de la semana.",
+     "resp": "Coincidimos en que la séptima trompeta es la final trompeta. Pero lo que anuncia es el final: los reinos del mundo pasan a Cristo y se consuma el misterio de Dios. Es el cierre de la historia, no su mitad.",
+     "resp_verso": {
+      "ref": "Ap 10:7",
+      "v": [
+       [
+        7,
+        "sino que en los días de la voz del séptimo ángel, cuando él comience a tocar la trompeta, el misterio de Dios se consumará, como él lo anunció a sus siervos los profetas."
+       ]
+      ]
+     },
+     "porque": 2
+    },
+    {
+     "titulo": "La ira empieza a la mitad",
+     "verso": {
+      "ref": "Ap 6:17",
+      "v": [
+       [
+        17,
+        "porque el gran día de su ira ha llegado; ¿y quién podrá sostenerse en pie?"
+       ]
+      ]
+     },
+     "cree": "Cuando se habla del gran día de su ira, se entiende que la ira de Dios cubre la segunda mitad, y la iglesia tiene que salir antes.",
+     "resp": "Esas mismas señales en el sol, la luna y las estrellas son las que Jesús pone inmediatamente después de la tribulación, justo antes de juntar a sus escogidos. La ira llega al final, y la reunión con ella.",
+     "resp_verso": {
+      "ref": "Mt 24:29-31",
+      "v": [
+       [
+        29,
+        "E inmediatamente después de la tribulación de aquellos días, el sol se oscurecerá, y la luna no dará su resplandor, y las estrellas caerán del cielo, y las potencias de los cielos serán conmovidas."
+       ],
+       [
+        30,
+        "Entonces aparecerá la señal del Hijo del Hombre en el cielo; y entonces lamentarán todas las tribus de la tierra, y verán al Hijo del Hombre viniendo sobre las nubes del cielo, con poder y gran gloria."
+       ],
+       [
+        31,
+        "Y enviará sus ángeles con gran voz de trompeta, y juntarán a sus escogidos, de los cuatro vientos, desde un extremo del cielo hasta el otro."
+       ]
+      ]
+     },
+     "porque": 1
+    }
+   ]
+  },
+  {
+   "id": "post",
+   "nombre": "Postribulación",
+   "cuando": "Al final de los siete años",
+   "resumen": "La iglesia atraviesa la tribulación, guardada por Dios, y es reunida con el Señor cuando Él vuelve con poder y gran gloria. El arrebatamiento y la segunda venida son un mismo acontecimiento. Es la postura que sostiene Velad.",
+   "nuestra": true,
+   "args": [
+    {
+     "titulo": "Inmediatamente después",
+     "verso": {
+      "ref": "Mt 24:29-31",
+      "v": [
+       [
+        29,
+        "E inmediatamente después de la tribulación de aquellos días, el sol se oscurecerá, y la luna no dará su resplandor, y las estrellas caerán del cielo, y las potencias de los cielos serán conmovidas."
+       ],
+       [
+        30,
+        "Entonces aparecerá la señal del Hijo del Hombre en el cielo; y entonces lamentarán todas las tribus de la tierra, y verán al Hijo del Hombre viniendo sobre las nubes del cielo, con poder y gran gloria."
+       ],
+       [
+        31,
+        "Y enviará sus ángeles con gran voz de trompeta, y juntarán a sus escogidos, de los cuatro vientos, desde un extremo del cielo hasta el otro."
+       ]
+      ]
+     },
+     "cree": "Jesús ordena los hechos: primero la tribulación, después las señales en el cielo y entonces su venida con trompeta para juntar a sus escogidos."
+    },
+    {
+     "titulo": "Una sola trompeta y una resurrección",
+     "verso": {
+      "ref": "1 Ts 4:16-17",
+      "v": [
+       [
+        16,
+        "Porque el Señor mismo con voz de mando, con voz de arcángel, y con trompeta de Dios, descenderá del cielo; y los muertos en Cristo resucitarán primero."
+       ],
+       [
+        17,
+        "Luego nosotros los que vivimos, los que hayamos quedado, seremos arrebatados juntamente con ellos en las nubes para recibir al Señor en el aire, y así estaremos siempre con el Señor."
+       ]
+      ]
+     },
+     "cree": "La trompeta de Dios, la resurrección de los muertos en Cristo y el arrebatamiento ocurren juntos. Apocalipsis llama primera resurrección a la de los que no adoraron a la bestia, o sea, después de la tribulación."
+    },
+    {
+     "titulo": "Santos que salen de la gran tribulación",
+     "verso": {
+      "ref": "Ap 7:14",
+      "v": [
+       [
+        14,
+        "Yo le dije: Señor, tú lo sabes. Y él me dijo: Estos son los que han salido de la gran tribulación, y han lavado sus ropas, y las han emblanquecido en la sangre del Cordero."
+       ]
+      ]
+     },
+     "cree": "Juan ve una multitud que sale de la gran tribulación lavada en la sangre del Cordero. El pueblo de Dios está ahí, guardado, hasta el final."
+    }
+   ]
+  }
+ ],
+ "cierre": {
+  "titulo": "Nuestra postura",
+  "texto": "Velad sostiene la postribulación porque es la lectura que deja cada texto en su orden natural, sin agregar una venida secreta que la Biblia no describe. No es una postura de miedo, sino de preparación: Jesús nos avisó estas cosas para que velemos, perseveremos y no nos escandalicemos cuando lleguen."
+ }
+}
