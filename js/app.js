@@ -576,11 +576,13 @@ function veladMain(DATA) {
             if (/^p-/.test(nd.id)) return k ? +k[1] : 999;
             return m ? +m[1] + (/b$/.test(nd.n) ? 0.5 : 0) : 999;
           }
-          var caps = ALL.filter(function (e) { return e.chain.length === 1 && /^(c\d|p-)/.test(e.nd.id); })
+          /* la cadena sin el portal "mapa" del tablero raíz, así el índice ve los 9 bloques como antes */
+          function sc(e) { return e.chain.filter(function (c) { return c.tipo !== "portal"; }); }
+          var caps = ALL.filter(function (e) { return sc(e).length === 1 && /^(c\d|p-)/.test(e.nd.id); })
             .sort(function (a, b) { return num(a.nd) - num(b.nd); });
           idx.innerHTML = caps.map(function (e, i) {
             var n = num(e.nd), lab = n < 999 ? String(Math.floor(n)).padStart(2, "0") + (n % 1 ? "b" : "") : "·";
-            var prev = caps[i - 1], blk = !prev || prev.chain[0] !== e.chain[0] ? '<li class="blk">' + esc(e.chain[0].title) + "</li>" : "";
+            var prev = caps[i - 1], blk = !prev || sc(prev)[0] !== sc(e)[0] ? '<li class="blk">' + esc(sc(e)[0].title) + "</li>" : "";
             return blk + '<li><button type="button" data-i="' + i + '"><span class="n">' + lab + "</span><span>" + esc(e.nd.title) + "</span>" +
               (e.nd.body ? '<span class="ok">Desglose ✓</span>' : '<span class="ok">En estudio</span>') + "</button></li>";
           }).join("");

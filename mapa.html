@@ -204,13 +204,14 @@
       </main>
     </div>
     <script src="js/refs.js?v=9"></script>
-    <script src="js/app.js?v=16"></script>
+    <script src="js/app.js?v=17"></script>
     <script src="js/extras.js?v=10"></script>
     <script src="js/edit.js?v=10"></script>
   <div id="vl-cont" hidden>
   <style>
   #vl-cont{position:fixed;right:max(14px,env(safe-area-inset-right));top:calc(env(safe-area-inset-top,0px) + 74px);z-index:60;display:flex;align-items:stretch;opacity:0;transform:translateY(-6px);transition:opacity .6s ease,transform .6s ease;max-width:min(21rem,calc(100vw - 28px))}
   #vl-cont.on{opacity:1;transform:none}
+  #vl-cont[hidden]{display:none}
   #vl-cont .go{display:flex;flex-direction:column;gap:.15rem;text-align:left;cursor:pointer;font:500 .8rem Inter,system-ui,sans-serif;color:#efe4c8;background:rgba(14,16,20,.94);border:1px solid rgba(201,162,78,.5);border-right:0;border-radius:12px 0 0 12px;padding:.55rem .85rem .6rem;box-shadow:0 6px 22px rgba(0,0,0,.4);min-width:0}
   #vl-cont .go small{font:600 .66rem Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#c9a24e}
   #vl-cont .go b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
