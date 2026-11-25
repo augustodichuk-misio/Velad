@@ -435,7 +435,8 @@ function veladMain(DATA) {
           LINKS = MAP.links || []; tl = setEl.querySelector(".x-tl");
           board.style.width = BW + "px";
           document.getElementById("exp-title").textContent = MAP.title;
-          document.getElementById("exp-label").innerHTML = MAP.subtitle ||
+          var expL = document.getElementById("exp-label"); expL.hidden = MAP.subtitle === "";
+          expL.innerHTML = MAP.subtitle ||
             esc(owner ? (mapAt(path.slice(0, -1)).kind || "Capítulo") + (blq(owner, 0) ? " · " + blq(owner, 0) : "") : MAP.title);
           document.title = TREE.brand + " — " + [TREE.title].concat(path.map(function (n) { return n.title; })).join(" › ");
           view.setAttribute("aria-label", "Tablero de investigación: " + MAP.title);
@@ -1446,7 +1447,7 @@ function veladMain(DATA) {
           /* primera vista: tablero para curiosear; los 9 bloques quedan dentro del nodo portal "mapa" */
           var T = d.tree, est = { id: "m-estudio", title: "", subtitle: T.subtitle, kind: T.kind, w: T.w, nodes: T.nodes, links: T.links || [] };
           var nn = x.nodes.map(function (n) { if (n.tipo === "portal") { n.children = est; est.title = n.title; } return n; });
-          d.tree = { id: T.id, title: (x.root && x.root.title) || T.title, brand: T.brand, subtitle: (x.root && x.root.subtitle) || T.subtitle, kind: "Nota", w: x.w || T.w, nodes: nn, links: x.links || [], portal: "mapa" };
+          d.tree = { id: T.id, title: (x.root && x.root.title) || T.title, brand: T.brand, subtitle: x.root && x.root.subtitle != null ? x.root.subtitle : T.subtitle, kind: "Nota", w: x.w || T.w, nodes: nn, links: x.links || [], portal: "mapa" };
         }
         return d;
       });
