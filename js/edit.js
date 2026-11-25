@@ -160,17 +160,29 @@
         throw e;
       });
   }
-  /* los nodos de entrada (nodos-raiz.json, con "tipo") nunca se guardan en data.json */
-  function clean(d) {
+  /* los nodos de entrada (nodos-raiz.json, con "tipo") y los capítulos externos (apocalipsis.json, con "ext")
+     nunca se guardan en data.json */
+  /* ojo: se llamaba clean(), igual que el limpiador de HTML del editor más abajo; esa declaración la pisaba y serialize() fallaba */
+  function cleanData(d) {
     var c = JSON.parse(JSON.stringify(d)), t = c.tree;
     if (t && t.nodes) {
       var x = {}; t.nodes = t.nodes.filter(function (n) { if (n.tipo) { x[n.id] = true; return false; } return true; });
       if (t.links) t.links = t.links.filter(function (l) { return !x[l[0]] && !x[l[1]]; });
       if (Object.keys(x).length && t.w === 2800) t.w = 2500;
     }
+    (function dropExt(m) {
+      if (!m || !m.nodes) return;
+      var gone = {};
+      m.nodes = m.nodes.filter(function (n) { if (n.ext) { gone[n.id] = true; return false; } return true; });
+      if (m.links && Object.keys(gone).length) {
+        m.links = m.links.filter(function (l) { return !gone[l[0]] && !gone[l[1]]; });
+        if (!m.links.length) delete m.links;
+      }
+      m.nodes.forEach(function (n) { if (n.children) dropExt(n.children); });
+    })(t);
     return c;
   }
-  function serialize() { return JSON.stringify(clean(A().data()), null, 1) + "\n"; }
+  function serialize() { return JSON.stringify(cleanData(A().data()), null, 1) + "\n"; }
   function buildPut(sha) {
     var body = { message: "Edición desde la web", content: utf8ToB64(serialize()), branch: CONFIG.branch };
     if (sha) body.sha = sha;

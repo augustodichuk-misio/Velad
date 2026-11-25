@@ -236,3 +236,21 @@
 .x-t.x-sz-s h3 { font-size: 18px; line-height: 1.22; }
 .x-t.x-sz-s .x-cat { font-size: 10px; }
 .x-t.x-sz-s .x-note { font-size: 11px; margin-top: 6px; }
+
+/* Apocalipsis 1: nota interpretativa, grilla de características, contexto */
+.x-dossier__body .x-dq + p { margin-top: -4px; }
+.x-dossier__body .x-interp { font-size: 13.5px; line-height: 1.5; color: var(--x-muted); padding: 8px 12px; border: 1px dashed var(--x-line-2); border-radius: 8px; }
+.x-dossier__body .x-interp__tag { display: inline-block; margin-right: 4px; font: 600 10.5px/1.6 var(--x-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--x-muted); }
+.x-chars { display: grid; gap: 14px; }
+.x-chars__g { display: grid; gap: 6px; }
+.x-dossier__body .x-chars__ref { font: 600 12px/1.3 var(--x-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--x-gold); }
+.x-dossier__body .x-chars__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1px; background: var(--x-line); border: 1px solid var(--x-line); border-radius: 8px; overflow: hidden; }
+.x-dossier__body .x-chars__list li { display: grid; grid-template-columns: 28px 1fr; column-gap: 8px; padding: 8px 12px; background: rgb(var(--x-bg-rgb)); font-size: 14.5px; line-height: 1.45; }
+.x-chars__n { grid-row: span 2; font: 500 12px/1.9 var(--x-sans); color: var(--x-gold); }
+.x-chars__hd { display: block; }
+.x-dossier__body .x-chars__list li b { font-weight: 600; overflow-wrap: anywhere; }
+.x-chars__tag { display: inline-block; vertical-align: 1px; margin-left: 6px; font: 500 10.5px/1.5 var(--x-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--x-muted); border: 1px solid var(--x-line-2); border-radius: 999px; padding: 0 7px; white-space: nowrap; }
+.x-chars__txt { grid-column: 2; display: block; color: var(--x-muted); font-size: 14px; }
+.x-dossier__body .x-ctx { display: grid; gap: 10px; }
+.x-ctx .fineprint { display: block; overflow-wrap: anywhere; }
+.x-dossier__body a { color: var(--x-gold); }

@@ -1453,6 +1453,27 @@ function veladMain(DATA) {
       });
     })
     .then(function (d) {
+      /* capítulos de Apocalipsis (apocalipsis.json, nodos con "ext"): se suman a m-apocalipsis, nunca a data.json.
+         Si el fetch falla o el mapa no está, el sitio sigue igual. */
+      if (/[?&]edit/.test(location.search)) return d;
+      return fetch("apocalipsis.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (x) {
+        try {
+          if (!x || !x.nodes || !x.nodes.length) return d;
+          var tgt = null;
+          (function find(m) {
+            (m.nodes || []).forEach(function (n) { if (tgt || !n.children) return; if (n.children.id === (x.map || "m-apocalipsis")) tgt = n.children; else find(n.children); });
+          })(d.tree);
+          if (!tgt || !tgt.nodes) return d;
+          var have = {}; tgt.nodes.forEach(function (n) { have[n.id] = true; });
+          var add = x.nodes.filter(function (n) { return n && n.id && !have[n.id]; });
+          add.forEach(function (n) { n.ext = true; have[n.id] = true; tgt.nodes.push(n); });
+          var ls = (x.links || []).filter(function (l) { return have[l[0]] && have[l[1]]; });
+          if (ls.length) tgt.links = (tgt.links || []).concat(ls);
+        } catch (e) { if (window.console) console.warn("apocalipsis.json", e); }
+        return d;
+      });
+    })
+    .then(function (d) {
       veladMain(d);
       veladRoute();
       document.dispatchEvent(new CustomEvent("velad-ready"));
