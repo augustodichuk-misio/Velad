@@ -254,3 +254,18 @@
 .x-dossier__body .x-ctx { display: grid; gap: 10px; }
 .x-ctx .fineprint { display: block; overflow-wrap: anywhere; }
 .x-dossier__body a { color: var(--x-gold); }
+
+/* ---------- despliegue en el lugar: bloques del mapa de estudio (25/11) ---------- */
+.x-desp-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 14px 0 0; padding-top: 10px; border-top: 1px solid var(--x-line); }
+.x-desp-tg { font: 500 12px/1 var(--x-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--x-gold); }
+.x-desp-ficha { appearance: none; border: 1px solid var(--x-line-2); border-radius: 999px; background: none; color: var(--x-muted); font: 500 12px/1 var(--x-sans); padding: 7px 14px; cursor: pointer; }
+.x-desp-ficha:hover { color: var(--x-text); border-color: var(--x-gold-soft); }
+.x-item.is-desp { border-color: var(--x-gold-soft); box-shadow: 0 0 0 1px rgb(var(--x-gold-rgb) / .25), var(--x-shadow); }
+.x-item.x-dchild { width: 260px; padding: 16px 18px; }
+.x-dchild h3 { font-size: 1.15em; }
+.x-dchild .x-note { font-size: .92em; }
+.x-dchild .x-go-in { margin: 10px 0 0; font: 600 11px/1 var(--x-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--x-gold); }
+.x-strings line.x-fan { stroke: var(--x-gold); stroke-opacity: .75; stroke-width: 1.4; }
+.x-board.has-fan .x-strings line:not(.x-fan), .has-fan ~ .x-strings line:not(.x-fan) { stroke-opacity: .18; }
+.x-hud .btn#desp-all[hidden] { display: none; }
+@media (max-width: 759px) { #desp-all { min-height: 40px; padding-inline: 12px; font-size: 13px; } }

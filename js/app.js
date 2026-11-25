@@ -317,7 +317,7 @@ function veladMain(DATA) {
         var pinsSvg = document.getElementById("pins");
         function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
         function mapAt(path) { var m = TREE; path.forEach(function (n) { m = n.children; }); return m; }
-        function nodeById(id) { for (var i = 0; i < MAP.nodes.length; i++) if (MAP.nodes[i].id === id) return MAP.nodes[i]; return null; }
+        function nodeById(id) { for (var i = 0; i < MAP.nodes.length; i++) if (MAP.nodes[i].id === id) return MAP.nodes[i]; return DNODES[id] || null; }
         var BLOQ = {
           "b-evangelios": ["Jesús y los apóstoles sobre su venida", "Lo que Jesús y los apóstoles enseñaron sobre su venida, la gran tribulación y la resurrección de los santos."],
           "b-isaias": ["El Día del Señor y el Mesías que reina", "El profeta del Día del Señor: juicio sobre las naciones, el Mesías que reina y Sion restaurada."],
@@ -355,7 +355,8 @@ function veladMain(DATA) {
             '" tabindex="0" role="button" aria-label="' + esc(nd.title) + (nd.children ? ", contiene un mapa" : "") + '" style="--c:var(--' + nd._c + ')">' +
             '<p class="x-cat">' + esc(m.kind || "Capítulo") + " <em>· " + esc(n) + "</em></p><h3>" + esc(nd.title) + "</h3>" +
             (nd.ref ? '<p class="x-ref">' + esc(nd.ref) + "</p>" : "") +
-            '<p class="x-note">' + esc(nd.summary || blq(nd, 0) || (nd.children ? countOf(nd) : "En estudio")) + "</p></article>";
+            '<p class="x-note">' + esc(nd.summary || blq(nd, 0) || (nd.children ? countOf(nd) : "En estudio")) + "</p>" +
+            (nd.children && despOn() && MAP.nodes.indexOf(nd) >= 0 ? '<p class="x-desp-row"><span class="x-desp-tg">' + despLabel(nd) + '</span><button type="button" class="x-desp-ficha" data-ficha="' + esc(nd.id) + '">Ficha</button></p>' : "") + "</article>";
         }
         /* nodos de entrada del mapa general (nodos-raiz.json): pregunta, imagen, desglose, tema */
         var TIPO = { pregunta: "Pregunta", imagen: "Imagen", desglose: "Desglose", tema: "Tema", dato: "Dato histórico", lugar: "Lugar", vida: "Para la vida", portal: "Para estudiar" };
@@ -403,8 +404,154 @@ function veladMain(DATA) {
         function userPos() { try { return JSON.parse(localStorage.getItem(UPOS_KEY)) || {}; } catch (e) { return {}; } }
         function saveUserPos(all) { try { localStorage.setItem(UPOS_KEY, JSON.stringify(all)); } catch (e) { /* sin almacenamiento */ } }
         function mapKey() { return stack.map(function (n) { return n.id; }).join("/") || "_raiz"; }
+
+        /* ---------- despliegue en el lugar (mapa de estudio, 25/11): tocar un bloque abre sus capítulos hacia su costado ----------
+           Los hijos se arman en columnas hacia afuera del bloque, unidos con hilos rectos. El estado vive solo en sessionStorage. */
+        var DESPLIEGUE = ["m-estudio"];
+        var DESP_KEY = "velad-despliegue", SEP = "~", OPEN = {}, DNODES = {}, BASEPOS = null, BASEW = 0;
+        function despOn() { return !!MAP && DESPLIEGUE.indexOf(MAP.id) >= 0 && !editing() && !/[?&]edit/.test(location.search); }
+        function despAny() { return despOn() && Object.keys(OPEN).length > 0; }
+        function despBlocks() { return MAP.nodes.filter(function (nd) { return nd.children && nd.children.nodes && nd.children.nodes.length; }); }
+        function despLabel(nd) { return OPEN[nd.id] ? "▴ Plegar" : "▾ Desplegar"; }
+        function despRows(n) { return Math.min(n, Math.max(4, Math.ceil(Math.sqrt(n * 2)))); }
+        function despKids(b) { return OPEN[b.id] ? b.children.nodes.map(function (k) { return b.id + SEP + k.id; }).filter(function (k) { return items[k]; }) : []; }
+        function despLoad() {
+          OPEN = {};
+          try { var all = JSON.parse(sessionStorage.getItem(DESP_KEY)) || {}; (all[MAP.id] || []).forEach(function (id) { if (nodeById(id)) OPEN[id] = true; }); } catch (e) { /* nada */ }
+        }
+        function despSave() {
+          try { var all = JSON.parse(sessionStorage.getItem(DESP_KEY)) || {}; all[MAP.id] = Object.keys(OPEN); sessionStorage.setItem(DESP_KEY, JSON.stringify(all)); } catch (e) { /* nada */ }
+        }
+        function fanCardHTML(w, kind) {
+          var sum = w.summary || w.note || "";
+          /* sin cantidades visibles ("Expediente con 27 nodos", "6 tarjetas") */
+          if (/\d+\s+(nodos?|tarjetas?|capítulos?|cap\.)\b|\bcon \d+\b/i.test(sum)) sum = "";
+          if (sum.length > 110) sum = sum.slice(0, 104).replace(/\s+\S*$/, "") + "…";
+          return '<article class="x-item x-dchild" data-id="' + esc(w.id) + '" tabindex="0" role="button" aria-label="' + esc(w.title) + ': entrar" style="--c:var(--' + (w._c || "x-gold") + ')">' +
+            '<p class="x-cat">' + esc(kind) + "</p><h3>" + esc(w.title) + "</h3>" + (w.ref ? '<p class="x-ref">' + esc(w.ref) + "</p>" : "") +
+            (sum ? '<p class="x-note">' + esc(sum) + "</p>" : "") + '<p class="x-go-in">Entrar →</p></article>';
+        }
+        /* agrega o quita las tarjetas hijas según OPEN; ids de hijos: bloque~capítulo */
+        function despRender() {
+          DNODES = {};
+          setEl.querySelectorAll(".x-dchild").forEach(function (el) { delete items[el.dataset.id]; el.remove(); });
+          LINKS = (MAP.links || []).slice();
+          board.classList.toggle("has-fan", despAny());
+          if (!despOn()) return;
+          var html = "";
+          despBlocks().forEach(function (b) {
+            var el = items[b.id]; if (!el) return;
+            el.classList.toggle("is-desp", !!OPEN[b.id]);
+            var tg = el.querySelector(".x-desp-tg"); if (tg) tg.textContent = despLabel(b);
+            el.setAttribute("aria-expanded", OPEN[b.id] ? "true" : "false");
+            if (!OPEN[b.id]) return;
+            var sub = b.children, R = despRows(sub.nodes.length);
+            sub.nodes.forEach(function (k, i) {
+              var w = Object.create(k);
+              Object.defineProperty(w, "id", { value: b.id + SEP + k.id, enumerable: true });
+              Object.defineProperty(w, "_parent", { value: b.id });
+              DNODES[w.id] = w;
+              html += fanCardHTML(w, sub.kind || "Capítulo");
+              /* primera columna: hilo al bloque; las siguientes: al de la misma fila en la columna anterior */
+              LINKS.push([i < R ? b.id : b.id + SEP + sub.nodes[i - R].id, w.id, "fan"]);
+            });
+          });
+          if (!html) return;
+          var tmp = document.createElement("div"); tmp.innerHTML = html;
+          [].slice.call(tmp.children).forEach(function (el) { setEl.appendChild(el); items[el.dataset.id] = el; });
+        }
+        /* abanico hacia el costado del bloque; luego se separan los grupos que se pisan */
+        function despLayout() {
+          if (!despAny()) { if (BASEPOS) { POS = JSON.parse(JSON.stringify(BASEPOS)); BW = BASEW; board.style.width = BW + "px"; } return; }
+          var FAN = 120, GX = 56, GY = 56, M = 70, order = Object.keys(OPEN), G = [];
+          POS = {};
+          MAP.nodes.forEach(function (b) {
+            var el = items[b.id]; if (!el || !BASEPOS[b.id]) return;
+            var bx = BASEPOS[b.id][0], by = BASEPOS[b.id][1], bw = el.offsetWidth, bh = el.offsetHeight;
+            var g = { id: b.id, rel: {}, l: 0, t: 0, r: bw, b: bh, x: bx, y: by, pri: OPEN[b.id] ? 100 + order.indexOf(b.id) : 0 };
+            g.rel[b.id] = [0, 0];
+            var kids = b.children ? despKids(b) : [], n = kids.length;
+            if (n) {
+              var R = despRows(n), cols = Math.ceil(n / R), dir = bx + bw / 2 < BASEW / 2 ? -1 : 1, rowH = [], colW = [], i, r, c;
+              for (i = 0; i < n; i++) { r = i % R; c = Math.floor(i / R); rowH[r] = Math.max(rowH[r] || 0, items[kids[i]].offsetHeight); colW[c] = Math.max(colW[c] || 0, items[kids[i]].offsetWidth); }
+              var totH = rowH.reduce(function (a, v) { return a + v + GY; }, 0) - GY, y0 = Math.round(bh / 2 - totH / 2), ry = [], xx = [];
+              for (r = 0, i = y0; r < rowH.length; r++) { ry[r] = i; i += rowH[r] + GY; }
+              for (c = 0, i = dir > 0 ? bw + FAN : -FAN; c < cols; c++) { xx[c] = dir > 0 ? i : i - colW[c]; i += dir * (colW[c] + GX); }
+              for (i = 0; i < n; i++) {
+                r = i % R; c = Math.floor(i / R);
+                var kx = xx[c], ky = ry[r];
+                g.rel[kids[i]] = [kx, ky];
+                g.l = Math.min(g.l, kx); g.t = Math.min(g.t, ky); g.r = Math.max(g.r, kx + items[kids[i]].offsetWidth); g.b = Math.max(g.b, ky + items[kids[i]].offsetHeight);
+              }
+            }
+            G.push(g);
+          });
+          function R_(g) { return { l: g.x + g.l - M / 2, t: g.y + g.t - M / 2, r: g.x + g.r + M / 2, b: g.y + g.b + M / 2 }; }
+          for (var it = 0; it < 600; it++) {
+            var hit = false;
+            for (var a = 0; a < G.length; a++) for (var bI = a + 1; bI < G.length; bI++) {
+              var A = R_(G[a]), B = R_(G[bI]);
+              if (A.l >= B.r || B.l >= A.r || A.t >= B.b || B.t >= A.b) continue;
+              hit = true;
+              var mv = G[a].pri > G[bI].pri ? G[bI] : (G[bI].pri > G[a].pri ? G[a] : G[bI]), st = mv === G[a] ? G[bI] : G[a];
+              var S = R_(st), V = R_(mv);
+              var px = Math.min(S.r - V.l, V.r - S.l), py = Math.min(S.b - V.t, V.b - S.t);
+              if (px <= py) mv.x += (V.l + V.r >= S.l + S.r ? 1 : -1) * (px + 1);
+              else mv.y += (V.t + V.b >= S.t + S.b ? 1 : -1) * (py + 1);
+            }
+            if (!hit) break;
+          }
+          var minX = Infinity, minY = Infinity, maxX = 0;
+          G.forEach(function (g) { minX = Math.min(minX, g.x + g.l); minY = Math.min(minY, g.y + g.t); });
+          var sx = 120 - minX, sy = 140 - minY;
+          G.forEach(function (g) {
+            Object.keys(g.rel).forEach(function (k) { POS[k] = [Math.round(g.x + g.rel[k][0] + sx), Math.round(g.y + g.rel[k][1] + sy)]; });
+            maxX = Math.max(maxX, g.x + g.r + sx);
+          });
+          BW = Math.max(1400, Math.ceil(maxX + 120)); board.style.width = BW + "px";
+        }
+        /* cámara suave sobre un grupo de tarjetas */
+        function frameIds(ids) {
+          var U = null;
+          ids.forEach(function (k) { if (!items[k]) return; var B = box(items[k]); if (!U) U = { l: B.l, t: B.t, r: B.r, b: B.b }; else { U.l = Math.min(U.l, B.l); U.t = Math.min(U.t, B.t); U.r = Math.max(U.r, B.r); U.b = Math.max(U.b, B.b); } });
+          if (!U) return fitView(true);
+          var g = { l: readL(), t: hud.offsetHeight + 16, r: window.innerWidth, b: window.innerHeight }, aw = g.r - g.l, ah = g.b - g.t;
+          var w = U.r - U.l + 80, h = U.b - U.t + 80, s = Math.min(1, aw / w, ah / h);
+          if (mob() && s < 0.36) { s = 0.36; cam.s = s; var bb = box(items[ids[0]]); cam.x = (g.l + g.r) / 2 - bb.cx * s; cam.y = g.t + 6 - (U.t - 20) * s; }
+          else { cam.s = s; cam.x = (g.l + g.r) / 2 - (U.l + U.r) / 2 * s; cam.y = Math.max(g.t + 6 - (U.t - 40) * s, (g.t + g.b) / 2 - (U.t + U.b) / 2 * s); }
+          clampPos(); apply(true);
+        }
+        function despPaintAll() {
+          var b = document.getElementById("desp-all"); if (!b) return;
+          b.hidden = !despOn();
+          if (!despOn()) return;
+          var all = despBlocks().every(function (x) { return OPEN[x.id]; });
+          b.textContent = all ? "Plegar todo" : "Abrir todo";
+          b.setAttribute("aria-pressed", all ? "true" : "false");
+        }
+        function despRefresh(frame) {
+          if (focused) closeFocusQuiet();
+          board.classList.remove("is-focus"); drawLinks(null);
+          Object.keys(items).forEach(function (k) { items[k].classList.remove("is-linked", "is-spot"); });
+          despRender(); despSave(); despPaintAll(); drawStrings();
+          if (frame) frameIds(frame); else fitView(true);
+        }
+        function despToggle(id) {
+          var b = nodeById(id); if (!b || !b.children) return;
+          if (OPEN[id]) { delete OPEN[id]; despRefresh(null); return; }
+          OPEN[id] = true;
+          despRefresh([id].concat(b.children.nodes.map(function (k) { return id + SEP + k.id; })));
+        }
+        /* tocar un capítulo desplegado entra a su mapa (o al mapa del bloque, enfocado en él) */
+        function despEnter(id) {
+          var w = DNODES[id]; if (!w) return false;
+          var b = nodeById(w._parent), k = Object.getPrototypeOf(w);
+          if (k.children) openPath(stack.concat([b, k])); else openPath(stack.concat([b]), k.id);
+          return true;
+        }
         function useMap(path) {
-          stack = path; MAP = mapAt(path); cur = MAP.id;
+          stack = path; MAP = mapAt(path); cur = MAP.id; DNODES = {}; OPEN = {};
+          if (despOn()) despLoad();
           inherit(TREE, "x-muted");
           var owner = path[path.length - 1];
           POS = {};
@@ -434,6 +581,8 @@ function veladMain(DATA) {
           });
           LINKS = MAP.links || []; tl = setEl.querySelector(".x-tl");
           board.style.width = BW + "px";
+          BASEPOS = JSON.parse(JSON.stringify(POS)); BASEW = BW;
+          despRender(); despPaintAll();
           document.getElementById("exp-title").textContent = MAP.title;
           var expL = document.getElementById("exp-label"); expL.hidden = MAP.subtitle === "";
           expL.innerHTML = MAP.subtitle ||
@@ -630,6 +779,7 @@ function veladMain(DATA) {
         })();
         useMap([]);
         function layout() {
+          if (despOn()) despLayout();
           var placed = [], cardsBottom = 0, right = 0;
           Object.keys(POS).sort(function (a, b) { return POS[a][1] - POS[b][1]; }).forEach(function (id) {
             var el = items[id];
@@ -680,7 +830,7 @@ function veladMain(DATA) {
           LINKS.forEach(function (l) {
             if (!items[l[0]] || !items[l[1]]) return;
             var a = pinOf(l[0]), b = pinOf(l[1]);
-            out += '<line data-a="' + l[0] + '" data-b="' + l[1] + '" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + b[0] + '" y2="' + b[1] + '"/>';
+            out += '<line ' + (l[2] ? 'class="x-' + l[2] + '" ' : "") + 'data-a="' + l[0] + '" data-b="' + l[1] + '" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + b[0] + '" y2="' + b[1] + '"/>';
           });
           Object.keys(items).forEach(function (k) {
             if (!linksOf(k).length) return;
@@ -716,7 +866,10 @@ function veladMain(DATA) {
             animTimer = setTimeout(function () { board.classList.remove("x-anim"); }, 750);
           } else board.classList.remove("x-anim");
           board.style.transform = "translate(" + cam.x + "px," + cam.y + "px) scale(" + cam.s + ")";
+          if (view.scrollLeft || view.scrollTop) { view.scrollLeft = 0; view.scrollTop = 0; }
         }
+        /* el foco de una tarjeta fuera de pantalla puede desplazar #view (overflow hidden): lo volvemos a 0, la cámara es la única que mueve */
+        view.addEventListener("scroll", function () { if (view.scrollLeft || view.scrollTop) { view.scrollLeft = 0; view.scrollTop = 0; } });
         function fitScale() {
           return Math.min(1, Math.min((window.innerWidth - readL()) / BW, window.innerHeight / BH) * 0.96);
         }
@@ -818,6 +971,7 @@ function veladMain(DATA) {
             var same = (nd.children.title || "") === (nd.title || "");
             if (same) k.className = "x-key x-key--bare";
             k.innerHTML = (same ? insideHTML(nd) : "<p>Esta tarjeta contiene un mapa: <b>" + esc(nd.children.title) + "</b>, " + countOf(nd) + ".</p>") +
+              (despOn() && MAP.nodes.indexOf(nd) >= 0 ? '<button class="btn x-open" type="button" data-desp="' + esc(id) + '">' + (OPEN[id] ? "Plegar acá" : "Desplegar acá") + "</button> " : "") +
               '<button class="btn x-open" type="button" data-open="' + esc(id) + '">Abrir mapa →</button>';
             var firstH = nd.body ? body.querySelector("h3") : null;
             if (firstH) body.insertBefore(k, firstH); else body.appendChild(k);
@@ -860,6 +1014,8 @@ function veladMain(DATA) {
         /* un capítulo con desglose se abre directo: tablero de énfasis + desglose a la izquierda */
         function tapItem(id) {
           var nd = nodeById(id);
+          if (DNODES[id]) { despEnter(id); return; }
+          if (nd && despOn() && nd.children && MAP.nodes.indexOf(nd) >= 0) { despToggle(id); return; }
           if (nd && nd.children && (nd.body || nd.tipo === "portal")) { openPath(stack.concat([nd])); return; }
           focusItem(id);
         }
@@ -909,7 +1065,7 @@ function veladMain(DATA) {
             moved = false;
             tapTarget = e.target.closest(".x-item, .x-mark");
             beginPan(pointers.get(e.pointerId));
-            var uc = !editing() && !mob() && e.target.closest(".x-item");
+            var uc = !editing() && !mob() && !despAny() && e.target.closest(".x-item:not(.x-dchild)");
             udrag = uc ? { id: uc.dataset.id, el: uc, ox: uc.offsetLeft, oy: uc.offsetTop } : null;
           } else if (pointers.size === 2) {
             moved = true;
@@ -984,6 +1140,8 @@ function veladMain(DATA) {
             return;
           }
           if (moved) return;
+          var fb = e.target.closest("[data-ficha]");
+          if (fb) { focusItem(fb.dataset.ficha); return; }
           var it = e.target.closest(".x-item");
           if (it) { tapItem(it.dataset.id); return; }
           var m = e.target.closest(".x-mark");
@@ -991,12 +1149,15 @@ function veladMain(DATA) {
         });
         board.addEventListener("dblclick", function (e) {
           if (editing()) return;
+          if (e.target.closest("[data-ficha]")) return;
           var it = e.target.closest(".x-item.has-map");
-          if (it) openPath(stack.concat([nodeById(it.dataset.id)]));
+          if (it && !it.classList.contains("x-dchild")) openPath(stack.concat([nodeById(it.dataset.id)]));
         });
         body.addEventListener("click", function (e) {
           var b = e.target.closest("[data-go]");
           if (b) { focusItem(b.dataset.go); return; }
+          var dz = e.target.closest("[data-desp]");
+          if (dz) { despToggle(dz.dataset.desp); return; }
           var o = e.target.closest("[data-open]");
           if (o) { openPath(stack.concat([nodeById(o.dataset.open)])); return; }
           if (e.target.closest("[data-route]")) { document.querySelector('.x-vw[data-view="route"]').click(); return; }
@@ -1030,6 +1191,13 @@ function veladMain(DATA) {
           var all = userPos(); delete all[mapKey()]; saveUserPos(all);
           var f = focused; if (f) closeFocusQuiet();
           useMap(stack); drawStrings(); fitView(true);
+        });
+        var despAll = document.getElementById("desp-all");
+        if (despAll) despAll.addEventListener("click", function () {
+          var bs = despBlocks(), all = bs.every(function (x) { return OPEN[x.id]; });
+          OPEN = {};
+          if (!all) bs.forEach(function (x) { OPEN[x.id] = true; });
+          despRefresh(null);
         });
         document.getElementById("reset").addEventListener("click", function () {
           if (focused) closeFocus(); else fitView(true);
