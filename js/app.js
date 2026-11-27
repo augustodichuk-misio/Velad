@@ -453,62 +453,77 @@ function veladMain(DATA) {
               DNODES[w.id] = w;
               html += fanCardHTML(w, sub.kind || "Capítulo");
               /* primera columna: hilo al bloque; las siguientes: al de la misma fila en la columna anterior */
-              LINKS.push([i < R ? b.id : b.id + SEP + sub.nodes[i - R].id, w.id, "fan"]);
             });
           });
           if (!html) return;
           var tmp = document.createElement("div"); tmp.innerHTML = html;
           [].slice.call(tmp.children).forEach(function (el) { setEl.appendChild(el); items[el.dataset.id] = el; });
         }
-        /* abanico hacia el costado del bloque; luego se separan los grupos que se pisan */
+        /* RADIAL (26/11): los bloques en ronda alrededor del centro; sus capítulos en anillos concéntricos hacia afuera, en su sector */
         function despLayout() {
           if (!despAny()) { if (BASEPOS) { POS = JSON.parse(JSON.stringify(BASEPOS)); BW = BASEW; board.style.width = BW + "px"; } return; }
-          var FAN = 120, GX = 56, GY = 56, M = 70, order = Object.keys(OPEN), G = [];
-          POS = {};
-          MAP.nodes.forEach(function (b) {
-            var el = items[b.id]; if (!el || !BASEPOS[b.id]) return;
-            var bx = BASEPOS[b.id][0], by = BASEPOS[b.id][1], bw = el.offsetWidth, bh = el.offsetHeight;
-            var g = { id: b.id, rel: {}, l: 0, t: 0, r: bw, b: bh, x: bx, y: by, pri: OPEN[b.id] ? 100 + order.indexOf(b.id) : 0 };
-            g.rel[b.id] = [0, 0];
-            var kids = b.children ? despKids(b) : [], n = kids.length;
-            if (n) {
-              var R = despRows(n), cols = Math.ceil(n / R), dir = bx + bw / 2 < BASEW / 2 ? -1 : 1, rowH = [], colW = [], i, r, c;
-              for (i = 0; i < n; i++) { r = i % R; c = Math.floor(i / R); rowH[r] = Math.max(rowH[r] || 0, items[kids[i]].offsetHeight); colW[c] = Math.max(colW[c] || 0, items[kids[i]].offsetWidth); }
-              var totH = rowH.reduce(function (a, v) { return a + v + GY; }, 0) - GY, y0 = Math.round(bh / 2 - totH / 2), ry = [], xx = [];
-              for (r = 0, i = y0; r < rowH.length; r++) { ry[r] = i; i += rowH[r] + GY; }
-              for (c = 0, i = dir > 0 ? bw + FAN : -FAN; c < cols; c++) { xx[c] = dir > 0 ? i : i - colW[c]; i += dir * (colW[c] + GX); }
-              for (i = 0; i < n; i++) {
-                r = i % R; c = Math.floor(i / R);
-                var kx = xx[c], ky = ry[r];
-                g.rel[kids[i]] = [kx, ky];
-                g.l = Math.min(g.l, kx); g.t = Math.min(g.t, ky); g.r = Math.max(g.r, kx + items[kids[i]].offsetWidth); g.b = Math.max(g.b, ky + items[kids[i]].offsetHeight);
+          var GAP = 50, CW = 0, CH = 0, minx = Infinity, miny = Infinity, maxx = -Infinity, maxy = -Infinity;
+          var bl = MAP.nodes.filter(function (b) { return items[b.id] && BASEPOS[b.id]; });
+          bl.forEach(function (b) {
+            var el = items[b.id], p = BASEPOS[b.id];
+            minx = Math.min(minx, p[0]); miny = Math.min(miny, p[1]); maxx = Math.max(maxx, p[0] + el.offsetWidth); maxy = Math.max(maxy, p[1] + el.offsetHeight);
+            CW = Math.max(CW, el.offsetWidth); CH = Math.max(CH, el.offsetHeight);
+            despKids(b).forEach(function (k) { CW = Math.max(CW, items[k].offsetWidth); CH = Math.max(CH, items[k].offsetHeight); });
+          });
+          var cx = (minx + maxx) / 2, cy = (miny + maxy) / 2, PI2 = Math.PI * 2;
+          bl.forEach(function (b) { var el = items[b.id], p = BASEPOS[b.id]; b._a = Math.atan2(p[1] + el.offsetHeight / 2 - cy, p[0] + el.offsetWidth / 2 - cx); });
+          bl.sort(function (a, b) { return a._a - b._a; });
+          /* distancia entre centros para que dos tarjetas no se pisen en la dirección phi */
+          function sep(phi) { var c = Math.abs(Math.cos(phi)), s = Math.abs(Math.sin(phi)); return Math.min(c > 1e-3 ? (CW + GAP) / c : 1e9, s > 1e-3 ? (CH + GAP) / s : 1e9); }
+          var wt = bl.map(function (b) { return 1 + despKids(b).length / 5; }), wsum = wt.reduce(function (a, v) { return a + v; }, 0);
+          var a0 = bl.length ? bl[0]._a - Math.PI * wt[0] / wsum : 0, sec = [], acc = a0;
+          bl.forEach(function (b, i) { var d = PI2 * wt[i] / wsum; sec.push([acc + d / 2, d]); acc += d; });
+          var C = {}, FL = [], f = 1;
+          function place() {
+            C = {}; FL = [];
+            /* radio de la ronda de bloques: que dos vecinos no se pisen */
+            var Rb = 0;
+            for (var i = 0; i < bl.length; i++) {
+              var j = (i + 1) % bl.length; if (j === i) break;
+              var t1 = sec[i][0], t2 = sec[j][0], dt = Math.abs(((t2 - t1) % PI2 + PI2) % PI2); if (dt > Math.PI) dt = PI2 - dt;
+              var need = sep((t1 + t2) / 2 + Math.PI / 2) * f, ch = 2 * Math.sin(Math.max(dt, 1e-3) / 2);
+              Rb = Math.max(Rb, need / ch);
+            }
+            Rb = Math.max(Rb, 1.2 * (CW + CH) * f);
+            bl.forEach(function (b, i) {
+              var th = sec[i][0], du = sec[i][1] * 0.86;
+              C[b.id] = [cx + Rb * Math.cos(th), cy + Rb * Math.sin(th)];
+              var kids = despKids(b), n = kids.length, k = 0, ring = 0, prev = null, step = 0, ts = 0;
+              for (var z = -1; z <= 1; z += 0.25) { step = Math.max(step, sep(th + z * du / 2)); ts = Math.max(ts, sep(th + z * du / 2 + Math.PI / 2)); }
+              step *= f; ts *= f;
+              var r = Rb + step;
+              while (k < n) {
+                var cap = Math.max(1, Math.floor(r * sec[i][1] * 0.97 / ts)), m = Math.min(cap, n - k), d = ts / r, cur = [];
+                for (var q = 0; q < m; q++) {
+                  var a = th + (q - (m - 1) / 2) * d, id = kids[k++];
+                  C[id] = [cx + r * Math.cos(a), cy + r * Math.sin(a)]; cur.push([id, a]);
+                  var to = b.id;
+                  if (prev) { var best = 1e9; prev.forEach(function (pp) { var e = Math.abs(pp[1] - a); if (e < best) { best = e; to = pp[0]; } }); }
+                  FL.push([to, id, "fan"]);
+                }
+                prev = cur; ring++; r += step;
               }
-            }
-            G.push(g);
-          });
-          function R_(g) { return { l: g.x + g.l - M / 2, t: g.y + g.t - M / 2, r: g.x + g.r + M / 2, b: g.y + g.b + M / 2 }; }
-          for (var it = 0; it < 600; it++) {
-            var hit = false;
-            for (var a = 0; a < G.length; a++) for (var bI = a + 1; bI < G.length; bI++) {
-              var A = R_(G[a]), B = R_(G[bI]);
-              if (A.l >= B.r || B.l >= A.r || A.t >= B.b || B.t >= A.b) continue;
-              hit = true;
-              var mv = G[a].pri > G[bI].pri ? G[bI] : (G[bI].pri > G[a].pri ? G[a] : G[bI]), st = mv === G[a] ? G[bI] : G[a];
-              var S = R_(st), V = R_(mv);
-              var px = Math.min(S.r - V.l, V.r - S.l), py = Math.min(S.b - V.t, V.b - S.t);
-              if (px <= py) mv.x += (V.l + V.r >= S.l + S.r ? 1 : -1) * (px + 1);
-              else mv.y += (V.t + V.b >= S.t + S.b ? 1 : -1) * (py + 1);
-            }
-            if (!hit) break;
+            });
           }
-          var minX = Infinity, minY = Infinity, maxX = 0;
-          G.forEach(function (g) { minX = Math.min(minX, g.x + g.l); minY = Math.min(minY, g.y + g.t); });
-          var sx = 120 - minX, sy = 140 - minY;
-          G.forEach(function (g) {
-            Object.keys(g.rel).forEach(function (k) { POS[k] = [Math.round(g.x + g.rel[k][0] + sx), Math.round(g.y + g.rel[k][1] + sy)]; });
-            maxX = Math.max(maxX, g.x + g.r + sx);
-          });
-          BW = Math.max(1400, Math.ceil(maxX + 120)); board.style.width = BW + "px";
+          function hit() {
+            var ks = Object.keys(C);
+            for (var i = 0; i < ks.length; i++) for (var j = i + 1; j < ks.length; j++) {
+              var A = C[ks[i]], B = C[ks[j]];
+              if (Math.abs(A[0] - B[0]) < CW + 46 && Math.abs(A[1] - B[1]) < CH + 46) return true;
+            }
+            return false;
+          }
+          for (var it = 0; it < 40; it++) { place(); if (!hit()) break; f *= 1.07; }
+          LINKS = LINKS.filter(function (l) { return l[2] !== "fan"; }).concat(FL);
+          POS = {}; minx = Infinity; miny = Infinity; maxx = -Infinity;
+          Object.keys(C).forEach(function (k) { var el = items[k]; C[k] = [C[k][0] - el.offsetWidth / 2, C[k][1] - el.offsetHeight / 2]; minx = Math.min(minx, C[k][0]); miny = Math.min(miny, C[k][1]); maxx = Math.max(maxx, C[k][0] + el.offsetWidth); });
+          Object.keys(C).forEach(function (k) { POS[k] = [Math.round(C[k][0] - minx + 120), Math.round(C[k][1] - miny + 140)]; });
+          BW = Math.max(1400, Math.ceil(maxx - minx + 240)); board.style.width = BW + "px";
         }
         /* cámara suave sobre un grupo de tarjetas */
         function frameIds(ids) {
